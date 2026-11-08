@@ -103,8 +103,11 @@ const repos = user.repositories.nodes
     topics: r.repositoryTopics.nodes.map(t => t.topic.name),
   }));
 
+// The portfolio site's own repo (<login>.github.io) is left out of the language mix,
+// so the page's HTML does not count towards the languages it reports.
+const SITE_REPO = `${LOGIN}.github.io`.toLowerCase();
 const langTotals = {};
-for (const r of repos) for (const l of r.languages) {
+for (const r of repos) if (r.name.toLowerCase() !== SITE_REPO) for (const l of r.languages) {
   langTotals[l.name] ??= { name: l.name, color: l.color, bytes: 0 };
   langTotals[l.name].bytes += l.bytes;
 }
