@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T06:13:26.283Z",
+  "generatedAt": "2026-11-08T06:26:02.489Z",
   "profile": {
     "login": "DhruvBasia",
     "name": "Dhruv Basia",
@@ -11,7 +11,7 @@
     "createdAt": "2022-09-08T14:49:24Z",
     "followers": 1,
     "following": 1,
-    "publicRepos": 15
+    "publicRepos": 16
   },
   "pinned": [
     "internship-intelligence-platform",
@@ -22,13 +22,13 @@
     "Elysian_Website"
   ],
   "contributions": {
-    "total": 185,
-    "commits": 177,
+    "total": 188,
+    "commits": 179,
     "pullRequests": 0,
     "issues": 0,
-    "reposCreated": 8,
+    "reposCreated": 9,
     "private": 0,
-    "activeDays": 106,
+    "activeDays": 107,
     "busiestDay": {
       "date": "2026-10-10",
       "contributionCount": 18,
@@ -37,7 +37,7 @@
     },
     "streak": {
       "longest": 96,
-      "current": 2
+      "current": 3
     },
     "weeks": [
       [
@@ -2331,8 +2331,8 @@
       [
         {
           "date": "2026-11-08",
-          "count": 0,
-          "level": 0,
+          "count": 3,
+          "level": 2,
           "weekday": 0
         }
       ]
@@ -2343,37 +2343,37 @@
       "name": "Python",
       "color": "#3572A5",
       "bytes": 1250437,
-      "pct": 37.8
+      "pct": 35.5
     },
     {
       "name": "TypeScript",
       "color": "#3178c6",
       "bytes": 1080974,
-      "pct": 32.7
+      "pct": 30.7
     },
     {
       "name": "JavaScript",
       "color": "#f1e05a",
-      "bytes": 503033,
-      "pct": 15.2
+      "bytes": 509430,
+      "pct": 14.5
+    },
+    {
+      "name": "HTML",
+      "color": "#e34c26",
+      "bytes": 356804,
+      "pct": 10.1
     },
     {
       "name": "Jupyter Notebook",
       "color": "#DA5B0B",
       "bytes": 172747,
-      "pct": 5.2
-    },
-    {
-      "name": "HTML",
-      "color": "#e34c26",
-      "bytes": 150229,
-      "pct": 4.5
+      "pct": 4.9
     },
     {
       "name": "CSS",
       "color": "#663399",
       "bytes": 119983,
-      "pct": 3.6
+      "pct": 3.4
     },
     {
       "name": "Hack",
@@ -2407,6 +2407,35 @@
     }
   ],
   "repos": [
+    {
+      "name": "DhruvBasia.github.io",
+      "description": "Portfolio of Dhruv Basia: AI & Data Science",
+      "url": "https://github.com/DhruvBasia/DhruvBasia.github.io",
+      "homepage": "https://dhruvbasia.github.io",
+      "stars": 0,
+      "forks": 0,
+      "archived": false,
+      "createdAt": "2026-11-08T06:15:27Z",
+      "pushedAt": "2026-11-08T06:25:41Z",
+      "commits": 2,
+      "language": {
+        "name": "HTML",
+        "color": "#e34c26"
+      },
+      "languages": [
+        {
+          "name": "HTML",
+          "color": "#e34c26",
+          "bytes": 206575
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a",
+          "bytes": 6397
+        }
+      ],
+      "topics": []
+    },
     {
       "name": "DhruvBasia",
       "description": "Personal GitHub profile README showcasing projects, skills, tech stack, and developer activity.",
