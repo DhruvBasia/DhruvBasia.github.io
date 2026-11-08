@@ -313,12 +313,30 @@ html[data-theme="ember"] .theme-btn .i-sun{display:block}
 /* NIC */
 .t-nic{--tile-bg:linear-gradient(170deg,var(--surface) 0%, var(--surface-2) 100%)}
 .org-mark{display:inline-grid;place-items:center;min-width:46px;height:46px;padding:0 9px;border-radius:14px;background:var(--surface);border:1px solid rgba(var(--edge-rgb),.12);box-shadow:0 1px 2px rgba(15,23,41,.06), inset 0 -2px 0 rgba(15,23,41,.04);font:750 15px/1 var(--f-display);letter-spacing:.02em;color:var(--ink)}
+/* NIC logo badge: white in both themes, like the education and certification logos */
+.org-logo{display:inline-grid;place-items:center;flex:none;height:46px;padding:0 10px;border-radius:14px;background:#fff;
+  box-shadow:0 0 0 1px rgba(15,23,41,.09), 0 1px 2px rgba(15,23,41,.06), 0 8px 16px -10px rgba(15,23,41,.22)}
+.org-logo img{height:24px;width:auto;max-width:none}
+.org-logo-wide{height:58px;padding:0 12px}
+.org-logo-wide img{height:40px}
+/* timeline badges: same height, width follows each logo's shape */
+.org-logo-box{height:58px;padding:0 7px}
+.org-logo-box img{height:48px}
+html[data-theme="ember"] .org-logo{background:#F7F4F0;box-shadow:0 0 0 1px rgba(255,255,255,.1), 0 8px 18px -10px rgba(0,0,0,.7)}
+html[data-theme="ember"] .org-logo img{filter:none}
 .nic-top{display:flex;align-items:center;gap:12px;margin-top:14px}
 .nic-top .t-h{font-size:22px}
 .nic-org{margin-top:10px;font:600 15px/1.35 var(--f-body);color:var(--ink);letter-spacing:-.01em}
 .nic-when{margin-top:4px}
 .mini-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:10px}
 .mini-chips li{padding:5px 9px;border-radius:8px;background:var(--sky-tint);color:var(--sky-ink);font:500 12px/1.2 var(--f-body)}
+/* narrower laptops: the NIC tile's text wraps more, so keep its chips on one line (fading at the edge) */
+@media (min-width:1100px) and (max-width:1365px){
+  .t-nic .nic-top{margin-top:10px}
+  .t-nic .nic-org{margin-top:8px}
+  .t-nic .mini-chips{flex-wrap:nowrap;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,#000 78%,transparent);mask-image:linear-gradient(90deg,#000 78%,transparent)}
+  .t-nic .mini-chips li{flex:none}
+}
 .gov-tag{display:inline-flex;align-items:center;gap:6px;font:500 12px/1.2 var(--f-mono);color:var(--ink-3)}
 
 /* résumé tile */
@@ -1072,6 +1090,11 @@ html[data-theme="ember"] .cred-logo img{filter:none}
   .tl-card{padding:20px 18px;border-radius:22px}
   .tl-head{gap:12px}
   .tl-head .org-mark{min-width:40px;height:40px;border-radius:12px;font-size:13px}
+  .tl-head-logo{flex-direction:column;gap:14px}
+  .org-logo-wide{height:52px}
+  .org-logo-wide img{height:36px}
+  .org-logo-box{height:52px;padding:0 6px}
+  .org-logo-box img{height:42px}
   .tl-head h3{font-size:20px}
   .tl-org{font-size:14.5px}
   .tl-points li{font-size:14.5px;padding-left:16px}
@@ -1200,7 +1223,7 @@ html[data-theme="ember"] .cred-logo img{filter:none}
         <div class="tile-head"><span class="label">Latest role · 2026</span></div>
         <a class="corner" href="#experience" aria-label="See experience"><span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow-ne"/></svg></span></a>
         <div class="nic-top">
-          <span class="org-mark" aria-hidden="true">NIC</span>
+          <span class="org-logo" aria-hidden="true"><img src="assets/logos/nic-mark.webp" width="263" height="120" alt="" decoding="async"></span>
           <h2 class="t-h">ML Intern</h2>
         </div>
         <p class="nic-org">National Informatics Centre (MHA)</p>
@@ -1693,8 +1716,8 @@ html[data-theme="ember"] .cred-logo img{filter:none}
         <li class="tl-item reveal">
           <div class="tl-when"><b>Jun – Aug 2026</b><span>On-site · New Delhi</span></div>
           <div class="card tl-card">
-            <div class="tl-head">
-              <span class="org-mark" aria-hidden="true">NIC</span>
+            <div class="tl-head tl-head-logo">
+              <span class="org-logo org-logo-wide" aria-hidden="true"><img src="assets/logos/nic.webp" width="469" height="132" alt="" loading="lazy" decoding="async"></span>
               <div><h3>Machine Learning Intern</h3><p class="tl-org">National Informatics Centre (NIC), Ministry of Home Affairs</p></div>
             </div>
             <ul class="tl-points">
@@ -1708,7 +1731,7 @@ html[data-theme="ember"] .cred-logo img{filter:none}
           <div class="tl-when"><b>Jul – Aug 2025</b><span>Remote</span></div>
           <div class="card tl-card">
             <div class="tl-head">
-              <span class="org-mark" aria-hidden="true">SB</span>
+              <span class="org-logo org-logo-box" aria-hidden="true"><img src="assets/logos/ibm-skillsbuild.webp" width="282" height="160" alt="" loading="lazy" decoding="async"></span>
               <div><h3>AI Agent Architect Intern</h3><p class="tl-org">IBM SkillsBuild Summer Program · Agentic AI &amp; ML track</p></div>
             </div>
             <ul class="tl-points">
@@ -1722,7 +1745,7 @@ html[data-theme="ember"] .cred-logo img{filter:none}
           <div class="tl-when"><b>2026</b><span>On-site · GGSIPU</span></div>
           <div class="card tl-card">
             <div class="tl-head">
-              <span class="org-mark" aria-hidden="true">SC</span>
+              <span class="org-logo org-logo-box" aria-hidden="true"><img src="assets/logos/ggsipu.webp" width="354" height="360" alt="" loading="lazy" decoding="async"></span>
               <div><h3>Web Developer</h3><p class="tl-org">Student Council, GGSIPU</p></div>
             </div>
             <ul class="tl-points">
@@ -1735,7 +1758,7 @@ html[data-theme="ember"] .cred-logo img{filter:none}
           <div class="tl-when"><b>Leadership</b><span>USAR, GGSIPU</span></div>
           <div class="card tl-card">
             <div class="tl-head">
-              <span class="org-mark" aria-hidden="true">IEEE</span>
+              <span class="org-logo org-logo-box" aria-hidden="true"><img src="assets/logos/ieee-usar.webp" width="450" height="360" alt="" loading="lazy" decoding="async"></span>
               <div><h3>Chairperson</h3><p class="tl-org">IEEE-USAR Student Branch</p></div>
             </div>
             <ul class="tl-points">
