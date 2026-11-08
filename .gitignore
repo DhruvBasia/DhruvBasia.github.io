@@ -1,0 +1,14 @@
+# Local working files: not part of the published site
+.claude/
+content/
+previews/
+
+# Auto-refresh workflow: add it once the GitHub login has the "workflow" permission
+.github/
+
+# Unused photo variants and originals (the original may carry camera metadata)
+assets/dhruv-original.jpeg
+assets/dhruv-full.*
+assets/dhruv-avatar.jpg
+assets/shots/agnidrishti.webp
+assets/shots/astra-demo.webp

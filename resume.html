@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+<title>Dhruv Basia | Résumé</title>
+<meta name="description" content="Résumé of Dhruv Basia, B.Tech Artificial Intelligence & Data Science, GGSIPU.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #111;
+    --ink-2: #3d3d3d;
+    --rule: #1a1a1a;
+    --link: #1f3fd1;
+    --paper: #fff;
+    --desk: #ecebe7;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--desk);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+    font-size: 9.7pt;
+    line-height: 1.32;
+    font-optical-sizing: auto;
+  }
+  body.embed { background: transparent; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: var(--link); text-decoration: underline; }
+
+  .sheet {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 24px auto;
+    padding: 13mm 15mm 12mm;
+    background: var(--paper);
+    box-shadow: 0 1px 2px rgba(40,30,10,.06), 0 4px 10px rgba(40,30,10,.06), 0 18px 40px rgba(40,30,10,.10);
+  }
+  body.embed .sheet { margin: 0 auto; box-shadow: none; }
+
+  header { text-align: center; margin-bottom: 6pt; }
+  h1 { font-size: 24pt; font-weight: 700; letter-spacing: .01em; line-height: 1.1; }
+  .contact { margin-top: 3pt; font-size: 9.3pt; color: var(--ink-2); }
+  .contact span + span::before { content: '|'; margin: 0 7px; color: #9a9a9a; }
+
+  section { margin-top: 7pt; }
+  h2 {
+    font-size: 10.5pt;
+    font-weight: 700;
+    font-variant: small-caps;
+    letter-spacing: .06em;
+    text-transform: lowercase;
+    border-bottom: 0.9px solid var(--rule);
+    padding-bottom: 1.5pt;
+    margin-bottom: 4pt;
+  }
+  h2::first-letter { text-transform: uppercase; }
+
+  .skills p { margin: 1pt 0; }
+  .skills b { font-weight: 600; }
+
+  .entry { margin: 4pt 0 0 9pt; }
+  .entry + .entry { margin-top: 6pt; }
+  .row { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+  .org { font-weight: 700; }
+  .sub { font-style: italic; color: var(--ink-2); }
+  ul { list-style: none; margin-top: 1.5pt; }
+  li { position: relative; padding-left: 12pt; margin-top: 1pt; }
+  li::before { content: '\25E6'; position: absolute; left: 1pt; top: -0.5pt; }
+  .proj-title { font-weight: 700; }
+  .proj-stack { font-style: italic; color: var(--ink-2); font-weight: 400; }
+  .gh { font-size: 9pt; white-space: nowrap; text-decoration: underline; text-underline-offset: 2px; }
+  .cert { margin-left: 9pt; }
+  .cert + .cert { margin-top: 2.5pt; }
+  .cert a { text-decoration: underline; text-underline-offset: 2px; }
+
+  /* Phones: reflow into a readable column instead of a shrunken A4 sheet */
+  @media screen and (max-width: 820px) {
+    body { font-size: 15px; line-height: 1.5; background: var(--paper); }
+    .sheet { width: auto; min-height: 0; margin: 0; padding: 22px 18px 32px; box-shadow: none; }
+    h1 { font-size: 30px; }
+    .contact { font-size: 14px; display: flex; flex-wrap: wrap; justify-content: center; gap: 2px 0; }
+    h2 { font-size: 16px; margin-top: 18px; }
+    .entry, .cert { margin-left: 0; }
+    .row { flex-direction: column; gap: 0; }
+    .row > :last-child { color: var(--ink-2); font-size: 13.5px; }
+    li { padding-left: 16px; }
+  }
+
+  @page { size: A4; margin: 0; }
+  @media print {
+    body { background: #fff; }
+    .sheet { margin: 0; box-shadow: none; width: 210mm; min-height: 297mm; }
+    a:hover { color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<article class="sheet" aria-label="Résumé of Dhruv Basia">
+  <header>
+    <h1>Dhruv Basia</h1>
+    <div class="contact">
+      <span>New Delhi, India</span>
+      <span><a href="mailto:basiadhruv@gmail.com">basiadhruv@gmail.com</a></span>
+      <span><a href="https://www.linkedin.com/in/dhruvbasia/" target="_blank" rel="noopener">linkedin.com/in/dhruvbasia</a></span>
+      <span><a href="https://github.com/DhruvBasia" target="_blank" rel="noopener">github.com/DhruvBasia</a></span>
+    </div>
+  </header>
+
+  <section class="skills">
+    <h2>Technical Skills</h2>
+    <p><b>Languages:</b> Python, JavaScript, C++, SQL, HTML, CSS</p>
+    <p><b>AI/ML &amp; Data:</b> NLP, LLMs, Scikit-learn, TensorFlow, Keras, OpenCV, CNNs, NLTK, Pandas, NumPy, Matplotlib</p>
+    <p><b>Web &amp; Backend:</b> React.js, Node.js, Vite, FastAPI, Firebase (Firestore, Auth), REST APIs</p>
+    <p><b>Tools &amp; Other:</b> Git, GitHub, Netlify, VS Code, Network Security &amp; Vulnerability Assessment</p>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="row"><span class="org">Guru Gobind Singh Indraprastha University (GGSIPU)</span><span>New Delhi, India</span></div>
+      <div class="row sub"><span>B.Tech in Artificial Intelligence &amp; Data Science; CGPA: 8.45/10</span><span>2023 – 2027</span></div>
+    </div>
+    <div class="entry">
+      <div class="row"><span class="org">Nutan Vidya Mandir Sr. Sec. School</span><span>New Delhi, India</span></div>
+      <div class="row sub"><span>CBSE Class XII (PCM &amp; Computer Science)</span><span>Graduated: April 2022</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Work Experience</h2>
+    <div class="entry">
+      <div class="row"><span class="org">National Informatics Centre (NIC), Ministry of Home Affairs</span><span>New Delhi, India</span></div>
+      <div class="row sub"><span>Machine Learning Intern – On-site</span><span>Jun 2026 – Aug 2026</span></div>
+      <ul>
+        <li>Building ML pipelines for an AI-driven document intelligence platform: automated document classification, metadata extraction, and information retrieval for government workflows.</li>
+        <li>Collaborating with NIC officials and a cross-functional intern team to design and present ML solutions aligned with government data-handling and security requirements.</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="row"><span class="org">IBM SkillsBuild Summer Program</span><span>Remote</span></div>
+      <div class="row sub"><span>AI Agent Architect Intern – Agentic AI &amp; ML Track</span><span>Jul 2025 – Aug 2025</span></div>
+      <ul>
+        <li>Mastered ML architectures and Agentic AI frameworks through the intensive IBM SkillsBuild program.</li>
+        <li>Simulated AI lifecycles on IBM cloud infrastructure, integrating responsible AI ethical frameworks.</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="row"><span class="org">Student Council, GGSIPU</span><span>On-site</span></div>
+      <div class="row sub"><span>Web Developer – Event Management &amp; Registration System</span><span>2026</span></div>
+      <ul>
+        <li>Developed a centralized web-based event management system supporting registration, role selection (attendee, volunteer, stall), and payment workflows.</li>
+        <li>Implemented enrollment-based data fetching to auto-populate student details, preventing data tampering and eliminating manual input errors.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="entry">
+      <div class="row"><span><span class="proj-title">NeuroLoad AI: Cognitive Load Detection System</span> | <span class="proj-stack">Python, NLTK, Scikit-learn, FastAPI, React</span></span><a class="gh" href="https://github.com/DhruvBasia/Cognitive_Load_Analysis-" target="_blank" rel="noopener">GitHub</a></div>
+      <ul>
+        <li>Engineered an NLP feature-extraction pipeline and trained an MLPClassifier on a custom-labeled dataset to classify text into Low/Medium/High cognitive load with high accuracy.</li>
+        <li>Deployed a FastAPI-based REST API for real-time inference, integrated with a React frontend for live predictions.</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="row"><span><span class="proj-title">Smart Green Commute Tracker</span> | <span class="proj-stack">React.js, Node.js, Firebase, Netlify, Google Gemini API</span></span><a class="gh" href="https://github.com/DhruvBasia/green-commute-tracker" target="_blank" rel="noopener">GitHub</a></div>
+      <ul>
+        <li>Built a serverless, real-time web application to track and quantify personal carbon emissions, integrating a gamified leaderboard to drive sustainable commuting behavior.</li>
+        <li>Engineered a secure API layer with Netlify Functions and an AI-driven eco-nudging system delivering personalized sustainability recommendations.</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="row"><span><span class="proj-title">CodeInsight AI: Automated Code Review Assistant</span> | <span class="proj-stack">Python, FastAPI, OpenAI API, AST Parsing, React</span></span><a class="gh" href="https://github.com/DhruvBasia" target="_blank" rel="noopener">GitHub</a></div>
+      <ul>
+        <li>Developed an AI-powered code review system that analyzes source code using AST parsing and NLP techniques to detect bugs, inefficiencies, and security vulnerabilities in real time.</li>
+        <li>Built a FastAPI backend integrated with LLM APIs to generate contextual feedback, code optimizations, and complexity analysis, achieving significant reduction in manual review time.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <div class="cert row"><span><b>Software Engineering Job Simulation – J.P. Morgan</b> (Virtual)</span><a href="https://drive.google.com/file/d/1f1aeTOvaFzTRdoRkg_h8WfxYltHqYagF/view?usp=sharing" target="_blank" rel="noopener">Link</a></div>
+    <div class="cert row"><span><b>Cyber Gyan Virtual Internship Program – C-DAC</b> (Ministry of Electronics and IT, Govt. of India)</span><a href="https://drive.google.com/file/d/1NDt_PIYhUOn10SwBcS5eopD0vbepGttO/view" target="_blank" rel="noopener">Link</a></div>
+    <div class="cert row"><span><b>Samsung Innovation Campus – Artificial Intelligence Course</b> (On-Campus)</span><a href="https://drive.google.com/file/d/1woL9Fs1BmFesAsUh-wn8iAEHqIa8XJAr/view?usp=sharing" target="_blank" rel="noopener">Link</a></div>
+  </section>
+
+  <section>
+    <h2>Volunteering &amp; Leadership</h2>
+    <div class="entry">
+      <div class="row"><span><b>Chairperson</b> | <span class="sub">IEEE-USAR Student Branch</span></span><span></span></div>
+      <ul>
+        <li>Led and scaled the IEEE student branch through technical events, workshops, and collaborations, boosting engagement.</li>
+        <li>Oversaw technical, operations, and media teams, driving planning, sponsorship coordination, and large-scale events.</li>
+      </ul>
+    </div>
+  </section>
+</article>
+<script>
+  if (new URLSearchParams(location.search).has('embed')) document.body.classList.add('embed');
+</script>
+</body>
+</html>
