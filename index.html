@@ -640,9 +640,25 @@ html[data-theme="ember"] .theme-btn .i-sun{display:block}
 .cred{padding:24px;border-radius:22px}
 .cred h3.sec-kicker{margin-bottom:6px}
 .cred-list{margin-top:10px}
-.cred-list li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;padding:14px 0;border-top:1px solid var(--line)}
+.cred-list li{display:grid;grid-template-columns:84px minmax(0,1fr);gap:16px;align-items:start;padding:16px 0;border-top:1px solid var(--line)}
 .cred-list li:first-child{border-top:0}
-.cred-ico{display:grid;place-items:center;width:44px;height:44px;border-radius:13px;background:var(--c, var(--sky-tint));color:var(--ci, var(--sky-ink))}
+/* institution logos sit on a white badge in both themes (they are drawn for light backgrounds) */
+.cred-logo{display:grid;place-items:center;width:84px;height:60px;padding:7px 10px;border-radius:14px;background:#fff;
+  box-shadow:0 0 0 1px rgba(15,23,41,.09), 0 1px 2px rgba(15,23,41,.06), 0 8px 16px -10px rgba(15,23,41,.22)}
+.cred-logo img{width:100%;height:100%;object-fit:contain}
+.cred-logo-wide{padding:7px 6px}
+.cred-logo-seal{padding:3px 10px}
+.cred-logo-fill{padding:0;overflow:hidden;background:#06204F}
+.cred-logo-fill img{object-fit:cover}
+html[data-theme="ember"] .cred-logo{background:#F7F4F0;box-shadow:0 0 0 1px rgba(255,255,255,.1), 0 8px 18px -10px rgba(0,0,0,.7)}
+html[data-theme="ember"] .cred-logo-fill{background:#06204F}
+html[data-theme="ember"] .cred-logo img{filter:none}
+@media (max-width:699px){
+  .cred-list li{grid-template-columns:72px minmax(0,1fr);gap:14px}
+  .cred-logo{width:72px;height:54px;padding:6px 8px}
+  .cred-logo-wide{padding:6px 4px}
+  .cred-logo-seal{padding:3px 8px}
+}
 .cred-list b{display:block;font:600 15.5px/1.35 var(--f-body);color:var(--ink)}
 .cred-list span{display:block;margin-top:2px;font:400 14px/1.45 var(--f-body);color:var(--ink-2)}
 .cred-list em{display:inline-block;margin-top:6px;font:500 12px/1.2 var(--f-mono);font-style:normal;color:var(--ink-3)}
@@ -1861,11 +1877,11 @@ html[data-theme="ember"] .theme-btn .i-sun{display:block}
           <h3 class="sec-kicker"><span class="num">07</span>Education</h3>
           <ul class="cred-list">
             <li>
-              <span class="cred-ico" aria-hidden="true"><svg class="ic"><use href="#i-cap"/></svg></span>
+              <span class="cred-logo cred-logo-seal" aria-hidden="true"><img src="assets/logos/ggsipu.webp" width="240" height="209" alt="" loading="lazy" decoding="async"></span>
               <div><b>B.Tech, Artificial Intelligence &amp; Data Science</b><span>Guru Gobind Singh Indraprastha University (GGSIPU), University School of Automation &amp; Robotics (USAR), New Delhi</span><em>2023 – 2027 · CGPA 8.45 / 10</em></div>
             </li>
             <li>
-              <span class="cred-ico" style="--c:#F3F5F8;--ci:#4A5568" aria-hidden="true"><svg class="ic"><use href="#i-cap"/></svg></span>
+              <span class="cred-logo cred-logo-seal" aria-hidden="true"><img src="assets/logos/cbse.webp" width="213" height="240" alt="" loading="lazy" decoding="async"></span>
               <div><b>CBSE Class XII · PCM + Computer Science</b><span>Nutan Vidya Mandir Sr. Sec. School</span><em>2022</em></div>
             </li>
           </ul>
@@ -1874,15 +1890,15 @@ html[data-theme="ember"] .theme-btn .i-sun{display:block}
           <h3 class="sec-kicker"><span class="num">08</span>Certifications</h3>
           <ul class="cred-list">
             <li>
-              <span class="cred-ico" style="--c:#FFF4DA;--ci:#8A5A00" aria-hidden="true"><svg class="ic"><use href="#i-badge"/></svg></span>
+              <span class="cred-logo cred-logo-wide" aria-hidden="true"><img src="assets/logos/jpmorgan.webp" width="480" height="106" alt="" loading="lazy" decoding="async"></span>
               <div><b>Software Engineering Job Simulation</b><span>J.P. Morgan</span><em>Virtual · Forage</em></div>
             </li>
             <li>
-              <span class="cred-ico" style="--c:#E4F3E8;--ci:#237A3F" aria-hidden="true"><svg class="ic"><use href="#i-shield"/></svg></span>
+              <span class="cred-logo" aria-hidden="true"><img src="assets/logos/cdac.webp" width="300" height="215" alt="" loading="lazy" decoding="async"></span>
               <div><b>Cyber Gyan Virtual Internship Program</b><span>C-DAC, Ministry of Electronics &amp; IT, Govt. of India</span><em>Virtual programme</em></div>
             </li>
             <li>
-              <span class="cred-ico" style="--c:#FDEEF1;--ci:#9B2C47" aria-hidden="true"><svg class="ic"><use href="#i-badge"/></svg></span>
+              <span class="cred-logo cred-logo-fill" aria-hidden="true"><img src="assets/logos/samsung-innovation-campus.webp" width="400" height="400" alt="" loading="lazy" decoding="async"></span>
               <div><b>Artificial Intelligence course</b><span>Samsung Innovation Campus</span><em>On-campus</em></div>
             </li>
           </ul>
