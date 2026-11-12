@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T15:10:59.742Z",
+  "generatedAt": "2026-11-12T23:37:04.903Z",
   "profile": {
     "login": "DhruvBasia",
     "name": "Dhruv Basia",
@@ -22,13 +22,13 @@
     "Elysian_Website"
   ],
   "contributions": {
-    "total": 196,
-    "commits": 187,
+    "total": 197,
+    "commits": 188,
     "pullRequests": 0,
     "issues": 0,
     "reposCreated": 9,
     "private": 0,
-    "activeDays": 110,
+    "activeDays": 111,
     "busiestDay": {
       "date": "2026-10-10",
       "contributionCount": 18,
@@ -37,7 +37,7 @@
     },
     "streak": {
       "longest": 96,
-      "current": 6
+      "current": 7
     },
     "weeks": [
       [
@@ -2355,8 +2355,8 @@
         },
         {
           "date": "2026-11-12",
-          "count": 0,
-          "level": 0,
+          "count": 1,
+          "level": 1,
           "weekday": 4
         }
       ]
@@ -2372,8 +2372,8 @@
     {
       "name": "TypeScript",
       "color": "#3178c6",
-      "bytes": 1080974,
-      "pct": 32.7
+      "bytes": 1084202,
+      "pct": 32.8
     },
     {
       "name": "JavaScript",
@@ -2432,98 +2432,6 @@
   ],
   "repos": [
     {
-      "name": "DhruvBasia.github.io",
-      "description": "Portfolio of Dhruv Basia: AI & Data Science",
-      "url": "https://github.com/DhruvBasia/DhruvBasia.github.io",
-      "homepage": "https://dhruvbasia.github.io",
-      "stars": 0,
-      "forks": 0,
-      "archived": false,
-      "createdAt": "2026-11-08T06:15:27Z",
-      "pushedAt": "2026-11-12T00:40:32Z",
-      "commits": 17,
-      "language": {
-        "name": "HTML",
-        "color": "#e34c26"
-      },
-      "languages": [
-        {
-          "name": "HTML",
-          "color": "#e34c26",
-          "bytes": 209644
-        },
-        {
-          "name": "JavaScript",
-          "color": "#f1e05a",
-          "bytes": 6648
-        }
-      ],
-      "topics": []
-    },
-    {
-      "name": "DhruvBasia",
-      "description": "Personal GitHub profile README showcasing projects, skills, tech stack, and developer activity.",
-      "url": "https://github.com/DhruvBasia/DhruvBasia",
-      "homepage": null,
-      "stars": 0,
-      "forks": 0,
-      "archived": false,
-      "createdAt": "2025-03-13T07:35:33Z",
-      "pushedAt": "2026-11-11T14:28:35Z",
-      "commits": 134,
-      "language": {
-        "name": "Python",
-        "color": "#3572A5"
-      },
-      "languages": [
-        {
-          "name": "Python",
-          "color": "#3572A5",
-          "bytes": 29637
-        },
-        {
-          "name": "HTML",
-          "color": "#e34c26",
-          "bytes": 1087
-        },
-        {
-          "name": "Shell",
-          "color": "#89e051",
-          "bytes": 535
-        }
-      ],
-      "topics": []
-    },
-    {
-      "name": "astra-agentic-blockchain-security",
-      "description": "ASTRA: Autonomous Security and Threat Response using Agentic AI for Blockchain - multi-agent node-admission security with LangGraph, Ganache and a human in the loop",
-      "url": "https://github.com/DhruvBasia/astra-agentic-blockchain-security",
-      "homepage": null,
-      "stars": 0,
-      "forks": 0,
-      "archived": false,
-      "createdAt": "2026-10-29T09:52:27Z",
-      "pushedAt": "2026-10-30T06:43:11Z",
-      "commits": 2,
-      "language": {
-        "name": "Python",
-        "color": "#3572A5"
-      },
-      "languages": [
-        {
-          "name": "Python",
-          "color": "#3572A5",
-          "bytes": 528708
-        },
-        {
-          "name": "Batchfile",
-          "color": "#C1F12E",
-          "bytes": 3701
-        }
-      ],
-      "topics": []
-    },
-    {
       "name": "stagecue-av",
       "description": "Dual-screen media & cue controller for live events, with a crew phone remote that works over any network",
       "url": "https://github.com/DhruvBasia/stagecue-av",
@@ -2532,8 +2440,8 @@
       "forks": 0,
       "archived": false,
       "createdAt": "2026-10-19T06:22:07Z",
-      "pushedAt": "2026-10-23T18:20:08Z",
-      "commits": 10,
+      "pushedAt": "2026-11-12T20:25:44Z",
+      "commits": 11,
       "language": {
         "name": "TypeScript",
         "color": "#3178c6"
@@ -2542,7 +2450,7 @@
         {
           "name": "TypeScript",
           "color": "#3178c6",
-          "bytes": 1002853
+          "bytes": 1006081
         },
         {
           "name": "JavaScript",
@@ -2576,10 +2484,102 @@
       "forks": 0,
       "archived": false,
       "createdAt": "2026-10-23T17:43:57Z",
-      "pushedAt": "2026-10-23T18:19:58Z",
+      "pushedAt": "2026-11-12T20:25:23Z",
       "commits": 1,
       "language": null,
       "languages": [],
+      "topics": []
+    },
+    {
+      "name": "DhruvBasia",
+      "description": "Personal GitHub profile README showcasing projects, skills, tech stack, and developer activity.",
+      "url": "https://github.com/DhruvBasia/DhruvBasia",
+      "homepage": null,
+      "stars": 0,
+      "forks": 0,
+      "archived": false,
+      "createdAt": "2025-03-13T07:35:33Z",
+      "pushedAt": "2026-11-12T15:20:46Z",
+      "commits": 135,
+      "language": {
+        "name": "Python",
+        "color": "#3572A5"
+      },
+      "languages": [
+        {
+          "name": "Python",
+          "color": "#3572A5",
+          "bytes": 29637
+        },
+        {
+          "name": "HTML",
+          "color": "#e34c26",
+          "bytes": 1087
+        },
+        {
+          "name": "Shell",
+          "color": "#89e051",
+          "bytes": 535
+        }
+      ],
+      "topics": []
+    },
+    {
+      "name": "DhruvBasia.github.io",
+      "description": "Portfolio of Dhruv Basia: AI & Data Science",
+      "url": "https://github.com/DhruvBasia/DhruvBasia.github.io",
+      "homepage": "https://dhruvbasia.github.io",
+      "stars": 0,
+      "forks": 0,
+      "archived": false,
+      "createdAt": "2026-11-08T06:15:27Z",
+      "pushedAt": "2026-11-12T15:11:01Z",
+      "commits": 18,
+      "language": {
+        "name": "HTML",
+        "color": "#e34c26"
+      },
+      "languages": [
+        {
+          "name": "HTML",
+          "color": "#e34c26",
+          "bytes": 209644
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a",
+          "bytes": 6648
+        }
+      ],
+      "topics": []
+    },
+    {
+      "name": "astra-agentic-blockchain-security",
+      "description": "ASTRA: Autonomous Security and Threat Response using Agentic AI for Blockchain - multi-agent node-admission security with LangGraph, Ganache and a human in the loop",
+      "url": "https://github.com/DhruvBasia/astra-agentic-blockchain-security",
+      "homepage": null,
+      "stars": 0,
+      "forks": 0,
+      "archived": false,
+      "createdAt": "2026-10-29T09:52:27Z",
+      "pushedAt": "2026-10-30T06:43:11Z",
+      "commits": 2,
+      "language": {
+        "name": "Python",
+        "color": "#3572A5"
+      },
+      "languages": [
+        {
+          "name": "Python",
+          "color": "#3572A5",
+          "bytes": 528708
+        },
+        {
+          "name": "Batchfile",
+          "color": "#C1F12E",
+          "bytes": 3701
+        }
+      ],
       "topics": []
     },
     {
