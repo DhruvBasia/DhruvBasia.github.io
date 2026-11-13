@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T06:41:23.686Z",
+  "generatedAt": "2026-11-13T19:39:32.614Z",
   "profile": {
     "login": "DhruvBasia",
     "name": "Dhruv Basia",
@@ -11,7 +11,7 @@
     "createdAt": "2022-09-08T14:49:24Z",
     "followers": 1,
     "following": 1,
-    "publicRepos": 16
+    "publicRepos": 15
   },
   "pinned": [
     "internship-intelligence-platform",
@@ -22,16 +22,16 @@
     "Elysian_Website"
   ],
   "contributions": {
-    "total": 198,
-    "commits": 189,
+    "total": 185,
+    "commits": 177,
     "pullRequests": 0,
     "issues": 0,
-    "reposCreated": 9,
+    "reposCreated": 8,
     "private": 0,
     "activeDays": 112,
     "busiestDay": {
-      "date": "2026-10-10",
-      "contributionCount": 18,
+      "date": "2026-08-01",
+      "contributionCount": 14,
       "contributionLevel": "FOURTH_QUARTILE",
       "weekday": 6
     },
@@ -2059,8 +2059,8 @@
         },
         {
           "date": "2026-09-26",
-          "count": 4,
-          "level": 2,
+          "count": 1,
+          "level": 1,
           "weekday": 6
         }
       ],
@@ -2147,8 +2147,8 @@
         },
         {
           "date": "2026-10-10",
-          "count": 18,
-          "level": 4,
+          "count": 7,
+          "level": 3,
           "weekday": 6
         }
       ],
@@ -2361,7 +2361,7 @@
         },
         {
           "date": "2026-11-13",
-          "count": 1,
+          "count": 2,
           "level": 1,
           "weekday": 5
         }
@@ -2370,46 +2370,46 @@
   },
   "languages": [
     {
-      "name": "Python",
-      "color": "#3572A5",
-      "bytes": 1250437,
-      "pct": 37.8
-    },
-    {
       "name": "TypeScript",
       "color": "#3178c6",
-      "bytes": 1084202,
-      "pct": 32.8
+      "bytes": 1006081,
+      "pct": 43.5
+    },
+    {
+      "name": "Python",
+      "color": "#3572A5",
+      "bytes": 565009,
+      "pct": 24.4
     },
     {
       "name": "JavaScript",
       "color": "#f1e05a",
-      "bytes": 503033,
-      "pct": 15.2
+      "bytes": 360590,
+      "pct": 15.6
     },
     {
       "name": "Jupyter Notebook",
       "color": "#DA5B0B",
       "bytes": 172747,
-      "pct": 5.2
+      "pct": 7.5
     },
     {
       "name": "HTML",
       "color": "#e34c26",
-      "bytes": 150229,
-      "pct": 4.5
+      "bytes": 128461,
+      "pct": 5.5
     },
     {
       "name": "CSS",
       "color": "#663399",
-      "bytes": 119983,
-      "pct": 3.6
+      "bytes": 54440,
+      "pct": 2.4
     },
     {
       "name": "Hack",
       "color": "#878787",
       "bytes": 17838,
-      "pct": 0.5
+      "pct": 0.8
     },
     {
       "name": "PHP",
@@ -2420,8 +2420,8 @@
     {
       "name": "Batchfile",
       "color": "#C1F12E",
-      "bytes": 3811,
-      "pct": 0.1
+      "bytes": 3701,
+      "pct": 0.2
     },
     {
       "name": "Shell",
@@ -2438,6 +2438,40 @@
   ],
   "repos": [
     {
+      "name": "DhruvBasia",
+      "description": "Personal GitHub profile README showcasing projects, skills, tech stack, and developer activity.",
+      "url": "https://github.com/DhruvBasia/DhruvBasia",
+      "homepage": null,
+      "stars": 0,
+      "forks": 0,
+      "archived": false,
+      "createdAt": "2025-03-13T07:35:33Z",
+      "pushedAt": "2026-11-13T14:39:33Z",
+      "commits": 136,
+      "language": {
+        "name": "Python",
+        "color": "#3572A5"
+      },
+      "languages": [
+        {
+          "name": "Python",
+          "color": "#3572A5",
+          "bytes": 29637
+        },
+        {
+          "name": "HTML",
+          "color": "#e34c26",
+          "bytes": 1087
+        },
+        {
+          "name": "Shell",
+          "color": "#89e051",
+          "bytes": 535
+        }
+      ],
+      "topics": []
+    },
+    {
       "name": "DhruvBasia.github.io",
       "description": "Portfolio of Dhruv Basia: AI & Data Science",
       "url": "https://github.com/DhruvBasia/DhruvBasia.github.io",
@@ -2446,8 +2480,8 @@
       "forks": 0,
       "archived": false,
       "createdAt": "2026-11-08T06:15:27Z",
-      "pushedAt": "2026-11-12T23:37:06Z",
-      "commits": 19,
+      "pushedAt": "2026-11-13T06:41:24Z",
+      "commits": 20,
       "language": {
         "name": "HTML",
         "color": "#e34c26"
@@ -2526,40 +2560,6 @@
       "topics": []
     },
     {
-      "name": "DhruvBasia",
-      "description": "Personal GitHub profile README showcasing projects, skills, tech stack, and developer activity.",
-      "url": "https://github.com/DhruvBasia/DhruvBasia",
-      "homepage": null,
-      "stars": 0,
-      "forks": 0,
-      "archived": false,
-      "createdAt": "2025-03-13T07:35:33Z",
-      "pushedAt": "2026-11-12T15:20:46Z",
-      "commits": 135,
-      "language": {
-        "name": "Python",
-        "color": "#3572A5"
-      },
-      "languages": [
-        {
-          "name": "Python",
-          "color": "#3572A5",
-          "bytes": 29637
-        },
-        {
-          "name": "HTML",
-          "color": "#e34c26",
-          "bytes": 1087
-        },
-        {
-          "name": "Shell",
-          "color": "#89e051",
-          "bytes": 535
-        }
-      ],
-      "topics": []
-    },
-    {
       "name": "astra-agentic-blockchain-security",
       "description": "ASTRA: Autonomous Security and Threat Response using Agentic AI for Blockchain - multi-agent node-admission security with LangGraph, Ganache and a human in the loop",
       "url": "https://github.com/DhruvBasia/astra-agentic-blockchain-security",
@@ -2626,65 +2626,6 @@
         }
       ],
       "topics": []
-    },
-    {
-      "name": "geospatial-fire-risk-analysis",
-      "description": "Interactive Web GIS platform & multi-criteria spatial risk assessment engine for urban fire hazards and disaster management.",
-      "url": "https://github.com/DhruvBasia/geospatial-fire-risk-analysis",
-      "homepage": "https://seelampur-fire-risk-map.onrender.com",
-      "stars": 0,
-      "forks": 0,
-      "archived": false,
-      "createdAt": "2026-09-26T18:07:12Z",
-      "pushedAt": "2026-10-10T07:31:41Z",
-      "commits": 13,
-      "language": {
-        "name": "Python",
-        "color": "#3572A5"
-      },
-      "languages": [
-        {
-          "name": "Python",
-          "color": "#3572A5",
-          "bytes": 685428
-        },
-        {
-          "name": "JavaScript",
-          "color": "#f1e05a",
-          "bytes": 142443
-        },
-        {
-          "name": "TypeScript",
-          "color": "#3178c6",
-          "bytes": 78121
-        },
-        {
-          "name": "CSS",
-          "color": "#663399",
-          "bytes": 65543
-        },
-        {
-          "name": "HTML",
-          "color": "#e34c26",
-          "bytes": 21768
-        },
-        {
-          "name": "Batchfile",
-          "color": "#C1F12E",
-          "bytes": 110
-        }
-      ],
-      "topics": [
-        "disaster-management",
-        "fire-risk",
-        "geojson",
-        "geopandas",
-        "geospatial",
-        "gis",
-        "maplibre-gl",
-        "spatial-analysis",
-        "web-gis"
-      ]
     },
     {
       "name": "Cognitive_Load_Analysis-",
