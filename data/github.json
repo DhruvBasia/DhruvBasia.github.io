@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T17:58:43.274Z",
+  "generatedAt": "2026-11-14T22:21:43.685Z",
   "profile": {
     "login": "DhruvBasia",
     "name": "Dhruv Basia",
@@ -2444,6 +2444,35 @@
   ],
   "repos": [
     {
+      "name": "DhruvBasia.github.io",
+      "description": "Portfolio of Dhruv Basia: AI & Data Science",
+      "url": "https://github.com/DhruvBasia/DhruvBasia.github.io",
+      "homepage": "https://dhruvbasia.github.io",
+      "stars": 0,
+      "forks": 0,
+      "archived": false,
+      "createdAt": "2026-11-08T06:15:27Z",
+      "pushedAt": "2026-11-14T17:58:44Z",
+      "commits": 23,
+      "language": {
+        "name": "HTML",
+        "color": "#e34c26"
+      },
+      "languages": [
+        {
+          "name": "HTML",
+          "color": "#e34c26",
+          "bytes": 209644
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a",
+          "bytes": 6648
+        }
+      ],
+      "topics": []
+    },
+    {
       "name": "DhruvBasia",
       "description": "Personal GitHub profile README showcasing projects, skills, tech stack, and developer activity.",
       "url": "https://github.com/DhruvBasia/DhruvBasia",
@@ -2473,35 +2502,6 @@
           "name": "Shell",
           "color": "#89e051",
           "bytes": 535
-        }
-      ],
-      "topics": []
-    },
-    {
-      "name": "DhruvBasia.github.io",
-      "description": "Portfolio of Dhruv Basia: AI & Data Science",
-      "url": "https://github.com/DhruvBasia/DhruvBasia.github.io",
-      "homepage": "https://dhruvbasia.github.io",
-      "stars": 0,
-      "forks": 0,
-      "archived": false,
-      "createdAt": "2026-11-08T06:15:27Z",
-      "pushedAt": "2026-11-14T06:18:47Z",
-      "commits": 22,
-      "language": {
-        "name": "HTML",
-        "color": "#e34c26"
-      },
-      "languages": [
-        {
-          "name": "HTML",
-          "color": "#e34c26",
-          "bytes": 209644
-        },
-        {
-          "name": "JavaScript",
-          "color": "#f1e05a",
-          "bytes": 6648
         }
       ],
       "topics": []
