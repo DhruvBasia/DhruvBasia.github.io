@@ -1,20 +1,20 @@
 <!doctype html>
-<html lang="en" data-theme="ivory">
+<html lang="en" data-theme="ivory" data-palette="mono">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="only light">
-<meta name="theme-color" content="#EFE9DE">
+<meta name="theme-color" content="#F4F4F5">
 <title>Dhruv Basia | AI & Data Science</title>
-<meta name="description" content="Dhruv Basia, AI & Data Science (GGSIPU '27, New Delhi), designs, builds and ships AI systems, from the data to the deployment: LangGraph agents, document intelligence at NIC, and apps people use. Résumé, projects, experience and GitHub on one page.">
+<meta name="description" content="Dhruv Basia, AI & Data Science (GGSIPU '27, New Delhi), designs, builds and ships AI systems, from the data to the deployment: LangGraph agents, document intelligence at NIC, and apps people use. Resume, projects, experience and GitHub on one page.">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Dhruv Basia | AI & Data Science">
-<meta property="og:description" content="I design, build and ship AI systems, from the data to the deployment. Intelligent software that works outside the demo. Résumé inside.">
+<meta property="og:description" content="I design, build and ship AI systems, from the data to the deployment. Intelligent software that works outside the demo. Resume inside.">
 <link rel="canonical" href="https://dhruvbasia.github.io/">
 <meta property="og:url" content="https://dhruvbasia.github.io/">
-<meta property="og:image" content="https://dhruvbasia.github.io/assets/dhruv-portrait.jpg">
-<meta name="twitter:image" content="https://dhruvbasia.github.io/assets/dhruv-portrait.jpg">
-<meta property="og:image:alt" content="Dhruv Basia standing outdoors in a pink shirt">
+<meta property="og:image" content="https://dhruvbasia.github.io/assets/dhruv-headshot.jpg">
+<meta name="twitter:image" content="https://dhruvbasia.github.io/assets/dhruv-headshot.jpg">
+<meta property="og:image:alt" content="Dhruv Basia, headshot in a black shirt against a dark grey background">
 <meta property="og:site_name" content="Dhruv Basia">
 <meta property="profile:first_name" content="Dhruv">
 <meta property="profile:last_name" content="Basia">
@@ -24,7 +24,7 @@
 <meta name="twitter:label2" content="Based in">
 <meta name="twitter:data2" content="New Delhi">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230F1729'/%3E%3Ccircle cx='48' cy='16' r='6' fill='%23FFC24B'/%3E%3Ctext x='30' y='44' font-family='Arial,Helvetica,sans-serif' font-weight='700' font-size='26' text-anchor='middle' fill='white'%3EDB%3C/text%3E%3C/svg%3E">
-<link rel="preload" as="image" href="assets/dhruv-portrait.webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/dhruv-headshot.webp" fetchpriority="high">
 <script>
 /* Light (Ivory) or dark (Ember), set before first paint: ?theme= in the URL wins, then the visitor's
    saved choice, then their device setting. */
@@ -36,7 +36,7 @@
   document.documentElement.setAttribute('data-theme', t);
   if (ok[t] === 2) {
     var m = document.querySelector('meta[name="color-scheme"]'); if (m) m.setAttribute('content', 'dark');
-    var c = document.querySelector('meta[name="theme-color"]'); if (c) c.setAttribute('content', '#14100E');
+    var c = document.querySelector('meta[name="theme-color"]'); if (c) c.setAttribute('content', '#09090B');
   }
 })();
 </script>
@@ -94,6 +94,8 @@
     8px 16px 16px rgba(15,23,41,.05),
     16px 32px 40px -8px rgba(15,23,41,.10);
   --tile-border:linear-gradient(180deg, rgba(255,255,255,1), rgba(15,23,41,.06) 40%, rgba(15,23,41,.11));
+  --hero-grad:linear-gradient(92deg,#2F6FEB,#7A4FD6);
+  --btn-ink:#fff;
 }
 
 /* ---------- colour schemes (switch with html[data-theme]) ---------- */
@@ -108,6 +110,7 @@ html[data-theme="ivory"]{
   --edu-a:#F6EEDD; --edu-b:#FBF8F1; --ieee-a:#F4ECE6; --ieee-b:#FBF8F5;
   --fband:#1C1A17; --fband-2:#24211D; --fband-accent:linear-gradient(90deg,#3049CC 0%,#B45309 100%);
   --fv-tint:linear-gradient(160deg,#F3EFE7 0%,#FAF8F3 60%,#EEF0F8 100%);
+  --hero-grad:linear-gradient(92deg,#2B44C8 10%,#7440C8 95%);
 }
 /* Ember (dark) */
 html[data-theme="ember"]{
@@ -131,6 +134,57 @@ html[data-theme="ember"]{
   --hl0:#262019; --hitl-a:#271E11; --hitl-b:#2E2313; --hitl-ink:#EBC27B;
   --fband:#0C0908; --fband-2:#110D0B; --fband-accent:linear-gradient(90deg,#E87C56 0%,#F5B83D 100%);
   --fv-tint:linear-gradient(160deg,#2A1D17 0%,#1E1815 60%,#251F14 100%);
+  --hero-grad:linear-gradient(92deg,#EE8A62 5%,#F5B83D 95%);
+}
+/* ---------- colour scheme: Mono Noir (html[data-palette="mono"]) ----------
+   The Ivory / Ember blocks above are the base; Mono Noir sets a handful of base colours for its dark
+   (data-theme="ember") and light (data-theme="ivory") versions, and the shared blocks derive the rest. */
+html[data-palette][data-theme="ember"]{
+  --surface-2:color-mix(in srgb, var(--surface), var(--ink) 5%); --surface-3:color-mix(in srgb, var(--surface), var(--ink) 9%);
+  --line:rgba(var(--edge-rgb),.09); --line-2:rgba(var(--edge-rgb),.15); --spot:rgba(var(--edge-rgb),.06);
+  --solid:color-mix(in srgb, var(--sky) 55%, #000); --node-stroke:color-mix(in srgb, var(--surface), var(--ink) 20%);
+  --sky-tint:color-mix(in srgb, var(--surface), var(--sky) 16%); --sky-tint-2:color-mix(in srgb, var(--surface), var(--sky) 26%); --sky-soft:color-mix(in srgb, var(--surface), var(--sky) 55%);
+  --tint-a:color-mix(in srgb, var(--surface), var(--bg) 40%); --tint-b:color-mix(in srgb, var(--surface), var(--sky) 5%);
+  --wash:color-mix(in srgb, var(--bg), var(--sky) 7%); --wash-2:color-mix(in srgb, var(--bg), var(--sky) 3%); --wash-3:var(--bg);
+  --btn-a:color-mix(in srgb, var(--sky), #fff 8%); --btn-b:color-mix(in srgb, var(--sky), #000 8%); --btn-a-h:color-mix(in srgb, var(--sky), #fff 16%); --btn-b-h:var(--sky);
+  --photo-bg:#2B2A28; --blush-rgb:110,52,66;
+  --edu-a:color-mix(in srgb, var(--surface), var(--sun) 8%); --edu-b:var(--surface); --ieee-a:color-mix(in srgb, var(--surface), var(--blush-ink) 8%); --ieee-b:var(--surface);
+  --sun-tint:color-mix(in srgb, var(--surface), var(--sun) 12%);
+  --hitl-a:color-mix(in srgb, var(--surface), var(--sun) 10%); --hitl-b:color-mix(in srgb, var(--surface), var(--sun) 16%); --hitl-ink:var(--sun-ink);
+  --hl0:color-mix(in srgb, var(--surface), var(--ink) 7%);
+  --fband:color-mix(in srgb, var(--bg), #000 35%); --fband-2:color-mix(in srgb, var(--bg), #000 12%);
+  --fv-tint:linear-gradient(160deg, color-mix(in srgb, var(--surface), var(--sky) 10%) 0%, var(--surface) 60%, color-mix(in srgb, var(--surface), var(--sun) 6%) 100%);
+}
+html[data-palette][data-theme="ivory"]{
+  --surface:#FFFFFF;
+  --surface-2:color-mix(in srgb, #fff, var(--bg) 55%); --surface-3:color-mix(in srgb, #fff, var(--bg) 92%);
+  --line:rgba(var(--edge-rgb),.08); --line-2:rgba(var(--edge-rgb),.13); --spot:rgba(255,255,255,.42);
+  --solid:var(--ink); --node-stroke:color-mix(in srgb, #fff, var(--ink) 18%); --glass-rgb:255,255,255;
+  --sky-tint:color-mix(in srgb, #fff, var(--sky) 9%); --sky-tint-2:color-mix(in srgb, #fff, var(--sky) 15%); --sky-soft:color-mix(in srgb, #fff, var(--sky) 42%);
+  --tint-a:color-mix(in srgb, #fff, var(--bg) 40%); --tint-b:color-mix(in srgb, var(--bg), var(--sky) 4%);
+  --wash:color-mix(in srgb, var(--bg), var(--sky) 7%); --wash-2:color-mix(in srgb, var(--bg), var(--sky) 4%); --wash-3:color-mix(in srgb, var(--bg), #fff 25%);
+  --btn-a:color-mix(in srgb, var(--sky), #fff 8%); --btn-b:color-mix(in srgb, var(--sky), #000 12%); --btn-a-h:color-mix(in srgb, var(--sky), #fff 14%); --btn-b-h:color-mix(in srgb, var(--sky), #000 4%);
+  --photo-bg:#2B2A28;
+  --edu-a:color-mix(in srgb, #fff, var(--sun) 12%); --edu-b:#fff; --ieee-a:color-mix(in srgb, #fff, var(--blush-ink) 8%); --ieee-b:#fff;
+  --sun-tint:color-mix(in srgb, #fff, var(--sun) 16%);
+  --hitl-a:color-mix(in srgb, #fff, var(--sun) 8%); --hitl-b:color-mix(in srgb, #fff, var(--sun) 16%); --hitl-ink:var(--sun-ink);
+  --fband:color-mix(in srgb, var(--ink), var(--sky) 8%); --fband-2:color-mix(in srgb, var(--ink), var(--sky) 14%);
+  --fv-tint:linear-gradient(160deg, color-mix(in srgb, #fff, var(--sky) 8%) 0%, var(--tint-a) 60%, color-mix(in srgb, #fff, var(--sun) 10%) 100%);
+}
+/* Mono Noir (chosen 2026-11-15): pure black and white, no colour accent; white buttons in dark mode, black in light */
+html[data-palette="mono"][data-theme="ember"]{
+  --bg:#09090B; --surface:#131316; --ink:#FAFAFA; --ink-2:#B4B4BB; --ink-3:#8D8D96;
+  --sky:#FAFAFA; --sky-ink:#FFFFFF; --accent-rgb:250,250,250; --btn-ink:#09090B; --solid:#3F3F46;
+  --sun:#D4D4D8; --sun-ink:#E4E4E7; --warm-rgb:212,212,216;
+  --edge-rgb:250,250,250; --glass-rgb:19,19,22; --wash-rgb:16,16,18;
+  --hero-grad:linear-gradient(92deg,#FFFFFF 5%,#9CA3AF 95%); --fband-accent:linear-gradient(90deg,#3F3F46 0%,#FAFAFA 50%,#3F3F46 100%);
+}
+html[data-palette="mono"][data-theme="ivory"]{
+  --bg:#F4F4F5; --ink:#09090B; --ink-2:#52525B; --ink-3:#62626B;
+  --sky:#18181B; --sky-ink:#18181B; --accent-rgb:24,24,27; --btn-ink:#fff;
+  --sun:#A1A1AA; --sun-ink:#3F3F46; --warm-rgb:161,161,170;
+  --edge-rgb:9,9,11; --wash-rgb:236,236,238;
+  --hero-grad:linear-gradient(92deg,#18181B 5%,#71717A 95%); --fband-accent:linear-gradient(90deg,#18181B 0%,#A1A1AA 100%);
 }
 /* dark-mode details the tokens can't express */
 html[data-theme="ember"] .daylight::after{opacity:.5}
@@ -177,7 +231,7 @@ ul,ol{padding:0;list-style:none}
 /* buttons */
 .btn{--h:48px;display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:var(--h);padding:0 20px;border-radius:14px;border:1px solid transparent;font:600 15px/1 var(--f-body);letter-spacing:-.005em;text-decoration:none;cursor:pointer;white-space:nowrap;-webkit-tap-highlight-color:transparent;transition:background-color .2s, border-color .2s, box-shadow .25s, color .2s}
 .btn-sm{--h:44px;padding:0 16px;font-size:14px;border-radius:12px}
-.btn-primary{color:#fff;background:linear-gradient(180deg,var(--btn-a),var(--btn-b));box-shadow:inset 0 1px 0 rgba(255,255,255,.25), 0 1px 2px rgba(15,23,41,.2), 0 8px 18px -8px rgba(var(--accent-rgb),.7)}
+.btn-primary{color:var(--btn-ink);background:linear-gradient(180deg,var(--btn-a),var(--btn-b));box-shadow:inset 0 1px 0 rgba(255,255,255,.25), 0 1px 2px rgba(15,23,41,.2), 0 8px 18px -8px rgba(var(--accent-rgb),.7)}
 .btn-ghost{color:var(--ink);background:var(--surface);border-color:rgba(var(--edge-rgb),.12);box-shadow:0 1px 2px rgba(15,23,41,.06), inset 0 -1px 0 rgba(15,23,41,.04)}
 .btn-soft{color:var(--sky-ink);background:var(--sky-tint);border-color:rgba(var(--accent-rgb),.16)}
 @media (hover:hover) and (pointer:fine){
@@ -213,8 +267,9 @@ ul,ol{padding:0;list-style:none}
 /* ------------------------------------------------ top bar */
 .topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
 .brand{display:inline-flex;align-items:center;gap:12px;min-height:44px;color:var(--ink);text-decoration:none;border-radius:12px}
-.avatar-mark{position:relative;display:block;flex:none;width:40px;height:40px;border-radius:50%}
-.avatar-mark img{width:100%;height:100%;border-radius:50%;object-fit:cover;background:var(--photo-bg);box-shadow:0 0 0 2px var(--surface), 0 0 0 3px rgba(var(--edge-rgb),.12), 0 6px 14px -6px rgba(15,23,41,.4)}
+/* avatar: rounded square with a white ring (his pick), head-and-shoulders crop */
+.avatar-mark{position:relative;display:block;flex:none;width:40px;height:40px;border-radius:12px}
+.avatar-mark img{width:100%;height:100%;border-radius:12px;object-fit:cover;background:var(--photo-bg);box-shadow:0 0 0 2px #fff, 0 0 0 3px rgba(var(--edge-rgb),.14), 0 6px 14px -6px rgba(0,0,0,.45)}
 .brand .avatar-mark::after{content:"";position:absolute;right:-2px;bottom:-2px;width:12px;height:12px;border-radius:50%;background:var(--leaf);box-shadow:0 0 0 2.5px var(--wash)}
 .brand-text{display:flex;flex-direction:column;line-height:1.15}
 .brand-text b{font:650 15px/1.2 var(--f-display);letter-spacing:-.01em}
@@ -238,17 +293,24 @@ html[data-theme="ember"] .theme-btn .i-sun{display:block}
 @media (hover:hover) and (pointer:fine){.topnav a:hover{background:rgba(var(--glass-rgb),.7);color:var(--ink)}}
 .topnav .btn{margin-left:8px}
 
-/* ------------------------------------------------ bento */
+/* ------------------------------------------------ bento (Night Bento layout: 12 columns, three rows:
+   photo · intro · flagship / four equal tiles / a short strip of GitHub, toolbox and clock) */
 .hero{padding-bottom:28px}
-.bento{display:grid;gap:16px;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(6,minmax(0,1fr));height:clamp(770px, calc(100svh - 96px), 860px);
-  grid-template-areas:"photo intro intro nic"
-    "photo intro intro nic"
-    "photo intro intro resume"
-    "edu   astra stack resume"
-    "ieee  astra gh    gh"
-    "loc   astra gh    gh";}
-.t-photo{grid-area:photo}.t-intro{grid-area:intro}.t-nic{grid-area:nic}.t-resume{grid-area:resume}
-.t-edu{grid-area:edu}.t-ieee{grid-area:ieee}.t-loc{grid-area:loc}.t-astra{grid-area:astra}.t-stack{grid-area:stack}.t-gh{grid-area:gh}
+.bento{display:grid;gap:14px;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:minmax(0,1fr) auto auto;height:clamp(760px, calc(100svh - 88px), 860px);
+  grid-template-areas:
+    "photo photo photo intro intro intro intro intro astra astra astra astra"
+    "nic   nic   nic   edu   edu   edu   lead  lead  lead  resume resume resume"
+    "gh    gh    gh    gh    gh    gh    stack stack stack loc   loc   loc";}
+.t-photo{grid-area:photo}.t-intro{grid-area:intro}.t-astra{grid-area:astra}
+.t-nic{grid-area:nic}.t-edu{grid-area:edu}.t-lead{grid-area:lead}.t-resume{grid-area:resume}
+.t-gh{grid-area:gh}.t-stack{grid-area:stack}.t-loc{grid-area:loc}
+
+/* tile labels carry a small status dot, colour-coded per tile */
+.label .dot{width:7px;height:7px;border-radius:50%;flex:none;background:var(--sky);box-shadow:0 0 0 3px rgba(var(--accent-rgb),.16)}
+.label .dot-sun{background:var(--sun);box-shadow:0 0 0 3px rgba(var(--warm-rgb),.22)}
+.label .dot-leaf{background:var(--leaf);box-shadow:0 0 0 3px rgba(47,143,78,.18)}
+.label .dot-blush{background:var(--blush-ink);box-shadow:0 0 0 3px rgba(var(--blush-rgb),.45)}
+.label .live-dot{margin-right:2px}
 
 .tile{position:relative;isolation:isolate;min-width:0;min-height:0;display:flex;flex-direction:column;padding:20px;border-radius:24px;border:1px solid transparent;overflow:hidden;
   background:var(--tile-bg, linear-gradient(var(--surface),var(--surface))) padding-box, var(--tile-border) border-box;
@@ -282,36 +344,45 @@ html[data-theme="ember"] .theme-btn .i-sun{display:block}
 .t-sub{font:500 14px/1.4 var(--f-body);color:var(--ink-2)}
 
 /* photo */
-.t-photo{padding:0;--tile-bg:linear-gradient(var(--photo-bg),var(--photo-bg))}
-.t-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%;z-index:-1}
-.t-photo .photo-shade{position:absolute;inset:auto 0 0 0;height:38%;z-index:0;background:linear-gradient(to top, rgba(15,23,41,.28), rgba(15,23,41,0));pointer-events:none}
-.glass-pill{position:absolute;left:14px;bottom:14px;z-index:2;display:inline-flex;align-items:center;gap:9px;padding:9px 14px 9px 12px;border-radius:999px;color:var(--ink);font:600 13px/1 var(--f-body);letter-spacing:-.005em;
-  background:rgba(var(--glass-rgb),.74);border:1px solid var(--glass-border);backdrop-filter:blur(14px) saturate(1.6);-webkit-backdrop-filter:blur(14px) saturate(1.6);box-shadow:0 6px 18px -6px rgba(15,23,41,.28)}
-.photo-tag{position:absolute;top:14px;left:14px;z-index:2;padding:6px 10px;border-radius:999px;font:500 12px/1 var(--f-mono);letter-spacing:.04em;color:var(--ink);background:rgba(var(--glass-rgb),.6);border:1px solid var(--glass-border);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+/* the headshot has a dark studio backdrop; the tile matches it so there's no light flash while it loads */
+.t-photo{padding:0;--tile-bg:linear-gradient(#2B2A28,#2B2A28)}
+/* layer 0, not -1: phones were not painting a negative-z photo inside the rounded, isolated tile */
+.t-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 30%;z-index:0}
+.t-photo .photo-shade{position:absolute;inset:auto 0 0 0;height:44%;z-index:1;background:linear-gradient(to top, rgba(8,10,16,.5), rgba(8,10,16,0));pointer-events:none}
+/* dark glass chips on the photo, stacked bottom-left */
+.photo-chips{position:absolute;left:14px;right:14px;bottom:14px;z-index:2;display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.glass-chip{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;color:#F4F2EE;font:500 12.5px/1 var(--f-mono);letter-spacing:.02em;
+  background:rgba(14,13,12,.52);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(12px) saturate(1.4);-webkit-backdrop-filter:blur(12px) saturate(1.4);box-shadow:0 8px 20px -10px rgba(0,0,0,.5)}
+.glass-chip .ic{width:14px;height:14px}
+.glass-chip .live-dot{box-shadow:0 0 0 3px rgba(63,184,106,.25)}
 
 /* intro */
-.t-intro{padding:30px 32px 28px;--tile-bg:radial-gradient(420px 260px at 100% 0%, rgba(var(--warm-rgb),.16), rgba(var(--warm-rgb),0) 70%),
-  radial-gradient(520px 300px at 92% 8%, rgba(var(--accent-rgb),.08), rgba(var(--accent-rgb),0) 70%),
+.t-intro{padding:28px 30px 26px;--tile-bg:radial-gradient(460px 260px at 100% 0%, rgba(var(--accent-rgb),.10), rgba(var(--accent-rgb),0) 70%),
+  radial-gradient(420px 260px at 0% 110%, rgba(var(--warm-rgb),.12), rgba(var(--warm-rgb),0) 70%),
   linear-gradient(var(--surface),var(--surface))}
-.t-intro .label{color:var(--sky-ink);display:block}
-.name{margin-top:18px;font:720 clamp(46px, min(6.1vw, 9.6vh), 88px)/.92 var(--f-display);font-variation-settings:"opsz" 96;letter-spacing:-.04em;color:var(--ink)}
-.thesis{margin-top:16px;max-width:44ch;font:450 clamp(18px, 1.55vw, 21px)/1.42 var(--f-body);letter-spacing:-.012em;color:var(--ink-2);text-wrap:pretty}
+.t-intro .label{display:flex}
+.name{margin-top:16px;font:740 clamp(44px, min(4.7vw, 8.6vh), 72px)/.94 var(--f-display);font-variation-settings:"opsz" 96;letter-spacing:-.045em;color:var(--ink)}
+.h-lead{margin-top:14px;max-width:30ch;font:650 clamp(18px, 1.5vw, 22px)/1.3 var(--f-display);letter-spacing:-.018em;color:var(--ink);text-wrap:pretty}
+.h-lead em{font-style:normal;background:var(--hero-grad);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.thesis{margin-top:10px;max-width:46ch;font:450 15.5px/1.55 var(--f-body);color:var(--ink-2);text-wrap:pretty}
 .thesis strong{color:var(--ink);font-weight:600}
-.thesis .hl{white-space:nowrap;color:var(--ink);font-weight:600;background:linear-gradient(transparent 58%, var(--blush) 58%, var(--blush) 92%, transparent 92%);padding:0 2px;margin:0 -2px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
-.intro-foot{margin-top:auto;padding-top:20px;display:flex;flex-direction:column;gap:12px}
+/* focus chips: one line, fading at the edge; dropped on short screens so the buttons always fit */
+.focus-chips{display:flex;flex-wrap:nowrap;gap:6px;margin-top:16px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+.focus-chips li{flex:none;padding:6px 11px;border-radius:999px;border:1px solid rgba(var(--edge-rgb),.1);background:var(--surface-2);font:600 12.5px/1.2 var(--f-body);color:var(--ink-2)}
+@media (min-width:1180px) and (max-height:820px){.focus-chips{display:none}}
+.intro-foot{margin-top:auto;padding-top:18px;display:flex;flex-direction:column;gap:10px}
 /* shorter laptop screens: tighten the intro card so the tagline, buttons and email row all fit */
-@media (min-width:1100px) and (max-height:920px){
-  .t-intro{padding:24px 32px 22px}
-  .t-intro .name{margin-top:14px}
-  .t-intro .thesis{margin-top:12px}
-  .t-intro .intro-foot{padding-top:16px;gap:10px}
+@media (min-width:1180px) and (max-height:920px){
+  .t-intro{padding:22px 28px 20px}
+  .t-intro .name{margin-top:12px}
+  .t-intro .h-lead{margin-top:10px}
+  .t-intro .intro-foot{padding-top:14px;gap:8px}
 }
 .cta-row{display:flex;flex-wrap:wrap;gap:10px}
 .contact-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .contact-row .copy-email{flex:0 1 auto}
 
-/* NIC */
-.t-nic{--tile-bg:linear-gradient(170deg,var(--surface) 0%, var(--surface-2) 100%)}
+/* NIC, education, leadership: label · logo + title · organisation · detail pinned to the bottom */
 .org-mark{display:inline-grid;place-items:center;min-width:46px;height:46px;padding:0 9px;border-radius:14px;background:var(--surface);border:1px solid rgba(var(--edge-rgb),.12);box-shadow:0 1px 2px rgba(15,23,41,.06), inset 0 -2px 0 rgba(15,23,41,.04);font:750 15px/1 var(--f-display);letter-spacing:.02em;color:var(--ink)}
 /* NIC logo badge: white in both themes, like the education and certification logos */
 .org-logo{display:inline-grid;place-items:center;flex:none;height:46px;padding:0 10px;border-radius:14px;background:#fff;
@@ -324,26 +395,25 @@ html[data-theme="ember"] .theme-btn .i-sun{display:block}
 .org-logo-box img{height:48px}
 html[data-theme="ember"] .org-logo{background:#F7F4F0;box-shadow:0 0 0 1px rgba(255,255,255,.1), 0 8px 18px -10px rgba(0,0,0,.7)}
 html[data-theme="ember"] .org-logo img{filter:none}
-.nic-top{display:flex;align-items:center;gap:12px;margin-top:14px}
-.nic-top .t-h{font-size:22px}
-.nic-org{margin-top:10px;font:600 15px/1.35 var(--f-body);color:var(--ink);letter-spacing:-.01em}
-.nic-when{margin-top:4px}
-.mini-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:10px}
-.mini-chips li{padding:5px 9px;border-radius:8px;background:var(--sky-tint);color:var(--sky-ink);font:500 12px/1.2 var(--f-body)}
-/* narrower laptops: the NIC tile's text wraps more, so keep its chips on one line (fading at the edge) */
-@media (min-width:1100px) and (max-width:1365px){
-  .t-nic .nic-top{margin-top:10px}
-  .t-nic .nic-org{margin-top:8px}
-  .t-nic .mini-chips{flex-wrap:nowrap;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,#000 78%,transparent);mask-image:linear-gradient(90deg,#000 78%,transparent)}
-  .t-nic .mini-chips li{flex:none}
-}
+.org-row{display:flex;align-items:center;gap:12px;margin-top:14px;min-width:0}
+.org-row .t-h{font-size:22px;min-width:0}
+.org-name{margin-top:10px;font:600 14.5px/1.35 var(--f-body);color:var(--ink);letter-spacing:-.01em}
+.tile .tail{margin-top:auto;padding-top:12px}
+.t-lead .tail{font:450 13.5px/1.5 var(--f-body);color:var(--ink-2)}
+/* the NIC focus chips stay on one line and fade at the tile's edge */
+.mini-chips{display:flex;flex-wrap:nowrap;gap:6px;margin-top:12px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,#000 76%,transparent);mask-image:linear-gradient(90deg,#000 76%,transparent)}
+.mini-chips li{flex:none;padding:5px 9px;border-radius:8px;background:var(--sky-tint);color:var(--sky-ink);font:500 12px/1.2 var(--f-body)}
+/* big number in the accent colour (CGPA) */
+.metric-row{display:flex;align-items:baseline;gap:10px;margin-top:auto;padding-top:12px}
+.metric{font:740 40px/1 var(--f-display);letter-spacing:-.045em;color:var(--sky-ink);font-variant-numeric:tabular-nums}
+.metric-row span{font:500 12px/1.3 var(--f-mono);color:var(--ink-3);letter-spacing:.02em}
 .gov-tag{display:inline-flex;align-items:center;gap:6px;font:500 12px/1.2 var(--f-mono);color:var(--ink-3)}
 
-/* résumé tile */
-.t-resume{--tile-bg:linear-gradient(170deg,var(--tint-b) 0%, var(--tint-a) 55%, var(--surface) 100%)}
+/* resume tile */
+.t-resume{--tile-bg:radial-gradient(320px 200px at 50% 100%, rgba(var(--accent-rgb),.08), rgba(var(--accent-rgb),0) 70%), linear-gradient(var(--surface),var(--surface))}
 .resume-btns{display:flex;gap:8px;margin-top:12px;position:relative;z-index:3}
 .resume-btns .btn{flex:1;padding:0 12px}
-.paper-peek{position:absolute;left:50%;top:116px;width:76%;aspect-ratio:794/1123;background:#fff;border-radius:3px;overflow:hidden;cursor:zoom-in;z-index:1;
+.paper-peek{position:absolute;left:50%;top:104px;width:76%;aspect-ratio:794/1123;background:#fff;border-radius:3px;overflow:hidden;cursor:zoom-in;z-index:1;
   transform:translateX(-50%) rotate(-2.5deg);box-shadow:var(--shadow-paper);transition:transform .6s var(--ease)}
 .paper-peek iframe,.sheet-big iframe{position:absolute;top:0;left:0;width:840px;max-width:none;height:1240px;border:0;transform-origin:0 0;pointer-events:none;background:transparent}
 .paper-peek::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(255,255,255,0) 55%, rgba(var(--wash-rgb),.0) 100%);pointer-events:none}
@@ -352,12 +422,16 @@ html[data-theme="ember"] .org-logo img{filter:none}
 }
 
 /* ASTRA tile */
-.t-astra{--tile-bg:linear-gradient(180deg,var(--surface) 0%, var(--surface) 40%, var(--tint-a) 100%)}
-.t-astra .t-h{font-size:26px;margin-top:12px}
+.t-astra{padding:20px 22px;--tile-bg:radial-gradient(440px 260px at 100% 0%, rgba(var(--warm-rgb),.12), rgba(var(--warm-rgb),0) 70%), linear-gradient(var(--surface),var(--surface))}
+.t-astra .t-h{font-size:26px;margin-top:2px}
 .t-astra .t-sub{margin-top:4px}
-.astra-graph{flex:1;min-height:0;margin:14px -4px 10px;display:flex;align-items:center;justify-content:center;border-radius:16px;
-  background-color:var(--tint-a);background-image:linear-gradient(rgba(var(--accent-rgb),.07) 1px, transparent 1px),linear-gradient(90deg, rgba(var(--accent-rgb),.07) 1px, transparent 1px);background-size:16px 16px;background-position:-1px -1px;border:1px solid rgba(var(--accent-rgb),.10);padding:10px 8px}
-.astra-graph svg{width:100%;height:100%;max-height:220px}
+.tile-more{position:relative;z-index:6;display:inline-flex;align-items:center;gap:5px;min-height:32px;padding:0 2px;border-radius:8px;font:650 14px/1 var(--f-body);color:var(--sky-ink);text-decoration:none;white-space:nowrap}
+@media (hover:hover) and (pointer:fine){.tile-more:hover{text-decoration:underline;text-underline-offset:3px}}
+.astra-graph{flex:1;min-height:0;margin:14px 0 16px;display:flex;align-items:center;justify-content:center;border-radius:16px;
+  background-color:var(--tint-a);background-image:linear-gradient(rgba(var(--accent-rgb),.07) 1px, transparent 1px),linear-gradient(90deg, rgba(var(--accent-rgb),.07) 1px, transparent 1px);background-size:16px 16px;background-position:-1px -1px;border:1px solid rgba(var(--accent-rgb),.10);padding:12px 10px}
+.astra-graph svg{width:100%;height:100%;max-height:250px}
+.astra-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 14px;margin-top:12px;font:500 12px/1.35 var(--f-mono);color:var(--ink-3)}
+.astra-foot .synth-tag{margin-top:0}
 .astra-metric{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap;font:600 15px/1.2 var(--f-body);color:var(--ink)}
 .astra-metric b{font:700 24px/1 var(--f-display);letter-spacing:-.03em;color:var(--ink)}
 .astra-metric .dotsep{color:var(--ink-3);padding:0 2px}
@@ -392,28 +466,24 @@ html[data-theme="ember"] .org-logo img{filter:none}
 .mini .t-b{font-size:12.5px}
 .mini text{font-family:var(--f-mono);font-size:12px;font-weight:500}
 
-/* GitHub tile */
-.t-gh .tile-head .label{color:var(--ink-2)}
+/* GitHub tile: a wide, short strip. Facts on the left, the contribution heatmap on the right; the whole tile opens github.com */
+.t-gh{display:grid;grid-template-columns:minmax(252px,.9fr) minmax(0,1.1fr);align-items:center;column-gap:20px;padding:16px 18px}
+.gh-info{display:flex;flex-direction:column;min-width:0;align-self:stretch}
+.t-gh .label{color:var(--ink-2)}
 .t-gh .label .ic{width:16px;height:16px}
-.gh-mini-heat{margin-top:14px;aspect-ratio:636/84;width:100%}
+.t-gh .label .ic-sm{width:13px;height:13px;opacity:.6}
+.gh-mini-heat{aspect-ratio:636/84;width:100%}
 .gh-mini-heat svg{width:100%;height:auto}
 .gh-mini-caption{margin-top:8px}
-.gh-mini-caption b{color:var(--ink);font-weight:600}
+.gh-mini-caption b{display:block;color:var(--ink);font-weight:600}
+.gh-active{display:block;margin-top:2px}
+.t-gh .langbar{margin-top:auto;height:8px}
+.t-gh .lang-legend{margin-top:8px;max-height:16px;overflow:hidden}
 .gh-recent{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;max-height:28px;overflow:hidden}
 .gh-recent li{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 10px;border-radius:9px;background:var(--surface-2);border:1px solid rgba(var(--edge-rgb),.06);font:500 12.5px/1 var(--f-body);color:var(--ink);white-space:nowrap}
 .gh-recent li span{font:400 12px/1 var(--f-mono);color:var(--ink-3)}
-/* nothing in the GitHub tile may squash (chips used to get cut off by the language bar) */
-.t-gh > *{flex-shrink:0}
-.t-gh .gh-recent{margin-bottom:12px}
-/* shorter laptop screens: tighten spacing so the tile still fits everything */
-@media (min-width:1100px) and (max-height:920px){
-  .t-gh{padding-block:16px}
-  .t-gh .gh-mini-heat{margin-top:8px}
-  .t-gh .gh-mini-caption{margin-top:6px}
-  .t-gh .gh-recent{margin-top:8px;margin-bottom:8px}
-  .t-gh .langbar{height:8px}
-  .t-gh .lang-legend{margin-top:8px}
-}
+/* the hero strip has no room for recent-repo chips; the GitHub section below shows them */
+.t-gh .gh-recent{display:none}
 .gh-recent-block{margin-top:26px}
 .gh-recent-lg{max-height:none;gap:8px}
 .gh-recent-lg li{height:34px;padding:0 12px;font-size:13.5px;background:var(--surface);border-color:rgba(var(--edge-rgb),.1)}
@@ -430,17 +500,7 @@ html[data-theme="ember"] .org-logo img{filter:none}
 .t-small .s-copy{display:flex;flex-direction:column;min-width:0;flex:1}
 .t-small .t-h{font-size:20px;margin-top:6px}
 .t-small .t-sub{font-size:13px;margin-top:2px}
-.t-edu{--tile-bg:linear-gradient(160deg,var(--edu-a) 0%, var(--edu-b) 100%)}
-.t-edu .label{color:var(--sun-ink)}
-.cgpa{display:flex;flex-direction:column;align-items:flex-end;flex:none;text-align:right}
-.cgpa b{font:720 40px/1 var(--f-display);letter-spacing:-.04em;color:var(--ink)}
-.cgpa span{font:500 12px/1.2 var(--f-mono);color:var(--sun-ink);margin-top:4px}
-.t-ieee{--tile-bg:linear-gradient(160deg,var(--ieee-a) 0%, var(--ieee-b) 100%)}
-.t-ieee .label{color:var(--blush-ink)}
-.badge-round{display:grid;place-items:center;width:52px;height:52px;border-radius:16px;flex:none;background:var(--surface);color:var(--blush-ink);box-shadow:0 0 0 1px rgba(155,44,71,.14), 0 4px 10px -4px rgba(155,44,71,.3)}
-.badge-round .ic{width:24px;height:24px}
-.t-loc{--tile-bg:linear-gradient(160deg,var(--wash) 0%, var(--tint-a) 70%, var(--surface) 100%)}
-.t-loc .label{color:var(--sky-ink)}
+.t-loc{padding:14px 16px 14px 18px}
 .clock{margin-top:4px;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px;font:600 15px/1.2 var(--f-mono);color:var(--ink);font-variant-numeric:tabular-nums}
 .clock small{font:500 12px/1.2 var(--f-mono);color:var(--ink-3);white-space:nowrap}
 .india{width:104px;height:104px;flex:none;margin:-10px -6px -10px 0}
@@ -453,7 +513,7 @@ html[data-theme="ember"] .org-logo img{filter:none}
 @keyframes ring{0%{transform:scale(.6);opacity:.9}100%{transform:scale(3.4);opacity:0}}
 
 /* stack marquee */
-.t-stack{padding:16px 0 14px}
+.t-stack{padding:16px 0 14px;justify-content:center}
 .t-stack .tile-head{padding:0 18px}
 .marquee{position:relative;overflow:hidden;margin-top:10px;-webkit-mask-image:linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);mask-image:linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent)}
 .marquee + .marquee{margin-top:6px}
@@ -563,6 +623,29 @@ html[data-theme="ember"] .org-logo img{filter:none}
 .proj p{margin-top:8px;font-size:14.5px;line-height:1.55;color:var(--ink-2)}
 .proj .p-stack{margin-top:14px;font:500 12px/1.5 var(--f-mono);color:var(--ink-3)}
 .proj .p-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:16px}
+/* small picture of each project, beside its name */
+.p-title{display:flex;align-items:center;gap:14px;margin-top:14px;min-width:0}
+.proj .p-title h3{margin-top:0;min-width:0}
+.p-thumb{width:60px;height:60px;flex:none;border-radius:16px;object-fit:cover;background:var(--surface-2);
+  box-shadow:0 0 0 1px rgba(var(--edge-rgb),.12), 0 10px 20px -12px rgba(0,0,0,.5)}
+.proj-wide .p-thumb{width:68px;height:68px;border-radius:18px}
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  .p-thumb{transition:transform .5s var(--ease)}
+  .proj:hover .p-thumb{transform:scale(1.06) rotate(-2deg)}
+}
+/* project filter: All / Academic / Personal / Industry */
+.pf-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;margin:-4px 0 18px}
+.pf-row[hidden]{display:none}
+.pf{display:inline-flex;flex-wrap:wrap;gap:4px;padding:5px;border-radius:14px;background:var(--surface);box-shadow:0 0 0 1px rgba(var(--edge-rgb),.1)}
+.pf button{min-height:40px;padding:0 16px;border:0;border-radius:10px;background:transparent;font:600 14px/1 var(--f-body);color:var(--ink-2);cursor:pointer;transition:background-color .2s, color .2s}
+.pf button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+@media (hover:hover) and (pointer:fine){.pf button:not([aria-pressed="true"]):hover{background:var(--surface-2);color:var(--ink)}}
+.proj[hidden]{display:none}
+@media (max-width:699px){
+  .pf{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:100%}
+  .pf button{padding:0 6px;font-size:13.5px}
+  .p-thumb,.proj-wide .p-thumb{width:56px;height:56px;border-radius:14px}
+}
 .lnk{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 12px;border-radius:11px;background:var(--surface-2);border:1px solid rgba(var(--edge-rgb),.07);color:var(--ink);font:600 13px/1 var(--f-body);text-decoration:none;transition:background-color .2s, border-color .2s, color .2s}
 .lnk .ic{width:14px;height:14px}
 @media (hover:hover) and (pointer:fine){.lnk:hover{background:var(--sky-tint);border-color:rgba(var(--accent-rgb),.3);color:var(--sky-ink)}}
@@ -648,11 +731,15 @@ html[data-theme="ember"] .org-logo img{filter:none}
 .skill-card{grid-column:span 2;padding:22px;border-radius:22px}
 .skill-card.wide{grid-column:span 3}
 .skill-card h3{display:flex;align-items:center;gap:10px;font:650 18px/1.2 var(--f-display);letter-spacing:-.02em}
-.skill-card h3 i{width:10px;height:10px;border-radius:3px;background:var(--c);transform:rotate(45deg)}
+.skill-card h3 i{flex:none;width:10px;height:10px;border-radius:3px;background:var(--c);transform:rotate(45deg)}
+.skill-what{margin-top:8px;font:400 14.5px/1.45 var(--f-body);color:var(--ink-2)}
+.skill-card.skill-strip{grid-column:1 / -1;display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;padding:16px 22px}
+.skill-strip .chips{margin-top:0}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .chips li{display:inline-flex;align-items:center;border-radius:10px;background:var(--surface-2);border:1px solid rgba(var(--edge-rgb),.07);overflow:hidden;font:500 13.5px/1 var(--f-body);color:var(--ink)}
 .chips li > span{padding:9px 11px}
-.chips .ev{display:inline-flex;align-items:center;gap:4px;align-self:stretch;padding:0 10px;min-height:34px;background:var(--surface);border-left:1px solid rgba(var(--edge-rgb),.07);font:500 12px/1 var(--f-mono);color:var(--sky-ink);text-decoration:none}
+.chips li > span{min-width:0}
+.chips .ev{flex:none;white-space:nowrap;display:inline-flex;align-items:center;gap:4px;align-self:stretch;padding:0 10px;min-height:34px;background:var(--surface);border-left:1px solid rgba(var(--edge-rgb),.07);font:500 12px/1 var(--f-mono);color:var(--sky-ink);text-decoration:none}
 @media (hover:hover) and (pointer:fine){.chips .ev:hover{background:var(--sky-tint)}}
 .cred-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:16px}
 .cred{padding:24px;border-radius:22px}
@@ -681,7 +768,7 @@ html[data-theme="ember"] .cred-logo img{filter:none}
 .cred-list span{display:block;margin-top:2px;font:400 14px/1.45 var(--f-body);color:var(--ink-2)}
 .cred-list em{display:inline-block;margin-top:6px;font:500 12px/1.2 var(--f-mono);font-style:normal;color:var(--ink-3)}
 
-/* résumé section */
+/* resume section */
 .resume-sec{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center;padding:clamp(24px,4vw,56px);border-radius:32px;overflow:hidden;
   box-shadow:var(--shadow-card), inset 0 1px 0 var(--hi);
   background:radial-gradient(600px 400px at 85% 20%, rgba(var(--warm-rgb),.14), transparent 70%), linear-gradient(160deg,var(--tint-b) 0%, var(--tint-a) 55%, var(--surface) 100%)}
@@ -746,8 +833,8 @@ html[data-theme="ember"] .cred-logo img{filter:none}
 .fs-v .ago{font-weight:500;color:var(--f-ink-2)}
 .foot-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,.7fr) minmax(0,.7fr) minmax(0,1fr);gap:clamp(28px,4vw,64px);padding:clamp(40px,5vw,64px) 0 clamp(16px,2vw,24px)}
 .foot-brand{display:inline-flex;align-items:center;gap:14px;color:inherit;text-decoration:none}
-.foot-brand .avatar-mark{width:48px;height:48px}
-.foot-brand .avatar-mark img{box-shadow:0 0 0 2px rgba(255,255,255,.16), 0 8px 18px -8px rgba(0,0,0,.6)}
+.foot-brand .avatar-mark{width:48px;height:48px;border-radius:14px}
+.foot-brand .avatar-mark img{border-radius:14px;box-shadow:0 0 0 2px #fff, 0 8px 18px -8px rgba(0,0,0,.6)}
 .foot-name{display:block;font:680 22px/1.1 var(--f-display);letter-spacing:-.03em;color:var(--f-ink)}
 .foot-role{display:block;margin-top:4px;font:500 12.5px/1.3 var(--f-mono);color:var(--f-ink-3)}
 .foot-line{margin-top:18px;max-width:46ch;color:var(--f-ink-2);font-size:15px;line-height:1.65}
@@ -904,8 +991,8 @@ html[data-theme="ember"] .cred-logo img{filter:none}
 .past-hero .float-nav{transform:translate(-50%,0);opacity:1;visibility:visible;transition:transform .5s var(--ease), opacity .3s, visibility 0s}
 @media (prefers-reduced-motion:reduce){.float-nav,.past-hero .float-nav{transform:translate(-50%,0);transition:opacity .2s, visibility 0s}}
 .fn-brand{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;text-decoration:none}
-.fn-brand .avatar-mark{width:34px;height:34px}
-.fn-brand .avatar-mark img{box-shadow:0 0 0 1.5px rgba(var(--edge-rgb),.14)}
+.fn-brand .avatar-mark{width:34px;height:34px;border-radius:10px}
+.fn-brand .avatar-mark img{border-radius:10px;box-shadow:0 0 0 1.5px #fff, 0 0 0 2.5px rgba(var(--edge-rgb),.14)}
 .fn-link{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:999px;color:var(--ink-2);text-decoration:none;font:500 14px/1 var(--f-body);transition:background-color .2s, color .2s}
 .fn-link[aria-current="true"]{background:rgba(var(--edge-rgb),.06);color:var(--ink)}
 @media (hover:hover) and (pointer:fine){.fn-link:hover{color:var(--ink);background:rgba(var(--edge-rgb),.05)}}
@@ -928,7 +1015,7 @@ html[data-theme="ember"] .cred-logo img{filter:none}
   .float-nav,.mbar,.glass-pill,.viewer-bar,.photo-tag{background:rgba(var(--glass-rgb),.96);backdrop-filter:none;-webkit-backdrop-filter:none}
 }
 
-/* ------------------------------------------------ résumé viewer */
+/* ------------------------------------------------ resume viewer */
 .viewer{padding:0;margin:auto;border:0;width:min(1000px, calc(100vw - 48px));height:calc(100dvh - 48px);max-width:none;max-height:none;border-radius:26px;overflow:hidden;color:var(--ink);
   background:radial-gradient(800px 400px at 50% -10%, var(--surface), rgba(255,255,255,0) 70%), linear-gradient(180deg,var(--surface-3),var(--surface-3));
   box-shadow:0 0 0 1px rgba(var(--edge-rgb),.08), 0 30px 80px -20px rgba(15,23,41,.45)}
@@ -949,7 +1036,7 @@ html[data-theme="ember"] .cred-logo img{filter:none}
 .vb-meta{font:500 12px/1.3 var(--f-mono);color:var(--ink-3)}
 .vb-actions{display:flex;align-items:center;gap:6px;flex:none}
 .vb-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;min-width:44px;padding:0 14px;border-radius:12px;border:1px solid rgba(var(--edge-rgb),.1);background:var(--surface);color:var(--ink);font:600 14px/1 var(--f-body);text-decoration:none;cursor:pointer;transition:background-color .2s, border-color .2s}
-.vb-btn.primary{background:linear-gradient(180deg,var(--btn-a),var(--btn-b));border-color:transparent;color:#fff}
+.vb-btn.primary{background:linear-gradient(180deg,var(--btn-a),var(--btn-b));border-color:transparent;color:var(--btn-ink)}
 .vb-close{padding:0;width:44px;background:var(--solid);color:#fff;border-color:var(--solid)}
 @media (hover:hover) and (pointer:fine){.vb-btn:not(.primary):not(.vb-close):hover{border-color:rgba(var(--edge-rgb),.25)}}
 .viewer-body{position:absolute;inset:0;overflow:auto;overscroll-behavior:contain;padding:96px 24px 40px}
@@ -961,28 +1048,28 @@ html[data-theme="ember"] .cred-logo img{filter:none}
 @media (max-width:1199px){
   .topnav a[href="#more"],.topnav a[href="#skills"]{display:none}
 }
+/* tablets and narrow laptops: 6 columns, natural height */
+@media (max-width:1179px){
+  .bento{height:auto;grid-template-columns:repeat(6,minmax(0,1fr));grid-template-rows:none;grid-auto-rows:auto;
+    grid-template-areas:"photo photo intro  intro  intro  intro"
+      "astra astra astra  nic    nic    nic"
+      "astra astra astra  edu    edu    edu"
+      "lead  lead  lead   resume resume resume"
+      "gh    gh    gh     gh     gh     gh"
+      "stack stack stack  loc    loc    loc";}
+  .t-photo{min-height:440px}
+  .t-astra{min-height:460px}
+  .t-nic,.t-edu,.t-lead{min-height:200px}
+  .t-resume{min-height:250px}
+  .t-stack,.t-loc{min-height:118px}
+}
 @media (max-width:1099px){
   .topnav{display:none}
-  .bento{height:auto;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;grid-auto-rows:auto;
-    grid-template-areas:"photo intro"
-      "nic   resume"
-      "gh    gh"
-      "astra edu"
-      "astra ieee"
-      "astra loc"
-      "stack stack";}
-  .t-photo{min-height:460px}
   .k-city{display:none}
   .t-intro{padding:26px 24px 24px}
   .cta-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
   .cta-row .btn{padding:0 8px;gap:6px;font-size:14.5px;min-width:0}
   .cta-row .btn .ic{width:16px;height:16px}
-  .t-nic{min-height:250px}
-  .t-resume{min-height:300px}
-  .t-gh{min-height:250px}
-  .t-small{min-height:124px}
-  .t-stack{min-height:124px}
-  .astra-graph svg{max-height:240px}
   .sec-head{grid-template-columns:1fr}
   .proj-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .gh-grid{grid-template-columns:minmax(0,1fr)}
@@ -1022,22 +1109,28 @@ html[data-theme="ember"] .cred-logo img{filter:none}
   .topbar{height:64px}
   .brand-text span{display:none}
   .top-actions{gap:6px}
-  .bento{gap:12px;
+  .bento{gap:12px;grid-template-columns:repeat(2,minmax(0,1fr));
     grid-template-areas:"photo  photo"
       "intro  intro"
-      "nic    nic"
-      "edu    ieee"
       "astra  astra"
+      "nic    nic"
+      "edu    edu"
+      "lead   lead"
       "gh     gh"
       "resume resume"
       "loc    loc"
       "stack  stack";}
   .tile{border-radius:22px}
-  .t-photo{min-height:0;height:262px}
-  .t-photo img{object-position:50% 18%}
+  .t-photo{min-height:0;height:300px}
+  .t-photo img{object-position:52% 26%}
   .t-intro{padding:22px 20px 20px}
   .name{margin-top:12px}
-  .thesis{margin-top:10px;font-size:17px;max-width:none}
+  .h-lead{max-width:none}
+  .thesis{max-width:none}
+  .t-astra{min-height:0}
+  .t-nic,.t-edu,.t-lead{min-height:0}
+  .t-gh{grid-template-columns:1fr;row-gap:14px}
+  .t-gh .langbar{margin-top:12px}
   .intro-foot{padding-top:18px}
   .k-city{display:none}
   .cta-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
@@ -1048,7 +1141,6 @@ html[data-theme="ember"] .cred-logo img{filter:none}
   .blueprint{padding:8px}
   .vb-actions .vb-btn{padding:0 6px;gap:6px;font-size:13.5px;white-space:nowrap}
   .india{margin:-8px 0 -8px 0;width:96px;height:96px}
-  .photo-tag{display:none}
   .gh-recent-block{display:none}
   .gh-block-title{flex-wrap:wrap}
   .contact{padding:28px 20px}
@@ -1059,16 +1151,9 @@ html[data-theme="ember"] .cred-logo img{filter:none}
   .contact-row .copy-email{flex:1 1 100%}
   .contact-row .copy-email .ce-addr{flex:1}
   .contact-row .icon-btn{flex:1}
-  .t-small{flex-direction:column;align-items:flex-start;gap:10px;min-height:0;padding:16px}
-  .t-edu .cgpa{align-items:flex-start;text-align:left}
-  .t-edu .cgpa b{font-size:32px}
-  .t-edu .cgpa span{white-space:nowrap}
-  .t-ieee .badge-round{display:none}
-  .t-loc{flex-direction:row;align-items:center}
+  .t-loc{min-height:0;padding:16px}
   .t-resume{min-height:330px}
   .paper-peek{width:66%}
-  .t-gh{min-height:0}
-  .t-astra{min-height:0}
   .astra-graph{min-height:220px}
   .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
   .ag-bar{padding-left:14px}
@@ -1143,6 +1228,7 @@ html[data-theme="ember"] .cred-logo img{filter:none}
   <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
   <symbol id="i-gh" viewBox="0 0 16 16"><path fill="currentColor" stroke="none" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></symbol>
   <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.1M12 19.3v2.1M2.6 12h2.1M19.3 12h2.1M5.35 5.35l1.5 1.5M17.15 17.15l1.5 1.5M5.35 18.65l1.5-1.5M17.15 6.85l1.5-1.5"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
   <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.2 14.6A8.4 8.4 0 0 1 9.4 3.8a8.4 8.4 0 1 0 10.8 10.8z"/></symbol>
   <symbol id="i-in" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
 </svg>
@@ -1151,7 +1237,7 @@ html[data-theme="ember"] .cred-logo img{filter:none}
 
 <header class="wrap topbar" id="top">
   <a class="brand" href="#top" aria-label="Dhruv Basia, back to top">
-    <span class="avatar-mark" aria-hidden="true"><img src="assets/dhruv-mark.webp" width="144" height="144" alt=""></span>
+    <span class="avatar-mark" aria-hidden="true"><img src="assets/dhruv-headshot-mark.webp" width="144" height="144" alt=""></span>
     <span class="brand-text"><b>Dhruv Basia</b><span>AI &amp; Data Science · Portfolio</span></span>
   </a>
   <nav class="topnav" aria-label="Primary">
@@ -1167,20 +1253,20 @@ html[data-theme="ember"] .cred-logo img{filter:none}
       <svg class="ic i-moon" aria-hidden="true"><use href="#i-moon"/></svg><svg class="ic i-sun" aria-hidden="true"><use href="#i-sun"/></svg>
     </button>
     <button class="btn btn-sm btn-primary top-cta" type="button" data-open-resume>
-      <svg class="ic ic-sm" aria-hidden="true"><use href="#i-doc"/></svg>Résumé
+      <svg class="ic ic-sm" aria-hidden="true"><use href="#i-doc"/></svg>Resume
     </button>
   </div>
 </header>
 
 <nav class="float-nav" aria-label="Sections" inert>
-  <a class="fn-brand" href="#top" aria-label="Back to top"><span class="avatar-mark" aria-hidden="true"><img src="assets/dhruv-mark.webp" width="144" height="144" alt=""></span></a>
+  <a class="fn-brand" href="#top" aria-label="Back to top"><span class="avatar-mark" aria-hidden="true"><img src="assets/dhruv-headshot-mark.webp" width="144" height="144" alt=""></span></a>
   <a class="fn-link" href="#work" data-spy="work">Work</a>
   <a class="fn-link" href="#experience" data-spy="experience">Experience</a>
   <a class="fn-link" href="#github" data-spy="github">GitHub</a>
   <a class="fn-link" href="#contact" data-spy="contact">Contact</a>
   <button class="theme-btn fn-theme" type="button" data-theme-btn aria-pressed="false" aria-label="Dark theme" title="Switch to dark theme"><svg class="ic i-moon" aria-hidden="true"><use href="#i-moon"/></svg><svg class="ic i-sun" aria-hidden="true"><use href="#i-sun"/></svg></button>
-  <a class="fn-dl" href="assets/Dhruv_Basia_Resume.pdf" download="Dhruv_Basia_Resume.pdf" aria-label="Download résumé (PDF)" title="Download résumé (PDF)"><svg class="ic" aria-hidden="true"><use href="#i-dl"/></svg></a>
-  <button class="btn btn-sm btn-primary" type="button" data-open-resume><svg class="ic ic-sm" aria-hidden="true"><use href="#i-doc"/></svg>Résumé</button>
+  <a class="fn-dl" href="assets/Dhruv_Basia_Resume.pdf" download="Dhruv_Basia_Resume.pdf" aria-label="Download resume (PDF)" title="Download resume (PDF)"><svg class="ic" aria-hidden="true"><use href="#i-dl"/></svg></a>
+  <button class="btn btn-sm btn-primary" type="button" data-open-resume><svg class="ic ic-sm" aria-hidden="true"><use href="#i-doc"/></svg>Resume</button>
 </nav>
 
 <main id="main">
@@ -1189,20 +1275,24 @@ html[data-theme="ember"] .cred-logo img{filter:none}
     <div class="bento">
 
       <figure class="tile t-photo" data-tilt>
-        <img src="assets/dhruv-portrait.webp" width="900" height="1200" alt="Dhruv Basia smiling outdoors in a pink shirt, trees and blue sky behind him" fetchpriority="high" decoding="async">
+        <img src="assets/dhruv-headshot.webp" width="1100" height="1100" alt="Dhruv Basia, headshot in a black shirt against a dark grey background" fetchpriority="high" decoding="async">
         <span class="photo-shade" aria-hidden="true"></span>
-        <span class="photo-tag" aria-hidden="true">New Delhi, IN</span>
-        <figcaption class="glass-pill"><span class="live-dot" aria-hidden="true"></span>Open to 2027 roles</figcaption>
+        <figcaption class="photo-chips">
+          <span class="glass-chip"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>New Delhi, IN</span>
+          <span class="glass-chip"><span class="live-dot" aria-hidden="true"></span>Open to 2027 roles</span>
+        </figcaption>
       </figure>
 
       <article class="tile t-intro" data-tilt>
-        <p class="label">AI &amp; Data Science · GGSIPU '27<span class="k-city"> · New Delhi</span></p>
+        <p class="label"><span class="live-dot" aria-hidden="true"></span>AI &amp; Data Science · GGSIPU '27<span class="k-city"> · New Delhi</span></p>
         <h1 class="name" id="name">Dhruv Basia</h1>
-        <p class="thesis">I design, build and ship <strong>AI systems</strong>, from the data to the deployment. I&nbsp;build intelligent software that <span class="hl">works outside the demo.</span></p>
+        <p class="h-lead">I design, build and ship <em>AI systems</em>, from the data to the deployment.</p>
+        <p class="thesis">I&nbsp;build intelligent software that <strong>works outside the demo.</strong></p>
+        <ul class="focus-chips" aria-label="Focus areas"><li>Agentic AI</li><li>Document intelligence</li><li>Computer vision</li><li>Geospatial</li></ul>
         <div class="intro-foot">
           <div class="cta-row">
             <button class="btn btn-primary" type="button" data-open-resume id="heroView">
-              <svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>View résumé
+              <svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>View resume
             </button>
             <a class="btn btn-ghost" href="assets/Dhruv_Basia_Resume.pdf" download="Dhruv_Basia_Resume.pdf">
               <svg class="ic" aria-hidden="true"><use href="#i-dl"/></svg>Download PDF
@@ -1219,45 +1309,11 @@ html[data-theme="ember"] .cred-logo img{filter:none}
         </div>
       </article>
 
-      <article class="tile t-nic" data-tilt style="--i:1">
-        <div class="tile-head"><span class="label">Latest role · 2026</span></div>
-        <a class="corner" href="#experience" aria-label="See experience"><span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow-ne"/></svg></span></a>
-        <div class="nic-top">
-          <span class="org-logo" aria-hidden="true"><img src="assets/logos/nic-mark.webp" width="263" height="120" alt="" decoding="async"></span>
-          <h2 class="t-h">ML Intern</h2>
+      <article class="tile t-astra" data-tilt style="--i:1">
+        <div class="tile-head">
+          <span class="label"><span class="dot dot-sun" aria-hidden="true"></span>Flagship · Research</span>
+          <a class="tile-more" href="#work-astra" aria-label="Read the ASTRA case study">Case study<svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow-ne"/></svg></a>
         </div>
-        <p class="nic-org">National Informatics Centre (MHA)</p>
-        <p class="fine nic-when">Jun – Aug 2026 · On-site, New Delhi</p>
-        <ul class="mini-chips" aria-label="Focus">
-          <li>Document classification</li><li>Metadata extraction</li><li>Retrieval</li>
-        </ul>
-      </article>
-
-      <article class="tile t-resume" data-tilt style="--i:2">
-        <div class="tile-head"><h2 class="label">Résumé · A4 · 1 page</h2></div>
-        <div class="resume-btns">
-          <button class="btn btn-sm btn-primary" type="button" data-open-resume id="tileView"><svg class="ic ic-sm" aria-hidden="true"><use href="#i-doc"/></svg>View</button>
-          <a class="btn btn-sm btn-ghost" href="assets/Dhruv_Basia_Resume.pdf" download="Dhruv_Basia_Resume.pdf" aria-label="Download résumé PDF"><svg class="ic ic-sm" aria-hidden="true"><use href="#i-dl"/></svg>PDF</a>
-        </div>
-        <div class="paper-peek" data-open-resume data-return="#tileView" data-paper aria-hidden="true">
-          <iframe src="resume.html?embed" title="Résumé thumbnail" tabindex="-1" scrolling="no" loading="eager"></iframe>
-        </div>
-      </article>
-
-      <article class="tile t-small t-edu" data-tilt style="--i:3">
-        <div class="s-copy">
-          <span class="label">Education</span>
-          <h2 class="t-h">GGSIPU</h2>
-          <p class="t-sub">B.Tech AI &amp; DS · '27</p>
-        </div>
-        <div class="cgpa"><b>8.45</b><span>CGPA / 10</span></div>
-      </article>
-
-      <article class="tile t-astra" data-tilt style="--i:4">
-        <div class="tile-head"><span class="label">Flagship · Research</span></div>
-        <a class="corner" href="#work-astra" aria-label="Read the ASTRA case study"><span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow-ne"/></svg></span></a>
-        <h2 class="t-h">ASTRA</h2>
-        <p class="t-sub">Agentic AI that guards the door to the blockchain</p>
         <div class="astra-graph">
           <svg class="dg mini" viewBox="0 0 260 190" role="img" aria-label="ASTRA flow: a Monitor agent dispatches the Sybil, Wallet, Finney and Eclipse agents; their scores form a Trust Factor; a human admin decides." data-packets data-cycle="3.4" data-stages="0.04,0.28|0.34,0.6|0.66,0.82">
             <g>
@@ -1281,50 +1337,88 @@ html[data-theme="ember"] .cred-logo img{filter:none}
             <rect class="n n-sun" x="56" y="160" width="148" height="26" rx="13"/><text class="t-c" x="130" y="177.5">Human decides</text>
           </svg>
         </div>
-        <p class="astra-metric">LangGraph <span class="dotsep">·</span> human-in-the-loop</p>
-        <p class="synth-tag"><i aria-hidden="true"></i>Runs live on a local Ethereum chain</p>
+        <h2 class="t-h">ASTRA</h2>
+        <p class="t-sub">Agentic AI that guards the door to the blockchain</p>
+        <p class="astra-foot"><span>LangGraph · human-in-the-loop</span><span class="synth-tag"><i aria-hidden="true"></i>Runs live on a local Ethereum chain</span></p>
       </article>
 
-      <article class="tile t-stack" data-tilt style="--i:5">
-        <div class="tile-head"><h2 class="label">Toolbox</h2></div>
+      <article class="tile t-nic" data-tilt style="--i:2">
+        <div class="tile-head"><span class="label"><span class="dot" aria-hidden="true"></span>Latest role · 2026</span></div>
+        <a class="corner" href="#experience" aria-label="See experience"><span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow-ne"/></svg></span></a>
+        <div class="org-row">
+          <span class="org-logo" aria-hidden="true"><img src="assets/logos/nic-mark.webp" width="263" height="120" alt="" decoding="async"></span>
+          <h2 class="t-h">ML Intern</h2>
+        </div>
+        <p class="org-name">National Informatics Centre (MHA)</p>
+        <ul class="mini-chips" aria-label="Focus">
+          <li>Document classification</li><li>Metadata extraction</li><li>Retrieval</li>
+        </ul>
+        <p class="fine tail">Jun – Aug 2026 · On-site, New Delhi</p>
+      </article>
+
+      <article class="tile t-edu" data-tilt style="--i:3">
+        <div class="tile-head"><span class="label"><span class="dot dot-sun" aria-hidden="true"></span>Education</span></div>
+        <div class="org-row">
+          <span class="org-logo" aria-hidden="true"><img src="assets/logos/ggsipu.webp" width="354" height="360" alt="" decoding="async"></span>
+          <h2 class="t-h">GGSIPU</h2>
+        </div>
+        <p class="org-name">B.Tech AI &amp; DS · USAR · '27</p>
+        <p class="metric-row"><b class="metric">8.45</b><span>CGPA / 10</span></p>
+      </article>
+
+      <article class="tile t-lead" data-tilt style="--i:4">
+        <div class="tile-head"><span class="label"><span class="dot dot-blush" aria-hidden="true"></span>Leadership</span></div>
+        <div class="org-row">
+          <span class="org-logo" aria-hidden="true"><img src="assets/logos/ieee-usar.webp" width="450" height="360" alt="" decoding="async"></span>
+          <h2 class="t-h">Chairperson</h2>
+        </div>
+        <p class="org-name">IEEE-USAR Student Branch</p>
+        <p class="tail">Led and scaled the branch through technical events, workshops and collaborations.</p>
+      </article>
+
+      <article class="tile t-resume" data-tilt style="--i:5">
+        <div class="tile-head"><h2 class="label"><span class="dot" aria-hidden="true"></span>Resume · A4 · 1 page</h2></div>
+        <div class="resume-btns">
+          <button class="btn btn-sm btn-primary" type="button" data-open-resume id="tileView"><svg class="ic ic-sm" aria-hidden="true"><use href="#i-doc"/></svg>View</button>
+          <a class="btn btn-sm btn-ghost" href="assets/Dhruv_Basia_Resume.pdf" download="Dhruv_Basia_Resume.pdf" aria-label="Download resume PDF"><svg class="ic ic-sm" aria-hidden="true"><use href="#i-dl"/></svg>PDF</a>
+        </div>
+        <div class="paper-peek" data-open-resume data-return="#tileView" data-paper aria-hidden="true">
+          <iframe src="resume.html?embed" title="Resume thumbnail" tabindex="-1" scrolling="no" loading="eager"></iframe>
+        </div>
+      </article>
+
+      <article class="tile t-gh" data-tilt style="--i:6">
+        <a class="tile-link" href="https://github.com/DhruvBasia" target="_blank" rel="noopener" aria-label="Open Dhruv's GitHub profile, github.com/DhruvBasia (opens in a new tab)"></a>
+        <div class="gh-info">
+          <h2 class="label"><svg class="ic" aria-hidden="true"><use href="#i-gh"/></svg>github.com/DhruvBasia<svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow-ne"/></svg></h2>
+          <p class="fine gh-mini-caption" id="heroHeatCap"><b>Contributions, last 12 months</b></p>
+          <div class="langbar" id="heroLangBar" role="img" aria-label="Language mix loading"></div>
+          <ul class="lang-legend" id="heroLangLegend"></ul>
+        </div>
+        <div class="gh-mini-heat" id="heroHeat" aria-hidden="true"></div>
+        <ul class="gh-recent" id="heroRecent" aria-label="Recently updated repositories"></ul>
+      </article>
+
+      <article class="tile t-stack" data-tilt style="--i:7">
+        <div class="tile-head"><h2 class="label"><span class="dot dot-leaf" aria-hidden="true"></span>Toolbox</h2></div>
         <div class="marquee" aria-hidden="true">
           <ul class="mq-track">
-            <li><i style="--c:#3572A5"></i>Python</li><li><i style="--c:#2F6FEB"></i>LangGraph</li><li><i style="--c:#F7931E"></i>scikit-learn</li><li><i style="--c:#FF6F00"></i>TensorFlow</li><li><i style="--c:#2F8F4E"></i>NLTK</li><li><i style="--c:#5C3EE8"></i>OpenCV</li><li><i style="--c:#0097A7"></i>MediaPipe</li><li><i style="--c:#13A10E"></i>GeoPandas</li><li><i style="--c:#199900"></i>Leaflet</li><li><i style="--c:#7EB742"></i>OSRM</li>
-            <li><i style="--c:#3572A5"></i>Python</li><li><i style="--c:#2F6FEB"></i>LangGraph</li><li><i style="--c:#F7931E"></i>scikit-learn</li><li><i style="--c:#FF6F00"></i>TensorFlow</li><li><i style="--c:#2F8F4E"></i>NLTK</li><li><i style="--c:#5C3EE8"></i>OpenCV</li><li><i style="--c:#0097A7"></i>MediaPipe</li><li><i style="--c:#13A10E"></i>GeoPandas</li><li><i style="--c:#199900"></i>Leaflet</li><li><i style="--c:#7EB742"></i>OSRM</li>
+            <li><i style="--c:#3572A5"></i>Python</li><li><i style="--c:#2F6FEB"></i>LangGraph</li><li><i style="--c:#8E75F2"></i>Gemini API</li><li><i style="--c:#10A37F"></i>CLIP</li><li><i style="--c:#6B7CF5"></i>ONNX</li><li><i style="--c:#5C3EE8"></i>OpenCV</li><li><i style="--c:#0097A7"></i>MediaPipe</li><li><i style="--c:#2F8F4E"></i>NLTK</li><li><i style="--c:#F7931E"></i>scikit-learn</li><li><i style="--c:#009688"></i>FastAPI</li>
+            <li><i style="--c:#3572A5"></i>Python</li><li><i style="--c:#2F6FEB"></i>LangGraph</li><li><i style="--c:#8E75F2"></i>Gemini API</li><li><i style="--c:#10A37F"></i>CLIP</li><li><i style="--c:#6B7CF5"></i>ONNX</li><li><i style="--c:#5C3EE8"></i>OpenCV</li><li><i style="--c:#0097A7"></i>MediaPipe</li><li><i style="--c:#2F8F4E"></i>NLTK</li><li><i style="--c:#F7931E"></i>scikit-learn</li><li><i style="--c:#009688"></i>FastAPI</li>
           </ul>
         </div>
         <div class="marquee rev" aria-hidden="true">
           <ul class="mq-track">
-            <li><i style="--c:#3178C6"></i>TypeScript</li><li><i style="--c:#61DAFB"></i>React</li><li><i style="--c:#009688"></i>FastAPI</li><li><i style="--c:#47848F"></i>Electron</li><li><i style="--c:#FFCA28"></i>Firebase</li><li><i style="--c:#150458"></i>Pandas</li><li><i style="--c:#4D77CF"></i>NumPy</li><li><i style="--c:#0A9EDC"></i>pytest</li><li><i style="--c:#6E9F18"></i>Vitest</li><li><i style="--c:#F05032"></i>Git</li>
-            <li><i style="--c:#3178C6"></i>TypeScript</li><li><i style="--c:#61DAFB"></i>React</li><li><i style="--c:#009688"></i>FastAPI</li><li><i style="--c:#47848F"></i>Electron</li><li><i style="--c:#FFCA28"></i>Firebase</li><li><i style="--c:#150458"></i>Pandas</li><li><i style="--c:#4D77CF"></i>NumPy</li><li><i style="--c:#0A9EDC"></i>pytest</li><li><i style="--c:#6E9F18"></i>Vitest</li><li><i style="--c:#F05032"></i>Git</li>
+            <li><i style="--c:#13A10E"></i>GeoPandas</li><li><i style="--c:#7EB742"></i>OSRM</li><li><i style="--c:#199900"></i>Leaflet</li><li><i style="--c:#E0663D"></i>NetworkX</li><li><i style="--c:#627EEA"></i>Ethereum</li><li><i style="--c:#3178C6"></i>TypeScript</li><li><i style="--c:#61DAFB"></i>React</li><li><i style="--c:#47848F"></i>Electron</li><li><i style="--c:#FFCA28"></i>Firebase</li><li><i style="--c:#2088FF"></i>GitHub Actions</li>
+            <li><i style="--c:#13A10E"></i>GeoPandas</li><li><i style="--c:#7EB742"></i>OSRM</li><li><i style="--c:#199900"></i>Leaflet</li><li><i style="--c:#E0663D"></i>NetworkX</li><li><i style="--c:#627EEA"></i>Ethereum</li><li><i style="--c:#3178C6"></i>TypeScript</li><li><i style="--c:#61DAFB"></i>React</li><li><i style="--c:#47848F"></i>Electron</li><li><i style="--c:#FFCA28"></i>Firebase</li><li><i style="--c:#2088FF"></i>GitHub Actions</li>
           </ul>
         </div>
-        <p class="sr-only">Toolbox: Python, LangGraph, scikit-learn, TensorFlow, NLTK, OpenCV, MediaPipe, GeoPandas, Leaflet, OSRM, TypeScript, React, FastAPI, Electron, Firebase, Pandas, NumPy, pytest, Vitest, Git.</p>
-      </article>
-
-      <article class="tile t-small t-ieee" data-tilt style="--i:6">
-        <div class="s-copy">
-          <span class="label">Leadership</span>
-          <h2 class="t-h">Chairperson</h2>
-          <p class="t-sub">IEEE-USAR Student Branch</p>
-        </div>
-        <span class="badge-round" aria-hidden="true"><svg class="ic"><use href="#i-users"/></svg></span>
-      </article>
-
-      <article class="tile t-gh" data-tilt style="--i:7">
-        <div class="tile-head"><h2 class="label"><svg class="ic" aria-hidden="true"><use href="#i-gh"/></svg>github.com/DhruvBasia</h2></div>
-        <a class="tile-link" href="https://github.com/DhruvBasia" target="_blank" rel="noopener" aria-label="Open Dhruv's GitHub profile, github.com/DhruvBasia (opens in a new tab)"></a>
-        <span class="corner" aria-hidden="true"><span><svg class="ic ic-sm"><use href="#i-arrow-ne"/></svg></span></span>
-        <div class="gh-mini-heat" id="heroHeat" aria-hidden="true"></div>
-        <p class="fine gh-mini-caption" id="heroHeatCap"><b>Contributions, last 12 months</b></p>
-        <ul class="gh-recent" id="heroRecent" aria-label="Recently updated repositories"></ul>
-        <div class="langbar" id="heroLangBar" role="img" aria-label="Language mix loading"></div>
-        <ul class="lang-legend" id="heroLangLegend"></ul>
+        <p class="sr-only">Toolbox: Python, LangGraph, Gemini API, CLIP, ONNX, OpenCV, MediaPipe, NLTK, scikit-learn, FastAPI, GeoPandas, OSRM, Leaflet, NetworkX, Ethereum, TypeScript, React, Electron, Firebase, GitHub Actions.</p>
       </article>
 
       <article class="tile t-small t-loc" data-tilt style="--i:8">
         <div class="s-copy">
-          <span class="label">Based in · IST</span>
+          <span class="label"><span class="dot" aria-hidden="true"></span>Based in · IST</span>
           <h2 class="t-h">New Delhi</h2>
           <p class="clock"><span id="clock">--:--:--</span> <small>IST · UTC+5:30</small></p>
         </div>
@@ -1617,7 +1711,7 @@ html[data-theme="ember"] .cred-logo img{filter:none}
         </div>
       </article>
 
-      <!-- More projects -->
+      <!-- More projects: filter by Academic / Personal / Industry; every card has a small picture of the project -->
       <div class="more-head reveal" id="more">
         <div>
           <p class="sec-kicker"><span class="num">03</span>More projects</p>
@@ -1625,71 +1719,110 @@ html[data-theme="ember"] .cred-logo img{filter:none}
         </div>
         <p class="sec-lede" style="max-width:46ch">Desktop tools, on-device AI, LLM tooling, campus systems and the web work in between.</p>
       </div>
-      <div class="proj-grid">
-        <article class="card proj proj-wide reveal">
+      <div class="pf-row" hidden>
+        <div class="pf" role="group" aria-label="Filter projects by type">
+          <button type="button" data-f="all" aria-pressed="true">All</button>
+          <button type="button" data-f="academic" aria-pressed="false">Academic</button>
+          <button type="button" data-f="personal" aria-pressed="false">Personal</button>
+          <button type="button" data-f="industry" aria-pressed="false">Industry</button>
+        </div>
+        <p class="fine pf-note" id="pfNote" aria-live="polite"></p>
+      </div>
+      <div class="proj-grid" id="projGrid">
+        <!-- The four flagships, shown here only when a category is picked (their full case studies are above) -->
+        <article class="card proj proj-flag" data-cat="academic" hidden>
+          <div class="p-top"><span class="p-num">01 · Flagship</span><span class="pill pill-sky">B.Tech research</span></div>
+          <div class="p-title"><img class="p-thumb" src="assets/thumbs/astra.webp" width="192" height="192" alt="ASTRA title card" loading="lazy" decoding="async"><h3>ASTRA</h3></div>
+          <p>Agentic AI that guards the door to the blockchain: LangGraph agents vet every node that asks to join, and a human makes the final call.</p>
+          <p class="p-stack">Python · LangGraph · Ganache · NetworkX</p>
+          <div class="p-links"><a class="lnk" href="#work-astra">Full case study<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        </article>
+        <article class="card proj proj-flag" data-cat="academic" hidden>
+          <div class="p-top"><span class="p-num">02 · Flagship</span><span class="pill pill-sky">Field survey</span></div>
+          <div class="p-title"><img class="p-thumb" src="assets/thumbs/agnidrishti.webp" width="192" height="192" alt="AgniDrishti's risk map of Seelampur with workshop markers" loading="lazy" decoding="async"><h3>AgniDrishti</h3></div>
+          <p>A fire-risk atlas for Seelampur, Delhi, built from a field survey: risk map, unit inspector and live dispatch along real streets.</p>
+          <p class="p-stack">Python · GeoPandas · Leaflet · OSRM</p>
+          <div class="p-links"><a class="lnk" href="#work-agnidrishti">Full case study<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        </article>
+        <article class="card proj proj-flag" data-cat="industry" hidden>
+          <div class="p-top"><span class="p-num">03 · Flagship</span><span class="pill pill-sky">Live events</span></div>
+          <div class="p-title"><img class="p-thumb" src="assets/thumbs/stagecue.webp" width="192" height="192" alt="StageCue AV's operator screen with preview and program outputs" loading="lazy" decoding="async"><h3>StageCue AV</h3></div>
+          <p>A dual-screen cue controller for live events, with a crew phone remote that works over any network and a Windows installer with auto-update.</p>
+          <p class="p-stack">Electron · React · TypeScript</p>
+          <div class="p-links"><a class="lnk" href="#work-stagecue">Full case study<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        </article>
+        <article class="card proj proj-flag" data-cat="industry" hidden>
+          <div class="p-top"><span class="p-num">04 · Flagship</span><span class="pill pill-sky">College fests</span></div>
+          <div class="p-title"><img class="p-thumb" src="assets/thumbs/coupon.webp" width="192" height="192" alt="Coupon Studio's sheet of numbered event coupons" loading="lazy" decoding="async"><h3>Coupon Studio</h3></div>
+          <p>Design numbered event coupons and export a print-exact PDF with cutting lines. Built for real college-fest operations.</p>
+          <p class="p-stack">JavaScript · Canvas · jsPDF · PWA</p>
+          <div class="p-links"><a class="lnk" href="#work-coupon">Full case study<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        </article>
+
+        <article class="card proj proj-wide reveal" data-cat="personal">
           <div class="p-top"><span class="p-num">05 · Desktop + mobile</span><span class="pill pill-sky">Windows + iPhone</span></div>
-          <h3>iPhone Link</h3>
+          <div class="p-title"><img class="p-thumb" src="assets/thumbs/iphone-link.webp" width="192" height="192" alt="iPhone Link's Send screen on an iPhone" loading="lazy" decoding="async"><h3>iPhone Link</h3></div>
           <p>Control a Windows PC from an iPhone over Wi-Fi: trackpad and keyboard, the live screen, file transfer that resumes, and terminals that start Claude Code with approvals from the phone. It installs as a Home Screen app: no App Store, no account, no cloud.</p>
           <p class="p-stack">Python · Home Screen web app · Windows</p>
           <div class="p-links"><span class="lnk muted"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg>Code on request</span></div>
         </article>
-        <article class="card proj proj-wide reveal">
+        <article class="card proj proj-wide reveal" id="p-eventshare" data-cat="personal">
           <div class="p-top"><span class="p-num">06 · Vision</span><span class="pill pill-sky">On-device AI</span></div>
-          <h3>Event Share: AI photo sorter</h3>
+          <div class="p-title"><img class="p-thumb" src="assets/thumbs/event-share.webp" width="192" height="192" alt="Event Share's 'Find every photo you're in' screen with a camera button" loading="lazy" decoding="async"><h3>Event Share: AI photo sorter</h3></div>
           <p>Sorts the photos and videos from a trip or event by what's in them and who's in them, so every friend gets their own folder. Scenes come from CLIP, faces from OpenCV's YuNet and SFace models, and no photo ever leaves the PC.</p>
           <p class="p-stack">Python · CLIP (ONNX) · OpenCV YuNet + SFace · NumPy</p>
           <div class="p-links"><span class="lnk muted"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg>Runs locally · code on request</span></div>
         </article>
-        <article class="card proj reveal">
+        <article class="card proj reveal" data-cat="personal">
           <div class="p-top"><span class="p-num">07 · Web</span><span class="pill pill-live">Live</span></div>
-          <h3>Digital Things</h3>
+          <div class="p-title"><img class="p-thumb" src="assets/thumbs/digital-things.webp" width="192" height="192" alt="Digital Things gift cards: a bouquet and a birthday cake" loading="lazy" decoding="async"><h3>Digital Things</h3></div>
           <p>Small gifts sent as a link: a bouquet, a birthday cake, a jar of notes, a mixtape. The whole gift lives in the URL, and the art is generated SVG.</p>
           <p class="p-stack">React 19 · TypeScript · Vite · SVG</p>
           <div class="p-links"><a class="lnk" href="https://digital-things-ten.vercel.app" target="_blank" rel="noopener">Live<svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a></div>
         </article>
-        <article class="card proj reveal">
+        <article class="card proj reveal" id="p-internship" data-cat="personal">
           <div class="p-top"><span class="p-num">08 · LLM tooling</span></div>
-          <h3>Internship Intelligence Platform</h3>
+          <div class="p-title"><img class="p-thumb" src="assets/thumbs/internship.webp" width="192" height="192" alt="Internship Intelligence Platform: a matched role card with skills and a match score" loading="lazy" decoding="async"><h3>Internship Intelligence Platform</h3></div>
           <p>An AI-powered internship aggregator, fit-evaluation engine and application tracker.</p>
           <p class="p-stack">Google Apps Script · Gemini</p>
           <div class="p-links"><a class="lnk" href="https://github.com/DhruvBasia/internship-intelligence-platform" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-gh"/></svg>Code<svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a></div>
         </article>
-        <article class="card proj reveal">
+        <article class="card proj reveal" id="p-alumni" data-cat="industry">
           <div class="p-top"><span class="p-num">09 · University</span><span class="pill pill-sun">Official</span></div>
-          <h3>USAR &amp; USDI Alumni Directory</h3>
+          <div class="p-title"><img class="p-thumb" src="assets/thumbs/alumni.webp" width="192" height="192" alt="The GGSIPU Alumni Directory home page: 'Once a part of IPU, always a part of our legacy'" loading="lazy" decoding="async"><h3>USAR &amp; USDI Alumni Directory</h3></div>
           <p>The alumni website of USAR and USDI at GGSIPU, built on a directive from the Vice Chancellor's office. Registration and a coordinator console, with mobile, email and enrolment numbers never made public.</p>
           <p class="p-stack">HTML · CSS · JavaScript · Google Apps Script · Sheets</p>
           <div class="p-links"><span class="lnk muted"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg>University project</span></div>
         </article>
-        <article class="card proj reveal">
+        <article class="card proj reveal" id="p-neuroload" data-cat="academic">
           <div class="p-top"><span class="p-num">10 · NLP</span></div>
-          <h3>NeuroLoad AI</h3>
+          <div class="p-title"><img class="p-thumb" src="assets/thumbs/neuroload.svg" width="192" height="192" alt="Illustration: a piece of text going into a Low / Medium / High load gauge" loading="lazy" decoding="async"><h3>NeuroLoad AI</h3></div>
           <p>An NLP feature-extraction pipeline and an MLPClassifier that sort text into Low, Medium or High cognitive load, with real-time FastAPI inference and a React UI.</p>
           <p class="p-stack">Python · NLTK · scikit-learn · FastAPI · React</p>
           <div class="p-links"><a class="lnk" href="https://github.com/DhruvBasia/Cognitive_Load_Analysis-" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-gh"/></svg>Code<svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a></div>
         </article>
-        <article class="card proj reveal">
+        <article class="card proj reveal" id="p-codered" data-cat="industry">
           <div class="p-top"><span class="p-num">11 · Event tech</span><span class="pill pill-blush">IEEE USAR</span></div>
-          <h3>Code Red: Pit Lane Lockdown</h3>
+          <div class="p-title"><img class="p-thumb" src="assets/thumbs/code-red.webp" width="192" height="192" alt="Code Red's landing page: a red F1 car on the track" loading="lazy" decoding="async"><h3>Code Red: Pit Lane Lockdown</h3></div>
           <p>An F1-themed escape-room race run on laptops: start lights on every screen at once, a live timing tower on the projector, and per-team puzzles generated on the server so answers never reach the browser.</p>
           <p class="p-stack">Node.js · JavaScript · Render</p>
           <div class="p-links"><span class="lnk muted"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg>Built for a live event</span></div>
         </article>
-        <article class="card proj reveal">
+        <article class="card proj reveal" id="p-greencommute" data-cat="personal">
           <div class="p-top"><span class="p-num">12 · Serverless</span></div>
-          <h3>Smart Green Commute Tracker</h3>
+          <div class="p-title"><img class="p-thumb" src="assets/thumbs/green-commute.svg" width="192" height="192" alt="Illustration: a commute route on a map, a CO₂ leaf and a leaderboard" loading="lazy" decoding="async"><h3>Smart Green Commute Tracker</h3></div>
           <p>A real-time app to track personal carbon emissions, with a gamified leaderboard and Gemini-powered eco-nudges through Netlify Functions.</p>
           <p class="p-stack">React · Node.js · Firebase · Netlify Functions · Gemini API</p>
           <div class="p-links"><a class="lnk" href="https://github.com/DhruvBasia/green-commute-tracker" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-gh"/></svg>Code<svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a></div>
         </article>
-        <article class="card proj reveal">
+        <article class="card proj reveal" id="p-gesture" data-cat="personal">
           <div class="p-top"><span class="p-num">13 · Vision</span></div>
-          <h3>Gesture Scroller</h3>
+          <div class="p-title"><img class="p-thumb" src="assets/thumbs/gesture-scroller.svg" width="192" height="192" alt="Illustration: a raised hand swiping up to the next short video" loading="lazy" decoding="async"><h3>Gesture Scroller</h3></div>
           <p>Touch-free Reels and Shorts: hand-gesture scrolling with MediaPipe hand tracking and OpenCV.</p>
           <p class="p-stack">Python · MediaPipe · OpenCV</p>
           <div class="p-links"><a class="lnk" href="https://github.com/DhruvBasia/Gesture-Scroller-for-Reels-Shorts" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-gh"/></svg>Code<svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a></div>
         </article>
-        <article class="card proj proj-small reveal">
+        <article class="card proj proj-small reveal" data-cat="all">
           <div class="p-top"><span class="p-num">14–16 · Smaller</span></div>
           <h3>Also on GitHub</h3>
           <ul class="small-list">
@@ -1790,7 +1923,7 @@ html[data-theme="ember"] .cred-logo img{filter:none}
         </div>
         <div class="gh-body">
           <div class="gh-profile">
-            <img src="assets/dhruv-avatar.webp" width="480" height="480" alt="" loading="lazy" decoding="async">
+            <img src="assets/dhruv-headshot-avatar.webp" width="480" height="480" alt="" loading="lazy" decoding="async">
             <div>
               <h3>Dhruv Basia</h3>
               <p class="gh-handle">@DhruvBasia</p>
@@ -1839,58 +1972,79 @@ html[data-theme="ember"] .cred-logo img{filter:none}
           <p class="sec-kicker"><span class="num">06</span>Skills, by evidence</p>
           <h2 class="sec-title" id="skills-title">No percentage bars. Receipts.</h2>
         </div>
-        <p class="sec-lede">Each skill links to the project on this page that uses it, where there is one.</p>
+        <p class="sec-lede">Grouped by what I can build, not by every tool I've opened. Each skill links to the work on this page that proves it.</p>
       </header>
       <div class="skills-grid">
         <article class="card skill-card reveal" style="--c:var(--sky)">
-          <h3><i aria-hidden="true"></i>AI / ML</h3>
+          <h3><i aria-hidden="true"></i>Agentic AI &amp; LLMs</h3>
+          <p class="skill-what">Multi-agent systems where the AI recommends and a person decides.</p>
           <ul class="chips">
-            <li><span>LLMs &amp; agents · LangGraph</span><a class="ev" href="#work-astra">ASTRA</a></li>
-            <li><span>NLP · NLTK</span><a class="ev" href="#more">NeuroLoad</a></li>
-            <li><span>scikit-learn</span><a class="ev" href="#more">NeuroLoad</a></li>
-            <li><span>OpenCV · MediaPipe</span><a class="ev" href="#more">Gesture</a></li>
-            <li><span>TensorFlow / Keras</span></li>
-            <li><span>CNNs</span></li>
+            <li><span>Multi-agent orchestration · LangGraph</span><a class="ev" href="#work-astra">ASTRA</a></li>
+            <li><span>Human-in-the-loop decision design</span><a class="ev" href="#work-astra">ASTRA</a></li>
+            <li><span>LLM features · Gemini API</span><a class="ev" href="#p-greencommute">Green Commute</a></li>
+            <li><span>LLM fit-scoring pipeline</span><a class="ev" href="#p-internship">Internship AI</a></li>
+          </ul>
+        </article>
+        <article class="card skill-card reveal" style="--c:#8B6CF0">
+          <h3><i aria-hidden="true"></i>Document intelligence &amp; NLP</h3>
+          <p class="skill-what">Turning documents and messy text into structured, searchable data.</p>
+          <ul class="chips">
+            <li><span>Document classification</span><a class="ev" href="#experience">NIC</a></li>
+            <li><span>Metadata extraction &amp; retrieval</span><a class="ev" href="#experience">NIC</a></li>
+            <li><span>NLP pipelines · NLTK · scikit-learn</span><a class="ev" href="#p-neuroload">NeuroLoad</a></li>
+            <li><span>Real-time model serving · FastAPI</span><a class="ev" href="#p-neuroload">NeuroLoad</a></li>
+          </ul>
+        </article>
+        <article class="card skill-card reveal" style="--c:#1FA5A0">
+          <h3><i aria-hidden="true"></i>Computer vision</h3>
+          <p class="skill-what">Models that find photos by what is in them, recognise faces and track hands.</p>
+          <ul class="chips">
+            <li><span>CLIP image embeddings · ONNX</span><a class="ev" href="#p-eventshare">Event Share</a></li>
+            <li><span>Face detection &amp; recognition · YuNet + SFace</span><a class="ev" href="#p-eventshare">Event Share</a></li>
+            <li><span>Hand tracking · MediaPipe · OpenCV</span><a class="ev" href="#p-gesture">Gesture</a></li>
+            <li><span>Private, on-device inference</span><a class="ev" href="#p-eventshare">Event Share</a></li>
           </ul>
         </article>
         <article class="card skill-card reveal" style="--c:#2F8F4E">
-          <h3><i aria-hidden="true"></i>Data &amp; GIS</h3>
+          <h3><i aria-hidden="true"></i>Geospatial &amp; data systems</h3>
+          <p class="skill-what">From a field survey to risk scores, live maps and dispatch routes.</p>
           <ul class="chips">
-            <li><span>GeoPandas</span><a class="ev" href="#work-agnidrishti">AgniDrishti</a></li>
-            <li><span>Leaflet · OSM / OSRM</span><a class="ev" href="#work-agnidrishti">AgniDrishti</a></li>
-            <li><span>NetworkX</span><a class="ev" href="#work-astra">ASTRA</a></li>
-            <li><span>Pandas</span></li><li><span>NumPy</span></li><li><span>Matplotlib</span></li>
+            <li><span>Spatial risk modelling · GeoPandas</span><a class="ev" href="#work-agnidrishti">AgniDrishti</a></li>
+            <li><span>Street routing &amp; dispatch · OSRM</span><a class="ev" href="#work-agnidrishti">AgniDrishti</a></li>
+            <li><span>Web GIS · Leaflet · GeoJSON</span><a class="ev" href="#work-agnidrishti">AgniDrishti</a></li>
+            <li><span>Graph analytics · NetworkX</span><a class="ev" href="#work-astra">ASTRA</a></li>
           </ul>
         </article>
-        <article class="card skill-card reveal" style="--c:#FFC24B">
+        <article class="card skill-card reveal" style="--c:#E0663D">
+          <h3><i aria-hidden="true"></i>Blockchain &amp; security</h3>
+          <p class="skill-what">Catching attacks on a live network, and keeping private data private.</p>
+          <ul class="chips">
+            <li><span>Attack detection · Sybil, eclipse, double-spend</span><a class="ev" href="#work-astra">ASTRA</a></li>
+            <li><span>Ethereum test chains · Ganache</span><a class="ev" href="#work-astra">ASTRA</a></li>
+            <li><span>Server-side anti-cheat design</span><a class="ev" href="#p-codered">Code Red</a></li>
+            <li><span>Privacy by design</span><a class="ev" href="#p-alumni">Alumni site</a></li>
+            <li><span>Vulnerability assessment</span><a class="ev" href="#certs">C-DAC</a></li>
+          </ul>
+        </article>
+        <article class="card skill-card reveal" style="--c:#E58AA0">
+          <h3><i aria-hidden="true"></i>Shipping software</h3>
+          <p class="skill-what">Getting it into people's hands, on desktop, web and phone.</p>
+          <ul class="chips">
+            <li><span>Desktop apps · Electron · React · TypeScript</span><a class="ev" href="#work-stagecue">StageCue</a></li>
+            <li><span>Installers with auto-update</span><a class="ev" href="#work-stagecue">StageCue</a></li>
+            <li><span>Remote control over any network</span><a class="ev" href="#work-stagecue">StageCue</a></li>
+            <li><span>Offline PWAs · print-exact PDF export</span><a class="ev" href="#work-coupon">Coupon</a></li>
+            <li><span>Serverless · Firebase</span><a class="ev" href="#p-greencommute">Green Commute</a></li>
+            <li><span>CI pipelines · GitHub Actions</span><a class="ev" href="#github">This site</a></li>
+            <li><span>Automated tests · pytest</span><a class="ev" href="#work-astra">ASTRA</a></li>
+          </ul>
+        </article>
+        <article class="card skill-card skill-strip reveal" style="--c:#5B6676">
           <h3><i aria-hidden="true"></i>Languages</h3>
           <ul class="chips">
             <li><span>Python</span><a class="ev" href="#work-astra">ASTRA</a></li>
             <li><span>TypeScript</span><a class="ev" href="#work-stagecue">StageCue</a></li>
             <li><span>JavaScript</span><a class="ev" href="#work-coupon">Coupon</a></li>
-            <li><span>C++</span></li><li><span>SQL</span></li><li><span>HTML / CSS</span></li>
-          </ul>
-        </article>
-        <article class="card skill-card wide reveal" style="--c:#E58AA0">
-          <h3><i aria-hidden="true"></i>Web &amp; apps</h3>
-          <ul class="chips">
-            <li><span>Electron</span><a class="ev" href="#work-stagecue">StageCue</a></li>
-            <li><span>React</span><a class="ev" href="#work-stagecue">StageCue</a></li>
-            <li><span>FastAPI</span><a class="ev" href="#more">NeuroLoad</a></li>
-            <li><span>PWAs</span><a class="ev" href="#work-coupon">Coupon</a></li>
-            <li><span>Firebase</span><a class="ev" href="#more">Green Commute</a></li>
-            <li><span>Node.js</span></li><li><span>REST APIs</span></li>
-          </ul>
-        </article>
-        <article class="card skill-card wide full reveal" style="--c:#5B6676">
-          <h3><i aria-hidden="true"></i>Tools</h3>
-          <ul class="chips">
-            <li><span>pytest</span><a class="ev" href="#work-astra">ASTRA</a></li>
-            <li><span>Vitest</span><a class="ev" href="#work-stagecue">StageCue</a></li>
-            <li><span>Render</span><a class="ev" href="#work-agnidrishti">AgniDrishti</a></li>
-            <li><span>Vercel</span><a class="ev" href="#more">Digital Things</a></li>
-            <li><span>Git / GitHub</span></li><li><span>Netlify</span></li><li><span>VS Code</span></li>
-            <li><span>Network security &amp; vulnerability assessment</span></li>
           </ul>
         </article>
       </div>
@@ -1909,7 +2063,7 @@ html[data-theme="ember"] .cred-logo img{filter:none}
             </li>
           </ul>
         </article>
-        <article class="card cred reveal">
+        <article class="card cred reveal" id="certs">
           <h3 class="sec-kicker"><span class="num">08</span>Certifications</h3>
           <ul class="cred-list">
             <li>
@@ -1930,16 +2084,16 @@ html[data-theme="ember"] .cred-logo img{filter:none}
     </div>
   </section>
 
-  <!-- ============================================ RÉSUMÉ -->
+  <!-- ============================================ RESUME -->
   <section class="section" id="resume" aria-labelledby="resume-title">
     <div class="wrap">
       <div class="resume-sec reveal">
         <div>
-          <p class="sec-kicker"><span class="num">09</span>Résumé</p>
+          <p class="sec-kicker"><span class="num">09</span>Resume</p>
           <h2 class="sec-title" id="resume-title">The <span style="white-space:nowrap">one-page</span> version.</h2>
           <p class="sec-lede" style="margin-top:16px">Read it here without leaving the page, or take the PDF with you. Same content, one A4 page.</p>
           <div class="resume-actions">
-            <button class="btn btn-primary" type="button" data-open-resume id="secView"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>View résumé</button>
+            <button class="btn btn-primary" type="button" data-open-resume id="secView"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>View resume</button>
             <a class="btn btn-ghost" href="assets/Dhruv_Basia_Resume.pdf" download="Dhruv_Basia_Resume.pdf"><svg class="ic" aria-hidden="true"><use href="#i-dl"/></svg>Download PDF</a>
             <a class="btn btn-soft" href="assets/Dhruv_Basia_Resume.pdf" target="_blank" rel="noopener">Open PDF<svg class="ic ic-sm" aria-hidden="true"><use href="#i-ext"/></svg></a>
             <button class="btn btn-soft" type="button" id="secPrint"><svg class="ic" aria-hidden="true"><use href="#i-print"/></svg>Print</button>
@@ -1948,7 +2102,7 @@ html[data-theme="ember"] .cred-logo img{filter:none}
         </div>
         <div class="sheet-stage">
           <div class="sheet-big" data-open-resume data-return="#secView" data-paper aria-hidden="true">
-            <iframe src="resume.html?embed" title="Résumé preview" tabindex="-1" scrolling="no" loading="lazy" id="sheetFrame"></iframe>
+            <iframe src="resume.html?embed" title="Resume preview" tabindex="-1" scrolling="no" loading="lazy" id="sheetFrame"></iframe>
             <span class="sheet-hint"><svg class="ic ic-sm" aria-hidden="true"><use href="#i-doc"/></svg>Open reader</span>
           </div>
         </div>
@@ -1973,13 +2127,13 @@ html[data-theme="ember"] .cred-logo img{filter:none}
         <div class="contact-actions">
           <a class="btn btn-ghost" href="https://www.linkedin.com/in/dhruvbasia/" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-in"/></svg>LinkedIn</a>
           <a class="btn btn-ghost" href="https://github.com/DhruvBasia" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-gh"/></svg>GitHub</a>
-          <button class="btn btn-primary" type="button" data-open-resume><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>View résumé</button>
+          <button class="btn btn-primary" type="button" data-open-resume><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>View resume</button>
           <a class="btn btn-ghost" href="assets/Dhruv_Basia_Resume.pdf" download="Dhruv_Basia_Resume.pdf"><svg class="ic" aria-hidden="true"><use href="#i-dl"/></svg>Download PDF</a>
         </div>
         </div>
         <aside class="vcard" aria-label="Contact card">
           <div class="vc-top">
-            <img src="assets/dhruv-avatar.webp" width="480" height="480" alt="Dhruv Basia" loading="lazy" decoding="async">
+            <img src="assets/dhruv-headshot-avatar.webp" width="480" height="480" alt="Dhruv Basia" loading="lazy" decoding="async">
             <div><b>Dhruv Basia</b><span>AI &amp; Data Science · GGSIPU '27</span></div>
           </div>
           <ul class="vc-list">
@@ -2005,7 +2159,7 @@ html[data-theme="ember"] .cred-logo img{filter:none}
       </div>
       <div class="foot-cta-actions">
         <a class="btn btn-primary" href="mailto:basiadhruv@gmail.com"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>basiadhruv@gmail.com</a>
-        <button class="btn btn-ghost" type="button" data-open-resume><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>View résumé</button>
+        <button class="btn btn-ghost" type="button" data-open-resume><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>View resume</button>
       </div>
     </div>
 
@@ -2019,7 +2173,7 @@ html[data-theme="ember"] .cred-logo img{filter:none}
     <div class="foot-grid">
       <div class="foot-id">
         <a class="foot-brand" href="#top" aria-label="Dhruv Basia, back to top">
-          <span class="avatar-mark" aria-hidden="true"><img src="assets/dhruv-mark.webp" width="144" height="144" alt="" loading="lazy"></span>
+          <span class="avatar-mark" aria-hidden="true"><img src="assets/dhruv-headshot-mark.webp" width="144" height="144" alt="" loading="lazy"></span>
           <span><span class="foot-name">Dhruv Basia</span><span class="foot-role">AI &amp; Data Science · GGSIPU '27</span></span>
         </a>
         <p class="foot-line">Agents that vet blockchain nodes, models that read government documents, maps that plan a fire response and software that runs live events. Each one taken from first idea to working software.</p>
@@ -2051,7 +2205,7 @@ html[data-theme="ember"] .cred-logo img{filter:none}
         </ul>
       </nav>
       <div class="foot-col">
-        <p class="foot-h">Résumé</p>
+        <p class="foot-h">Resume</p>
         <p class="foot-note">One page, A4. Read it here or keep a copy.</p>
         <div class="foot-btns">
           <button class="btn btn-sm btn-primary" type="button" data-open-resume><svg class="ic ic-sm" aria-hidden="true"><use href="#i-doc"/></svg>View</button>
@@ -2071,15 +2225,15 @@ html[data-theme="ember"] .cred-logo img{filter:none}
   </div>
 </footer>
 
-<div class="mbar" role="region" aria-label="Résumé quick actions" inert>
-  <button class="btn btn-primary" type="button" data-open-resume><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>View résumé</button>
+<div class="mbar" role="region" aria-label="Resume quick actions" inert>
+  <button class="btn btn-primary" type="button" data-open-resume><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>View resume</button>
   <a class="btn btn-ghost" href="assets/Dhruv_Basia_Resume.pdf" download="Dhruv_Basia_Resume.pdf"><svg class="ic" aria-hidden="true"><use href="#i-dl"/></svg>Download</a>
 </div>
 
 <dialog class="viewer" id="viewer" aria-labelledby="viewerTitle">
   <div class="viewer-body" id="viewerBody">
-    <div class="viewer-sheet"><iframe id="viewerFrame" title="Résumé of Dhruv Basia" scrolling="no"></iframe></div>
-    <p class="fine viewer-foot">Rendered from the HTML résumé · the PDF has the same content</p>
+    <div class="viewer-sheet"><iframe id="viewerFrame" title="Resume of Dhruv Basia" scrolling="no"></iframe></div>
+    <p class="fine viewer-foot">Rendered from the HTML resume · the PDF has the same content</p>
   </div>
   <div class="viewer-bar">
     <div class="vb-file">
@@ -2090,7 +2244,7 @@ html[data-theme="ember"] .cred-logo img{filter:none}
       <a class="vb-btn primary" href="assets/Dhruv_Basia_Resume.pdf" download="Dhruv_Basia_Resume.pdf"><svg class="ic ic-sm" aria-hidden="true"><use href="#i-dl"/></svg><span>Download</span></a>
       <button class="vb-btn" type="button" id="vbPrint"><svg class="ic ic-sm" aria-hidden="true"><use href="#i-print"/></svg><span>Print</span></button>
       <a class="vb-btn" href="assets/Dhruv_Basia_Resume.pdf" target="_blank" rel="noopener"><span>Open PDF</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-ext"/></svg></a>
-      <button class="vb-btn vb-close" type="button" id="vbClose" aria-label="Close résumé viewer"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+      <button class="vb-btn vb-close" type="button" id="vbClose" aria-label="Close resume viewer"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
     </div>
   </div>
 </dialog>
@@ -2143,7 +2297,7 @@ html[data-theme="ember"] .cred-logo img{filter:none}
 
   /* ---------- light / dark toggle: Ivory <-> Ember ---------- */
   (function themes() {
-    const THEMES = { ivory: { meta: '#EFE9DE', dark: false }, ember: { meta: '#14100E', dark: true } };
+    const THEMES = { ivory: { meta: '#F4F4F5', dark: false }, ember: { meta: '#09090B', dark: true } };
     const root = document.documentElement, btns = $$('[data-theme-btn]');
     const metaTheme = $('meta[name="theme-color"]'), metaScheme = $('meta[name="color-scheme"]');
     const current = () => (THEMES[root.getAttribute('data-theme')] ? root.getAttribute('data-theme') : 'ivory');
@@ -2200,7 +2354,7 @@ html[data-theme="ember"] .cred-logo img{filter:none}
     svg.innerHTML = s;
   })();
 
-  /* ---------- paper thumbnails (scaled live résumé) ---------- */
+  /* ---------- paper thumbnails (scaled live resume) ---------- */
   const fitPaper = (box) => {
     const f = $('iframe', box); if (!f) return;
     const s = box.clientWidth / 794;
@@ -2211,7 +2365,7 @@ html[data-theme="ember"] .cred-logo img{filter:none}
   if ('ResizeObserver' in window) { const ro = new ResizeObserver(es => es.forEach(e => fitPaper(e.target))); papers.forEach(p => ro.observe(p)); }
   else addEventListener('resize', () => papers.forEach(fitPaper));
 
-  /* ---------- résumé viewer ---------- */
+  /* ---------- resume viewer ---------- */
   const dlg = $('#viewer'), frame = $('#viewerFrame'), body = $('#viewerBody');
   let lastTrigger = null, frameReady = false, cleaned = true;
   const sizeFrame = () => {
@@ -2616,7 +2770,7 @@ html[data-theme="ember"] .cred-logo img{filter:none}
     const total = c.total;
     // hero mini
     $('#heroHeat').innerHTML = heatSVG(weeks, { cell: 9.6, gap: 2.4, attrs: 'preserveAspectRatio="xMinYMin meet"' });
-    $('#heroHeatCap').innerHTML = `<b>${total} contributions in the last year</b> · ${c.activeDays} active days`;
+    $('#heroHeatCap').innerHTML = `<b>${total} contributions in the last year</b><span class="gh-active">${c.activeDays} active days</span>`;
     // full heatmap
     $('#ghHeat').innerHTML = heatSVG(weeks, { cell: 12, gap: 3, padL: 34, padT: 22, labels: true, titles: true, attrs: 'role="img" aria-labelledby="heatTitle"' });
     $('#heatTitle').textContent = `${total} contributions in the last year`;
@@ -2683,6 +2837,31 @@ html[data-theme="ember"] .cred-logo img{filter:none}
       $('#ghHeat').innerHTML = `<p class="fine">${msg}</p>`;
       $('#ghRepos').innerHTML = `<p class="fine">${msg}</p>`;
     });
+})();
+</script>
+<script>
+/* Project filter (More projects). Without JavaScript the bar stays hidden and every project shows.
+   "All" shows the grid as it is; a category also brings in that category's flagships (their full case studies are above). */
+(function () {
+  var row = document.querySelector('.pf-row'), grid = document.getElementById('projGrid'), note = document.getElementById('pfNote');
+  if (!row || !grid) return;
+  var cards = Array.prototype.slice.call(grid.querySelectorAll(':scope > .proj'));
+  var btns = Array.prototype.slice.call(row.querySelectorAll('button[data-f]'));
+  var NAMES = { academic: 'academic', personal: 'personal', industry: 'industry' };
+  function apply(f) {
+    var shown = 0;
+    cards.forEach(function (c) {
+      var cat = c.getAttribute('data-cat'), flag = c.classList.contains('proj-flag');
+      var show = f === 'all' ? !flag : cat === f;
+      c.hidden = !show;
+      if (show) { shown++; if (f !== 'all') c.classList.add('in'); } // filtered cards appear at once, no scroll reveal
+    });
+    btns.forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-f') === f)); });
+    note.textContent = f === 'all' ? '' : shown + ' ' + NAMES[f] + ' project' + (shown === 1 ? '' : 's');
+  }
+  row.addEventListener('click', function (e) { var b = e.target.closest('button[data-f]'); if (b) apply(b.getAttribute('data-f')); });
+  row.hidden = false;
+  apply('all');
 })();
 </script>
 </body>

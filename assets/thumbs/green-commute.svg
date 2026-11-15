@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <!-- Smart Green Commute Tracker: a commute route on a map, a leaf for the carbon score, a leaderboard -->
+  <rect width="192" height="192" fill="#E6F5EC"/>
+  <g stroke="#CFE8D8" stroke-width="2">
+    <path d="M0 48 H192 M0 96 H192 M0 144 H192 M48 0 V192 M96 0 V192 M144 0 V192"/>
+  </g>
+  <path d="M34 150 C 60 150, 58 104, 92 104 S 128 60, 156 52" fill="none" stroke="#1F8A4C" stroke-width="7" stroke-linecap="round" stroke-dasharray="2 13"/>
+  <circle cx="34" cy="150" r="10" fill="#fff" stroke="#1F8A4C" stroke-width="5"/>
+  <path d="M156 24 c-14 0 -22 10 -22 21 c0 14 22 33 22 33 s22 -19 22 -33 c0 -11 -8 -21 -22 -21z" fill="#1F8A4C"/>
+  <circle cx="156" cy="45" r="7" fill="#E6F5EC"/>
+  <g transform="translate(26 26)">
+    <rect width="72" height="54" rx="12" fill="#fff" stroke="#BFE2CC" stroke-width="2"/>
+    <path d="M18 38 C18 22 30 14 46 14 C46 30 38 40 24 40 Z" fill="#3FB871"/>
+    <path d="M20 40 L36 24" stroke="#1F8A4C" stroke-width="3" stroke-linecap="round"/>
+    <text x="52" y="44" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="800" fill="#1F5F38">CO₂</text>
+  </g>
+  <g transform="translate(110 112)">
+    <rect width="62" height="56" rx="12" fill="#fff" stroke="#BFE2CC" stroke-width="2"/>
+    <rect x="12" y="30" width="10" height="16" rx="3" fill="#9FD8B4"/>
+    <rect x="26" y="16" width="10" height="30" rx="3" fill="#3FB871"/>
+    <rect x="40" y="24" width="10" height="22" rx="3" fill="#7CCB9B"/>
+  </g>
+</svg>
