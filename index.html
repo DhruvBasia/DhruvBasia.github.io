@@ -979,7 +979,12 @@ html[data-theme="ember"] .cred-logo img{filter:none}
 }
 
 /* more projects: two wide cards on top, then a 4 x 2 grid */
-.proj-grid .proj-small{grid-column:span 1}
+/* "Also on GitHub" runs full width under the grid, so the grid never ends on a half-empty row */
+.proj-grid .proj-small{grid-column:1 / -1}
+@media (min-width:700px){
+  .proj-small .small-list{grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px}
+  .proj-small .small-list li{border-top:0}
+}
 .proj-grid .proj-wide{grid-column:span 2}
 .proj-wide h3{font-size:24px}
 .proj-wide p{font-size:15.5px;max-width:58ch}
@@ -1008,6 +1013,41 @@ html[data-theme="ember"] .cred-logo img{filter:none}
 .past-hero .mbar{transform:none}
 .mbar .btn{flex:1;padding:0 12px}
 @media (prefers-reduced-motion:reduce){.mbar{transition:none}}
+.mbar .mbar-dl{flex:none;width:48px;padding:0}
+
+/* section menu: ☰ in the top bar (phones and tablets) and "Sections" in the phone bottom bar */
+.menu-btn{display:none}
+section[tabindex="-1"]:focus,article[tabindex="-1"]:focus,div[tabindex="-1"]:focus{outline:none}
+/* very narrow phones: photo only in the top bar, so the menu and Resume buttons fit (the name is right below in the hero) */
+@media (max-width:359px){.brand-text{display:none}}
+@media (max-width:1099px){.menu-btn{display:inline-grid}}
+dialog.secsheet{position:fixed;inset:auto 0 0 0;margin:0 auto;width:100%;max-width:560px;max-height:min(86dvh,720px);overflow:auto;overscroll-behavior:contain;
+  padding:6px 12px calc(14px + env(safe-area-inset-bottom));border:0;border-radius:24px 24px 0 0;background:var(--surface);color:var(--ink);
+  box-shadow:0 0 0 1px rgba(var(--edge-rgb),.08), 0 -24px 60px -20px rgba(0,0,0,.5);transform:translateY(100%);transition:transform .36s var(--ease)}
+dialog.secsheet.is-open{transform:none}
+dialog.secsheet::backdrop{background:rgba(8,10,14,.5);opacity:0;transition:opacity .3s}
+dialog.secsheet.is-open::backdrop{opacity:1}
+.sm-grip{width:40px;height:4px;border-radius:2px;background:rgba(var(--edge-rgb),.2);margin:6px auto 8px}
+.sm-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 2px 6px 10px}
+.sm-head p{font:500 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.sm-close{display:grid;place-items:center;width:44px;height:44px;border:0;border-radius:50%;background:rgba(var(--edge-rgb),.06);color:var(--ink);cursor:pointer}
+.sm-list{display:grid;gap:2px}
+.sm-list a{position:relative;display:grid;grid-template-columns:40px minmax(0,1fr);align-items:center;gap:10px;min-height:54px;padding:8px 10px;border-radius:14px;color:var(--ink);text-decoration:none}
+.sm-list .n{font:500 12px/1 var(--f-mono);color:var(--ink-3)}
+.sm-list b{display:block;font:600 15.5px/1.25 var(--f-body);letter-spacing:-.01em}
+.sm-list small{display:block;margin-top:2px;font:400 13px/1.35 var(--f-body);color:var(--ink-3)}
+.sm-list a[aria-current="true"]{background:rgba(var(--edge-rgb),.07)}
+.sm-list a[aria-current="true"] .n{color:var(--ink);font-weight:600}
+.sm-list a[aria-current="true"] > span:last-child{padding-right:78px}
+.sm-list a[aria-current="true"]::after{content:"You're here";position:absolute;right:10px;top:50%;transform:translateY(-50%);padding:5px 8px;border-radius:999px;background:var(--ink);color:var(--bg);font:600 11px/1 var(--f-body)}
+@media (hover:hover) and (pointer:fine){.sm-list a:hover{background:rgba(var(--edge-rgb),.05)}}
+@media (min-width:700px){
+  /* tablets: drop down under the top bar instead of sliding up from the bottom */
+  dialog.secsheet{inset:76px 16px auto auto;width:360px;max-height:calc(100dvh - 96px);border-radius:20px;padding:10px 10px 12px;transform:translateY(-6px);opacity:0;transition:opacity .2s, transform .25s var(--ease)}
+  dialog.secsheet.is-open{transform:none;opacity:1}
+  .sm-grip{display:none}
+}
+@media (prefers-reduced-motion:reduce){dialog.secsheet,dialog.secsheet::backdrop{transition:none}}
 
 /* glass fallbacks */
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
@@ -1111,6 +1151,7 @@ html[data-theme="ember"] .cred-logo img{filter:none}
   .topbar{height:64px}
   .brand-text span{display:none}
   .top-actions{gap:6px}
+  .top-cta{padding:0 12px}
   .bento{gap:12px;grid-template-columns:repeat(2,minmax(0,1fr));
     grid-template-areas:"photo  photo"
       "intro  intro"
@@ -1211,6 +1252,7 @@ html[data-theme="ember"] .cred-logo img{filter:none}
   <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V4h10v5"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v6H7z"/></symbol>
   <symbol id="i-ext" viewBox="0 0 24 24"><path d="M8 16 16 8M9.5 8H16v6.5"/></symbol>
   <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
   <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></symbol>
   <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
   <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></symbol>
@@ -1253,6 +1295,9 @@ html[data-theme="ember"] .cred-logo img{filter:none}
   <div class="top-actions">
     <button class="theme-btn" type="button" data-theme-btn aria-pressed="false" aria-label="Dark theme" title="Switch to dark theme">
       <svg class="ic i-moon" aria-hidden="true"><use href="#i-moon"/></svg><svg class="ic i-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+    </button>
+    <button class="theme-btn menu-btn" type="button" data-open-sections aria-haspopup="dialog" aria-controls="secSheet" aria-label="Sections" title="Jump to a section">
+      <svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg>
     </button>
     <button class="btn btn-sm btn-primary top-cta" type="button" data-open-resume>
       <svg class="ic ic-sm" aria-hidden="true"><use href="#i-doc"/></svg>Resume
@@ -1796,36 +1841,43 @@ html[data-theme="ember"] .cred-logo img{filter:none}
           <p class="p-stack">HTML · CSS · JavaScript · Google Apps Script · Sheets</p>
           <div class="p-links"><span class="lnk muted"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg>University project</span></div>
         </article>
+        <article class="card proj reveal" id="p-sih" data-cat="industry">
+          <div class="p-top"><span class="p-num">10 · University</span><span class="pill pill-sun">Official</span></div>
+          <div class="p-title"><img class="p-thumb" src="assets/thumbs/sih-portal.webp" width="192" height="192" alt="The SIH 2026 portal's selection roadmap: team registration, Round 1 PPT evaluation and Round 2 final defense" loading="lazy" decoding="async"><h3>USAR SIH 2026 Selection Portal</h3></div>
+          <p>Ran USAR's internal selection for Smart India Hackathon 2026: 154 teams and 900 students, two judging rounds across 17 panels, and 50 teams nominated to the national SIH. A public portal, an admin desk and a coordinator desk, with Google Sheets as the database.</p>
+          <p class="p-stack">Google Apps Script · Sheets · HtmlService · Chart.js</p>
+          <div class="p-links"><span class="lnk muted"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg>Code on request</span></div>
+        </article>
         <article class="card proj reveal" id="p-neuroload" data-cat="academic">
-          <div class="p-top"><span class="p-num">10 · NLP</span></div>
+          <div class="p-top"><span class="p-num">11 · NLP</span></div>
           <div class="p-title"><img class="p-thumb" src="assets/thumbs/neuroload.svg" width="192" height="192" alt="Illustration: a piece of text going into a Low / Medium / High load gauge" loading="lazy" decoding="async"><h3>NeuroLoad AI</h3></div>
           <p>An NLP feature-extraction pipeline and an MLPClassifier that sort text into Low, Medium or High cognitive load, with real-time FastAPI inference and a React UI.</p>
           <p class="p-stack">Python · NLTK · scikit-learn · FastAPI · React</p>
           <div class="p-links"><a class="lnk" href="https://github.com/DhruvBasia/Cognitive_Load_Analysis-" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-gh"/></svg>Code<svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a></div>
         </article>
         <article class="card proj reveal" id="p-codered" data-cat="industry">
-          <div class="p-top"><span class="p-num">11 · Event tech</span><span class="pill pill-blush">IEEE USAR</span></div>
+          <div class="p-top"><span class="p-num">12 · Event tech</span><span class="pill pill-blush">IEEE USAR</span></div>
           <div class="p-title"><img class="p-thumb" src="assets/thumbs/code-red.webp" width="192" height="192" alt="Code Red's landing page: a red F1 car on the track" loading="lazy" decoding="async"><h3>Code Red: Pit Lane Lockdown</h3></div>
           <p>An F1-themed escape-room race run on laptops: start lights on every screen at once, a live timing tower on the projector, and per-team puzzles generated on the server so answers never reach the browser.</p>
           <p class="p-stack">Node.js · JavaScript · Render</p>
           <div class="p-links"><span class="lnk muted"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg>Built for a live event</span></div>
         </article>
         <article class="card proj reveal" id="p-greencommute" data-cat="personal">
-          <div class="p-top"><span class="p-num">12 · Serverless</span></div>
+          <div class="p-top"><span class="p-num">13 · Serverless</span></div>
           <div class="p-title"><img class="p-thumb" src="assets/thumbs/green-commute.svg" width="192" height="192" alt="Illustration: a commute route on a map, a CO₂ leaf and a leaderboard" loading="lazy" decoding="async"><h3>Smart Green Commute Tracker</h3></div>
           <p>A real-time app to track personal carbon emissions, with a gamified leaderboard and Gemini-powered eco-nudges through Netlify Functions.</p>
           <p class="p-stack">React · Node.js · Firebase · Netlify Functions · Gemini API</p>
           <div class="p-links"><a class="lnk" href="https://github.com/DhruvBasia/green-commute-tracker" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-gh"/></svg>Code<svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a></div>
         </article>
         <article class="card proj reveal" id="p-gesture" data-cat="personal">
-          <div class="p-top"><span class="p-num">13 · Vision</span></div>
+          <div class="p-top"><span class="p-num">14 · Vision</span></div>
           <div class="p-title"><img class="p-thumb" src="assets/thumbs/gesture-scroller.svg" width="192" height="192" alt="Illustration: a raised hand swiping up to the next short video" loading="lazy" decoding="async"><h3>Gesture Scroller</h3></div>
           <p>Touch-free Reels and Shorts: hand-gesture scrolling with MediaPipe hand tracking and OpenCV.</p>
           <p class="p-stack">Python · MediaPipe · OpenCV</p>
           <div class="p-links"><a class="lnk" href="https://github.com/DhruvBasia/Gesture-Scroller-for-Reels-Shorts" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-gh"/></svg>Code<svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a></div>
         </article>
         <article class="card proj proj-small reveal" data-cat="all">
-          <div class="p-top"><span class="p-num">14–16 · Smaller</span></div>
+          <div class="p-top"><span class="p-num">15–17 · Smaller</span></div>
           <h3>Also on GitHub</h3>
           <ul class="small-list">
             <li><div><b>Weather ML forecasting</b><span>Predictive models in Jupyter</span></div><a class="lnk" href="https://github.com/DhruvBasia/Weather-Machine-Learning-Project" target="_blank" rel="noopener" aria-label="Weather ML forecasting code on GitHub"><svg class="ic" aria-hidden="true"><use href="#i-gh"/></svg><svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a></li>
@@ -2065,7 +2117,7 @@ html[data-theme="ember"] .cred-logo img{filter:none}
       </div>
 
       <div class="cred-grid">
-        <article class="card cred reveal">
+        <article class="card cred reveal" id="education">
           <h3 class="sec-kicker"><span class="num">07</span>Education</h3>
           <ul class="cred-list">
             <li>
@@ -2240,10 +2292,33 @@ html[data-theme="ember"] .cred-logo img{filter:none}
   </div>
 </footer>
 
-<div class="mbar" role="region" aria-label="Resume quick actions" inert>
+<div class="mbar" role="region" aria-label="Quick actions" inert>
+  <button class="btn btn-ghost mbar-menu" type="button" data-open-sections aria-haspopup="dialog" aria-controls="secSheet"><svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg>Sections</button>
   <button class="btn btn-primary" type="button" data-open-resume><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>View resume</button>
-  <a class="btn btn-ghost" href="assets/Dhruv_Basia_Resume.pdf" download="Dhruv_Basia_Resume.pdf"><svg class="ic" aria-hidden="true"><use href="#i-dl"/></svg>Download</a>
+  <a class="btn btn-ghost mbar-dl" href="assets/Dhruv_Basia_Resume.pdf" download="Dhruv_Basia_Resume.pdf" aria-label="Download resume (PDF)" title="Download resume (PDF)"><svg class="ic" aria-hidden="true"><use href="#i-dl"/></svg></a>
 </div>
+
+<!-- Section menu for phones and tablets: opened from the top bar or the bottom bar -->
+<dialog class="secsheet" id="secSheet" aria-labelledby="secSheetTitle">
+  <div class="sm-grip" aria-hidden="true"></div>
+  <div class="sm-head">
+    <p id="secSheetTitle">Jump to a section</p>
+    <button class="sm-close" type="button" aria-label="Close section menu"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+  </div>
+  <nav aria-label="Page sections">
+    <ol class="sm-list">
+      <li><a href="#top" data-sec="top"><span class="n">01</span><span><b>Home</b><small>Photo, intro and quick links</small></span></a></li>
+      <li><a href="#work" data-sec="work"><span class="n">02</span><span><b>Selected work</b><small>ASTRA, AgniDrishti, StageCue, Coupon Studio</small></span></a></li>
+      <li><a href="#more" data-sec="more"><span class="n">03</span><span><b>More projects</b><small>Filter by academic, personal or industry</small></span></a></li>
+      <li><a href="#experience" data-sec="experience"><span class="n">04</span><span><b>Experience</b><small>NIC (MHA), IBM, Student Council, College President</small></span></a></li>
+      <li><a href="#github" data-sec="github"><span class="n">05</span><span><b>GitHub</b><small>Contribution graph and repositories</small></span></a></li>
+      <li><a href="#skills" data-sec="skills"><span class="n">06</span><span><b>Skills</b><small>Grouped by what I can build</small></span></a></li>
+      <li><a href="#education" data-sec="education"><span class="n">07–08</span><span><b>Education &amp; certifications</b><small>GGSIPU, CBSE and three certificates</small></span></a></li>
+      <li><a href="#resume" data-sec="resume"><span class="n">09</span><span><b>Resume</b><small>Read it here or download the PDF</small></span></a></li>
+      <li><a href="#contact" data-sec="contact"><span class="n">10</span><span><b>Contact</b><small>Email, LinkedIn and GitHub</small></span></a></li>
+    </ol>
+  </nav>
+</dialog>
 
 <dialog class="viewer" id="viewer" aria-labelledby="viewerTitle">
   <div class="viewer-body" id="viewerBody">
@@ -2459,6 +2534,66 @@ html[data-theme="ember"] .cred-logo img{filter:none}
     }, { rootMargin: '-45% 0px -50% 0px' });
     ['work', 'experience', 'github', 'skills', 'resume', 'contact'].forEach(id => { const el = document.getElementById(id); if (el) spy.observe(el); });
   } else { fnav.inert = false; mbar.inert = false; document.documentElement.classList.add('past-hero'); }
+
+  /* ---------- section menu (phones and tablets) ---------- */
+  (function sectionMenu() {
+    const sheet = $('#secSheet');
+    if (!sheet || typeof sheet.showModal !== 'function') return;
+    const links = $$('a[data-sec]', sheet);
+    const ids = links.map(a => a.dataset.sec);
+    let opener = null, closing = 0;
+    /* the current section is the last one whose top has passed 35% of the screen */
+    const currentId = () => {
+      const line = innerHeight * 0.35; let cur = 'top';
+      ids.forEach(id => { const el = id === 'top' ? null : document.getElementById(id); if (el && el.getBoundingClientRect().top <= line) cur = id; });
+      return cur;
+    };
+    function open(btn) {
+      clearTimeout(closing);
+      opener = btn;
+      const cur = currentId();
+      links.forEach(a => a.setAttribute('aria-current', String(a.dataset.sec === cur)));
+      if (!sheet.open) sheet.showModal();
+      document.documentElement.classList.add('is-locked');
+      requestAnimationFrame(() => sheet.classList.add('is-open'));
+      const here = links.find(a => a.dataset.sec === cur) || links[0];
+      here.focus({ preventScroll: true });
+      if (here.scrollIntoView) here.scrollIntoView({ block: 'nearest' });
+    }
+    function close(after) {
+      sheet.classList.remove('is-open');
+      document.documentElement.classList.remove('is-locked');
+      const done = () => { if (sheet.open) sheet.close(); if (after) after(); };
+      clearTimeout(closing);
+      if (reduce()) done(); else closing = setTimeout(done, 260);
+    }
+    const backToOpener = () => { if (opener && opener.isConnected) opener.focus({ preventScroll: true }); };
+    $$('[data-open-sections]').forEach(b => b.addEventListener('click', () => open(b)));
+    $('.sm-close', sheet).addEventListener('click', () => close(backToOpener));
+    sheet.addEventListener('cancel', (e) => { e.preventDefault(); close(backToOpener); });
+    /* a tap on the dimmed backdrop lands on the dialog itself, outside its box */
+    sheet.addEventListener('click', (e) => {
+      if (e.target !== sheet) return;
+      const r = sheet.getBoundingClientRect();
+      if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) close(backToOpener);
+    });
+    links.forEach(a => a.addEventListener('click', (e) => {
+      e.preventDefault();
+      const id = a.dataset.sec;
+      close(() => {
+        const behavior = reduce() ? 'auto' : 'smooth';
+        if (id === 'top') { window.scrollTo({ top: 0, behavior }); history.replaceState(null, '', '#top'); return; }
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.scrollIntoView({ behavior, block: 'start' });
+        history.replaceState(null, '', '#' + id);
+        if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
+        el.focus({ preventScroll: true });
+      });
+    }));
+    /* rotating to a wide screen while it is open: just close it */
+    matchMedia('(min-width: 1100px)').addEventListener('change', (m) => { if (m.matches && sheet.open) close(); });
+  })();
 
   /* ---------- tilt + specular ---------- */
   if (fine) {
