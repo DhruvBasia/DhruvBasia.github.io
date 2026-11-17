@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-16T21:59:10.333Z",
+  "generatedAt": "2026-11-17T07:52:40.143Z",
   "profile": {
     "login": "DhruvBasia",
     "name": "Dhruv Basia",
-    "bio": "",
+    "bio": "Final Year B.Tech AI-DS Student\r\n",
     "company": "Guru Gobind Singh Indraprastha University",
     "location": "New Delhi, India",
-    "avatarUrl": "https://avatars.githubusercontent.com/u/113122155?u=ec48e868ea89df8560070f065aee5e97144dbc81&v=4",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/113122155?u=71e9505914d51a2f9791d64e15c48bb51df53c0d&v=4",
     "url": "https://github.com/DhruvBasia",
     "createdAt": "2022-09-08T14:49:24Z",
     "followers": 1,
@@ -22,13 +22,13 @@
     "Elysian_Website"
   ],
   "contributions": {
-    "total": 193,
-    "commits": 185,
+    "total": 196,
+    "commits": 188,
     "pullRequests": 0,
     "issues": 0,
     "reposCreated": 8,
     "private": 0,
-    "activeDays": 115,
+    "activeDays": 116,
     "busiestDay": {
       "date": "2026-08-01",
       "contributionCount": 14,
@@ -37,7 +37,7 @@
     },
     "streak": {
       "longest": 96,
-      "current": 11
+      "current": 12
     },
     "weeks": [
       [
@@ -2340,6 +2340,12 @@
           "count": 3,
           "level": 2,
           "weekday": 1
+        },
+        {
+          "date": "2026-11-17",
+          "count": 3,
+          "level": 2,
+          "weekday": 2
         }
       ]
     ]
@@ -2414,6 +2420,35 @@
   ],
   "repos": [
     {
+      "name": "internship-intelligence-platform",
+      "description": "An AI-powered internship aggregator, fit evaluation engine, and application tracker built on Google Apps Script and Gemini AI.",
+      "url": "https://github.com/DhruvBasia/internship-intelligence-platform",
+      "homepage": null,
+      "stars": 0,
+      "forks": 0,
+      "archived": false,
+      "createdAt": "2026-09-19T12:40:17Z",
+      "pushedAt": "2026-11-17T07:37:05Z",
+      "commits": 6,
+      "language": {
+        "name": "JavaScript",
+        "color": "#f1e05a"
+      },
+      "languages": [
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a",
+          "bytes": 82558
+        },
+        {
+          "name": "HTML",
+          "color": "#e34c26",
+          "bytes": 78978
+        }
+      ],
+      "topics": []
+    },
+    {
       "name": "DhruvBasia.github.io",
       "description": "Portfolio of Dhruv Basia: AI & Data Science",
       "url": "https://github.com/DhruvBasia/DhruvBasia.github.io",
@@ -2422,8 +2457,8 @@
       "forks": 0,
       "archived": false,
       "createdAt": "2026-11-08T06:15:27Z",
-      "pushedAt": "2026-11-16T19:16:57Z",
-      "commits": 35,
+      "pushedAt": "2026-11-16T21:59:11Z",
+      "commits": 36,
       "language": {
         "name": "HTML",
         "color": "#e34c26"
@@ -2694,35 +2729,6 @@
         "sustainability",
         "vite"
       ]
-    },
-    {
-      "name": "internship-intelligence-platform",
-      "description": "An AI-powered internship aggregator, fit evaluation engine, and application tracker built on Google Apps Script and Gemini AI.",
-      "url": "https://github.com/DhruvBasia/internship-intelligence-platform",
-      "homepage": null,
-      "stars": 0,
-      "forks": 0,
-      "archived": false,
-      "createdAt": "2026-09-19T12:40:17Z",
-      "pushedAt": "2026-09-19T14:09:02Z",
-      "commits": 6,
-      "language": {
-        "name": "JavaScript",
-        "color": "#f1e05a"
-      },
-      "languages": [
-        {
-          "name": "JavaScript",
-          "color": "#f1e05a",
-          "bytes": 82558
-        },
-        {
-          "name": "HTML",
-          "color": "#e34c26",
-          "bytes": 78978
-        }
-      ],
-      "topics": []
     },
     {
       "name": "Elysian_Website",
