@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T07:33:47.765Z",
+  "generatedAt": "2026-11-23T23:51:14.560Z",
   "profile": {
     "login": "DhruvBasia",
     "name": "Dhruv Basia",
@@ -22,13 +22,13 @@
     "Elysian_Website"
   ],
   "contributions": {
-    "total": 274,
-    "commits": 200,
+    "total": 298,
+    "commits": 202,
     "pullRequests": 0,
     "issues": 0,
     "reposCreated": 8,
-    "private": 66,
-    "activeDays": 121,
+    "private": 88,
+    "activeDays": 123,
     "busiestDay": {
       "date": "2026-10-10",
       "contributionCount": 18,
@@ -36,8 +36,8 @@
       "weekday": 6
     },
     "streak": {
-      "longest": 96,
-      "current": 17
+      "longest": 115,
+      "current": 115
     },
     "weeks": [
       [
@@ -1928,7 +1928,7 @@
         {
           "date": "2026-09-19",
           "count": 8,
-          "level": 3,
+          "level": 2,
           "weekday": 6
         }
       ],
@@ -1972,7 +1972,7 @@
         {
           "date": "2026-09-26",
           "count": 4,
-          "level": 2,
+          "level": 1,
           "weekday": 6
         }
       ],
@@ -2098,7 +2098,7 @@
         {
           "date": "2026-10-16",
           "count": 4,
-          "level": 2,
+          "level": 1,
           "weekday": 5
         },
         {
@@ -2185,33 +2185,33 @@
         },
         {
           "date": "2026-10-30",
-          "count": 2,
+          "count": 4,
           "level": 1,
           "weekday": 5
         },
         {
           "date": "2026-10-31",
-          "count": 3,
-          "level": 1,
+          "count": 5,
+          "level": 2,
           "weekday": 6
         }
       ],
       [
         {
           "date": "2026-11-01",
-          "count": 5,
-          "level": 2,
+          "count": 17,
+          "level": 4,
           "weekday": 0
         },
         {
           "date": "2026-11-02",
-          "count": 1,
+          "count": 2,
           "level": 1,
           "weekday": 1
         },
         {
           "date": "2026-11-03",
-          "count": 1,
+          "count": 2,
           "level": 1,
           "weekday": 2
         },
@@ -2223,8 +2223,8 @@
         },
         {
           "date": "2026-11-05",
-          "count": 0,
-          "level": 0,
+          "count": 3,
+          "level": 1,
           "weekday": 4
         },
         {
@@ -2244,7 +2244,7 @@
         {
           "date": "2026-11-08",
           "count": 8,
-          "level": 3,
+          "level": 2,
           "weekday": 0
         },
         {
@@ -2274,7 +2274,7 @@
         {
           "date": "2026-11-13",
           "count": 4,
-          "level": 2,
+          "level": 1,
           "weekday": 5
         },
         {
@@ -2294,13 +2294,13 @@
         {
           "date": "2026-11-16",
           "count": 4,
-          "level": 2,
+          "level": 1,
           "weekday": 1
         },
         {
           "date": "2026-11-17",
           "count": 4,
-          "level": 2,
+          "level": 1,
           "weekday": 2
         },
         {
@@ -2337,8 +2337,8 @@
         },
         {
           "date": "2026-11-23",
-          "count": 0,
-          "level": 0,
+          "count": 3,
+          "level": 1,
           "weekday": 1
         }
       ]
@@ -2414,64 +2414,6 @@
   ],
   "repos": [
     {
-      "name": "DhruvBasia.github.io",
-      "description": "Portfolio of Dhruv Basia: AI & Data Science",
-      "url": "https://github.com/DhruvBasia/DhruvBasia.github.io",
-      "homepage": "https://dhruvbasia.github.io",
-      "stars": 0,
-      "forks": 0,
-      "archived": false,
-      "createdAt": "2026-11-08T06:15:27Z",
-      "pushedAt": "2026-11-22T19:36:02Z",
-      "commits": 48,
-      "language": {
-        "name": "HTML",
-        "color": "#e34c26"
-      },
-      "languages": [
-        {
-          "name": "HTML",
-          "color": "#e34c26",
-          "bytes": 242845
-        },
-        {
-          "name": "JavaScript",
-          "color": "#f1e05a",
-          "bytes": 6648
-        }
-      ],
-      "topics": []
-    },
-    {
-      "name": "internship-intelligence-platform",
-      "description": "An AI-powered internship aggregator, fit evaluation engine, and application tracker built on Google Apps Script and Gemini AI.",
-      "url": "https://github.com/DhruvBasia/internship-intelligence-platform",
-      "homepage": null,
-      "stars": 0,
-      "forks": 0,
-      "archived": false,
-      "createdAt": "2026-09-19T12:40:17Z",
-      "pushedAt": "2026-11-22T15:04:49Z",
-      "commits": 6,
-      "language": {
-        "name": "JavaScript",
-        "color": "#f1e05a"
-      },
-      "languages": [
-        {
-          "name": "JavaScript",
-          "color": "#f1e05a",
-          "bytes": 82558
-        },
-        {
-          "name": "HTML",
-          "color": "#e34c26",
-          "bytes": 78978
-        }
-      ],
-      "topics": []
-    },
-    {
       "name": "DhruvBasia",
       "description": "Personal GitHub profile README showcasing projects, skills, tech stack, and developer activity.",
       "url": "https://github.com/DhruvBasia/DhruvBasia",
@@ -2480,8 +2422,8 @@
       "forks": 0,
       "archived": false,
       "createdAt": "2025-03-13T07:35:33Z",
-      "pushedAt": "2026-11-22T14:39:21Z",
-      "commits": 145,
+      "pushedAt": "2026-11-23T18:18:27Z",
+      "commits": 146,
       "language": {
         "name": "Python",
         "color": "#3572A5"
@@ -2501,6 +2443,64 @@
           "name": "Shell",
           "color": "#89e051",
           "bytes": 535
+        }
+      ],
+      "topics": []
+    },
+    {
+      "name": "internship-intelligence-platform",
+      "description": "An AI-powered internship aggregator, fit evaluation engine, and application tracker built on Google Apps Script and Gemini AI.",
+      "url": "https://github.com/DhruvBasia/internship-intelligence-platform",
+      "homepage": null,
+      "stars": 0,
+      "forks": 0,
+      "archived": false,
+      "createdAt": "2026-09-19T12:40:17Z",
+      "pushedAt": "2026-11-23T08:27:04Z",
+      "commits": 7,
+      "language": {
+        "name": "JavaScript",
+        "color": "#f1e05a"
+      },
+      "languages": [
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a",
+          "bytes": 82558
+        },
+        {
+          "name": "HTML",
+          "color": "#e34c26",
+          "bytes": 78978
+        }
+      ],
+      "topics": []
+    },
+    {
+      "name": "DhruvBasia.github.io",
+      "description": "Portfolio of Dhruv Basia: AI & Data Science",
+      "url": "https://github.com/DhruvBasia/DhruvBasia.github.io",
+      "homepage": "https://dhruvbasia.github.io",
+      "stars": 0,
+      "forks": 0,
+      "archived": false,
+      "createdAt": "2026-11-08T06:15:27Z",
+      "pushedAt": "2026-11-23T07:33:49Z",
+      "commits": 49,
+      "language": {
+        "name": "HTML",
+        "color": "#e34c26"
+      },
+      "languages": [
+        {
+          "name": "HTML",
+          "color": "#e34c26",
+          "bytes": 242845
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a",
+          "bytes": 6648
         }
       ],
       "topics": []
