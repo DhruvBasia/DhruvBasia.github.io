@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T09:51:08.694Z",
+  "generatedAt": "2026-11-24T22:24:27.782Z",
   "profile": {
     "login": "DhruvBasia",
     "name": "Dhruv Basia",
@@ -10,7 +10,7 @@
     "url": "https://github.com/DhruvBasia",
     "createdAt": "2022-09-08T14:49:24Z",
     "followers": 3,
-    "following": 2,
+    "following": 3,
     "publicRepos": 15
   },
   "pinned": [
@@ -22,13 +22,13 @@
     "Elysian_Website"
   ],
   "contributions": {
-    "total": 298,
-    "commits": 202,
+    "total": 300,
+    "commits": 204,
     "pullRequests": 0,
     "issues": 0,
     "reposCreated": 8,
     "private": 88,
-    "activeDays": 123,
+    "activeDays": 124,
     "busiestDay": {
       "date": "2026-10-10",
       "contributionCount": 18,
@@ -36,8 +36,8 @@
       "weekday": 6
     },
     "streak": {
-      "longest": 115,
-      "current": 115
+      "longest": 116,
+      "current": 116
     },
     "weeks": [
       [
@@ -2343,8 +2343,8 @@
         },
         {
           "date": "2026-11-24",
-          "count": 0,
-          "level": 0,
+          "count": 2,
+          "level": 1,
           "weekday": 2
         }
       ]
@@ -2420,98 +2420,6 @@
   ],
   "repos": [
     {
-      "name": "DhruvBasia.github.io",
-      "description": "Portfolio of Dhruv Basia: AI & Data Science",
-      "url": "https://github.com/DhruvBasia/DhruvBasia.github.io",
-      "homepage": "https://dhruvbasia.github.io",
-      "stars": 0,
-      "forks": 0,
-      "archived": false,
-      "createdAt": "2026-11-08T06:15:27Z",
-      "pushedAt": "2026-11-23T23:51:15Z",
-      "commits": 50,
-      "language": {
-        "name": "HTML",
-        "color": "#e34c26"
-      },
-      "languages": [
-        {
-          "name": "HTML",
-          "color": "#e34c26",
-          "bytes": 242845
-        },
-        {
-          "name": "JavaScript",
-          "color": "#f1e05a",
-          "bytes": 6648
-        }
-      ],
-      "topics": []
-    },
-    {
-      "name": "DhruvBasia",
-      "description": "Personal GitHub profile README showcasing projects, skills, tech stack, and developer activity.",
-      "url": "https://github.com/DhruvBasia/DhruvBasia",
-      "homepage": null,
-      "stars": 0,
-      "forks": 0,
-      "archived": false,
-      "createdAt": "2025-03-13T07:35:33Z",
-      "pushedAt": "2026-11-23T18:18:27Z",
-      "commits": 146,
-      "language": {
-        "name": "Python",
-        "color": "#3572A5"
-      },
-      "languages": [
-        {
-          "name": "Python",
-          "color": "#3572A5",
-          "bytes": 29637
-        },
-        {
-          "name": "HTML",
-          "color": "#e34c26",
-          "bytes": 1087
-        },
-        {
-          "name": "Shell",
-          "color": "#89e051",
-          "bytes": 535
-        }
-      ],
-      "topics": []
-    },
-    {
-      "name": "internship-intelligence-platform",
-      "description": "An AI-powered internship aggregator, fit evaluation engine, and application tracker built on Google Apps Script and Gemini AI.",
-      "url": "https://github.com/DhruvBasia/internship-intelligence-platform",
-      "homepage": null,
-      "stars": 0,
-      "forks": 0,
-      "archived": false,
-      "createdAt": "2026-09-19T12:40:17Z",
-      "pushedAt": "2026-11-23T08:27:04Z",
-      "commits": 7,
-      "language": {
-        "name": "JavaScript",
-        "color": "#f1e05a"
-      },
-      "languages": [
-        {
-          "name": "JavaScript",
-          "color": "#f1e05a",
-          "bytes": 82558
-        },
-        {
-          "name": "HTML",
-          "color": "#e34c26",
-          "bytes": 78978
-        }
-      ],
-      "topics": []
-    },
-    {
       "name": "stagecue-av",
       "description": "Dual-screen media & cue controller for live events, with a crew phone remote that works over any network",
       "url": "https://github.com/DhruvBasia/stagecue-av",
@@ -2520,7 +2428,7 @@
       "forks": 0,
       "archived": false,
       "createdAt": "2026-10-19T06:22:07Z",
-      "pushedAt": "2026-11-17T08:18:24Z",
+      "pushedAt": "2026-11-24T21:28:39Z",
       "commits": 11,
       "language": {
         "name": "TypeScript",
@@ -2551,6 +2459,98 @@
           "name": "Dockerfile",
           "color": "#384d54",
           "bytes": 182
+        }
+      ],
+      "topics": []
+    },
+    {
+      "name": "DhruvBasia",
+      "description": "Personal GitHub profile README showcasing projects, skills, tech stack, and developer activity.",
+      "url": "https://github.com/DhruvBasia/DhruvBasia",
+      "homepage": null,
+      "stars": 0,
+      "forks": 0,
+      "archived": false,
+      "createdAt": "2025-03-13T07:35:33Z",
+      "pushedAt": "2026-11-24T17:52:01Z",
+      "commits": 147,
+      "language": {
+        "name": "Python",
+        "color": "#3572A5"
+      },
+      "languages": [
+        {
+          "name": "Python",
+          "color": "#3572A5",
+          "bytes": 29637
+        },
+        {
+          "name": "HTML",
+          "color": "#e34c26",
+          "bytes": 1087
+        },
+        {
+          "name": "Shell",
+          "color": "#89e051",
+          "bytes": 535
+        }
+      ],
+      "topics": []
+    },
+    {
+      "name": "DhruvBasia.github.io",
+      "description": "Portfolio of Dhruv Basia: AI & Data Science",
+      "url": "https://github.com/DhruvBasia/DhruvBasia.github.io",
+      "homepage": "https://dhruvbasia.github.io",
+      "stars": 0,
+      "forks": 0,
+      "archived": false,
+      "createdAt": "2026-11-08T06:15:27Z",
+      "pushedAt": "2026-11-24T09:51:09Z",
+      "commits": 51,
+      "language": {
+        "name": "HTML",
+        "color": "#e34c26"
+      },
+      "languages": [
+        {
+          "name": "HTML",
+          "color": "#e34c26",
+          "bytes": 242845
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a",
+          "bytes": 6648
+        }
+      ],
+      "topics": []
+    },
+    {
+      "name": "internship-intelligence-platform",
+      "description": "An AI-powered internship aggregator, fit evaluation engine, and application tracker built on Google Apps Script and Gemini AI.",
+      "url": "https://github.com/DhruvBasia/internship-intelligence-platform",
+      "homepage": null,
+      "stars": 0,
+      "forks": 0,
+      "archived": false,
+      "createdAt": "2026-09-19T12:40:17Z",
+      "pushedAt": "2026-11-23T08:27:04Z",
+      "commits": 7,
+      "language": {
+        "name": "JavaScript",
+        "color": "#f1e05a"
+      },
+      "languages": [
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a",
+          "bytes": 82558
+        },
+        {
+          "name": "HTML",
+          "color": "#e34c26",
+          "bytes": 78978
         }
       ],
       "topics": []
