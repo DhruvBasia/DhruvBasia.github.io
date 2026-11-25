@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T08:29:07.385Z",
+  "generatedAt": "2026-11-25T21:39:36.276Z",
   "profile": {
     "login": "DhruvBasia",
     "name": "Dhruv Basia",
@@ -11,7 +11,7 @@
     "createdAt": "2022-09-08T14:49:24Z",
     "followers": 3,
     "following": 3,
-    "publicRepos": 15
+    "publicRepos": 16
   },
   "pinned": [
     "internship-intelligence-platform",
@@ -22,13 +22,13 @@
     "Elysian_Website"
   ],
   "contributions": {
-    "total": 300,
-    "commits": 204,
+    "total": 303,
+    "commits": 206,
     "pullRequests": 0,
     "issues": 0,
-    "reposCreated": 8,
+    "reposCreated": 9,
     "private": 88,
-    "activeDays": 124,
+    "activeDays": 125,
     "busiestDay": {
       "date": "2026-10-10",
       "contributionCount": 18,
@@ -36,8 +36,8 @@
       "weekday": 6
     },
     "streak": {
-      "longest": 116,
-      "current": 116
+      "longest": 117,
+      "current": 117
     },
     "weeks": [
       [
@@ -2349,8 +2349,8 @@
         },
         {
           "date": "2026-11-25",
-          "count": 0,
-          "level": 0,
+          "count": 3,
+          "level": 1,
           "weekday": 3
         }
       ]
@@ -2361,37 +2361,37 @@
       "name": "TypeScript",
       "color": "#3178c6",
       "bytes": 1006081,
-      "pct": 43.5
+      "pct": 42.3
     },
     {
       "name": "Python",
       "color": "#3572A5",
-      "bytes": 565009,
-      "pct": 24.4
+      "bytes": 592846,
+      "pct": 25
     },
     {
       "name": "JavaScript",
       "color": "#f1e05a",
-      "bytes": 360590,
-      "pct": 15.6
+      "bytes": 375529,
+      "pct": 15.8
     },
     {
       "name": "Jupyter Notebook",
       "color": "#DA5B0B",
       "bytes": 172747,
-      "pct": 7.5
+      "pct": 7.3
     },
     {
       "name": "HTML",
       "color": "#e34c26",
-      "bytes": 128461,
-      "pct": 5.5
+      "bytes": 137541,
+      "pct": 5.8
     },
     {
       "name": "CSS",
       "color": "#663399",
-      "bytes": 54440,
-      "pct": 2.4
+      "bytes": 63721,
+      "pct": 2.7
     },
     {
       "name": "Hack",
@@ -2426,6 +2426,79 @@
   ],
   "repos": [
     {
+      "name": "DhruvBasia",
+      "description": "Personal GitHub profile README showcasing projects, skills, tech stack, and developer activity.",
+      "url": "https://github.com/DhruvBasia/DhruvBasia",
+      "homepage": null,
+      "stars": 0,
+      "forks": 0,
+      "archived": false,
+      "createdAt": "2025-03-13T07:35:33Z",
+      "pushedAt": "2026-11-25T17:18:27Z",
+      "commits": 148,
+      "language": {
+        "name": "Python",
+        "color": "#3572A5"
+      },
+      "languages": [
+        {
+          "name": "Python",
+          "color": "#3572A5",
+          "bytes": 29637
+        },
+        {
+          "name": "HTML",
+          "color": "#e34c26",
+          "bytes": 1087
+        },
+        {
+          "name": "Shell",
+          "color": "#89e051",
+          "bytes": 535
+        }
+      ],
+      "topics": []
+    },
+    {
+      "name": "customer-feedback-analysis",
+      "description": "Sentiment and complaint-theme classification of customer feedback (TF-IDF + Logistic Regression) with a Flask web app. Internship project.",
+      "url": "https://github.com/DhruvBasia/customer-feedback-analysis",
+      "homepage": null,
+      "stars": 0,
+      "forks": 0,
+      "archived": false,
+      "createdAt": "2026-11-25T16:52:26Z",
+      "pushedAt": "2026-11-25T16:52:44Z",
+      "commits": 1,
+      "language": {
+        "name": "Python",
+        "color": "#3572A5"
+      },
+      "languages": [
+        {
+          "name": "Python",
+          "color": "#3572A5",
+          "bytes": 27837
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a",
+          "bytes": 14939
+        },
+        {
+          "name": "CSS",
+          "color": "#663399",
+          "bytes": 9281
+        },
+        {
+          "name": "HTML",
+          "color": "#e34c26",
+          "bytes": 9080
+        }
+      ],
+      "topics": []
+    },
+    {
       "name": "DhruvBasia.github.io",
       "description": "Portfolio of Dhruv Basia: AI & Data Science",
       "url": "https://github.com/DhruvBasia/DhruvBasia.github.io",
@@ -2434,8 +2507,8 @@
       "forks": 0,
       "archived": false,
       "createdAt": "2026-11-08T06:15:27Z",
-      "pushedAt": "2026-11-24T22:24:28Z",
-      "commits": 52,
+      "pushedAt": "2026-11-25T08:29:08Z",
+      "commits": 53,
       "language": {
         "name": "HTML",
         "color": "#e34c26"
@@ -2494,40 +2567,6 @@
           "name": "Dockerfile",
           "color": "#384d54",
           "bytes": 182
-        }
-      ],
-      "topics": []
-    },
-    {
-      "name": "DhruvBasia",
-      "description": "Personal GitHub profile README showcasing projects, skills, tech stack, and developer activity.",
-      "url": "https://github.com/DhruvBasia/DhruvBasia",
-      "homepage": null,
-      "stars": 0,
-      "forks": 0,
-      "archived": false,
-      "createdAt": "2025-03-13T07:35:33Z",
-      "pushedAt": "2026-11-24T17:52:01Z",
-      "commits": 147,
-      "language": {
-        "name": "Python",
-        "color": "#3572A5"
-      },
-      "languages": [
-        {
-          "name": "Python",
-          "color": "#3572A5",
-          "bytes": 29637
-        },
-        {
-          "name": "HTML",
-          "color": "#e34c26",
-          "bytes": 1087
-        },
-        {
-          "name": "Shell",
-          "color": "#89e051",
-          "bytes": 535
         }
       ],
       "topics": []
