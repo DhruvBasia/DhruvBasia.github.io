@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T22:24:27.782Z",
+  "generatedAt": "2026-11-25T08:29:07.385Z",
   "profile": {
     "login": "DhruvBasia",
     "name": "Dhruv Basia",
@@ -2346,6 +2346,12 @@
           "count": 2,
           "level": 1,
           "weekday": 2
+        },
+        {
+          "date": "2026-11-25",
+          "count": 0,
+          "level": 0,
+          "weekday": 3
         }
       ]
     ]
@@ -2420,6 +2426,35 @@
   ],
   "repos": [
     {
+      "name": "DhruvBasia.github.io",
+      "description": "Portfolio of Dhruv Basia: AI & Data Science",
+      "url": "https://github.com/DhruvBasia/DhruvBasia.github.io",
+      "homepage": "https://dhruvbasia.github.io",
+      "stars": 0,
+      "forks": 0,
+      "archived": false,
+      "createdAt": "2026-11-08T06:15:27Z",
+      "pushedAt": "2026-11-24T22:24:28Z",
+      "commits": 52,
+      "language": {
+        "name": "HTML",
+        "color": "#e34c26"
+      },
+      "languages": [
+        {
+          "name": "HTML",
+          "color": "#e34c26",
+          "bytes": 242845
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a",
+          "bytes": 6648
+        }
+      ],
+      "topics": []
+    },
+    {
       "name": "stagecue-av",
       "description": "Dual-screen media & cue controller for live events, with a crew phone remote that works over any network",
       "url": "https://github.com/DhruvBasia/stagecue-av",
@@ -2493,35 +2528,6 @@
           "name": "Shell",
           "color": "#89e051",
           "bytes": 535
-        }
-      ],
-      "topics": []
-    },
-    {
-      "name": "DhruvBasia.github.io",
-      "description": "Portfolio of Dhruv Basia: AI & Data Science",
-      "url": "https://github.com/DhruvBasia/DhruvBasia.github.io",
-      "homepage": "https://dhruvbasia.github.io",
-      "stars": 0,
-      "forks": 0,
-      "archived": false,
-      "createdAt": "2026-11-08T06:15:27Z",
-      "pushedAt": "2026-11-24T09:51:09Z",
-      "commits": 51,
-      "language": {
-        "name": "HTML",
-        "color": "#e34c26"
-      },
-      "languages": [
-        {
-          "name": "HTML",
-          "color": "#e34c26",
-          "bytes": 242845
-        },
-        {
-          "name": "JavaScript",
-          "color": "#f1e05a",
-          "bytes": 6648
         }
       ],
       "topics": []
