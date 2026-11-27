@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T21:28:47.689Z",
+  "generatedAt": "2026-11-27T08:25:57.142Z",
   "profile": {
     "login": "DhruvBasia",
     "name": "Dhruv Basia",
@@ -22,13 +22,13 @@
     "Elysian_Website"
   ],
   "contributions": {
-    "total": 306,
+    "total": 307,
     "commits": 207,
     "pullRequests": 0,
     "issues": 0,
     "reposCreated": 9,
-    "private": 90,
-    "activeDays": 126,
+    "private": 91,
+    "activeDays": 127,
     "busiestDay": {
       "date": "2026-10-10",
       "contributionCount": 18,
@@ -36,8 +36,8 @@
       "weekday": 6
     },
     "streak": {
-      "longest": 118,
-      "current": 118
+      "longest": 119,
+      "current": 119
     },
     "weeks": [
       [
@@ -2358,6 +2358,12 @@
           "count": 3,
           "level": 1,
           "weekday": 4
+        },
+        {
+          "date": "2026-11-27",
+          "count": 1,
+          "level": 1,
+          "weekday": 5
         }
       ]
     ]
@@ -2432,6 +2438,35 @@
   ],
   "repos": [
     {
+      "name": "DhruvBasia.github.io",
+      "description": "Portfolio of Dhruv Basia: AI & Data Science",
+      "url": "https://github.com/DhruvBasia/DhruvBasia.github.io",
+      "homepage": "https://dhruvbasia.github.io",
+      "stars": 0,
+      "forks": 0,
+      "archived": false,
+      "createdAt": "2026-11-08T06:15:27Z",
+      "pushedAt": "2026-11-26T21:28:48Z",
+      "commits": 56,
+      "language": {
+        "name": "HTML",
+        "color": "#e34c26"
+      },
+      "languages": [
+        {
+          "name": "HTML",
+          "color": "#e34c26",
+          "bytes": 242845
+        },
+        {
+          "name": "JavaScript",
+          "color": "#f1e05a",
+          "bytes": 6648
+        }
+      ],
+      "topics": []
+    },
+    {
       "name": "DhruvBasia",
       "description": "Personal GitHub profile README showcasing projects, skills, tech stack, and developer activity.",
       "url": "https://github.com/DhruvBasia/DhruvBasia",
@@ -2461,35 +2496,6 @@
           "name": "Shell",
           "color": "#89e051",
           "bytes": 535
-        }
-      ],
-      "topics": []
-    },
-    {
-      "name": "DhruvBasia.github.io",
-      "description": "Portfolio of Dhruv Basia: AI & Data Science",
-      "url": "https://github.com/DhruvBasia/DhruvBasia.github.io",
-      "homepage": "https://dhruvbasia.github.io",
-      "stars": 0,
-      "forks": 0,
-      "archived": false,
-      "createdAt": "2026-11-08T06:15:27Z",
-      "pushedAt": "2026-11-26T08:12:57Z",
-      "commits": 55,
-      "language": {
-        "name": "HTML",
-        "color": "#e34c26"
-      },
-      "languages": [
-        {
-          "name": "HTML",
-          "color": "#e34c26",
-          "bytes": 242845
-        },
-        {
-          "name": "JavaScript",
-          "color": "#f1e05a",
-          "bytes": 6648
         }
       ],
       "topics": []
